@@ -4,7 +4,7 @@ def Classic_polybox_ResGen(z,state,params,Ts):
     """ CLASSIC_POLYBOX_RESGEN Sequential residual generator for model ''
     Causality: algebraic
 
-    Structurally sensitive to faults: f_M2, f_M3, f_A2
+    Structurally sensitive to faults: f_M1, f_M2, f_M3, f_A1, f_A2
 
     Example of basic usage:
     Let z be the observations matrix, each column corresponding to a known signal and Ts the sampling time,
@@ -15,26 +15,30 @@ def Classic_polybox_ResGen(z,state,params,Ts):
         r[k], state = Classic_polybox_ResGen( zk, state, params, Ts )
 
     State is a dictionary with the keys: 
-    File generated Tue Jun 18 23:53:45 2024
+    File generated Wed Jun 19 21:59:18 2024
     """
     def Classic_polybox_ResGen_core(z, state, params, Ts):
         # Known signals
+        u_a = z[0]
         u_b = z[1]
-        u_c = z[2]
         u_d = z[3]
         u_e = z[4]
+        u_f = z[5]
         u_g = z[6]
 
         # Residual generator body
-        g = u_g # e7
-        e = u_e # e12
-        d = u_d # e11
-        b = u_b # e8
+        g = u_g # e12
+        f = u_f # e11
+        e = u_e # e10
+        d = u_d # e9
+        b = u_b # e7
         y = b*d # e2
+        x = f - y # e4
         z = g - y # e5
-        c = z/e # e3
+        a = u_a # e6
+        c = x/a # e1
          
-        r = -c + u_c # e9
+        r = c*e - z # e3
 
         return (r, state)
 

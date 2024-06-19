@@ -1,8 +1,8 @@
 import faultdiagnosistoolbox as fdt
-import logging
 import sympy as sym
 import importlib
 import re
+from minihit.hsdag import HsDag
 from config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
                    PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, \
                    TITLE, OBSERVATIONS
@@ -30,25 +30,21 @@ class DiagnosisModel:
 
     def get_all_minimal_conflicts(self):
         if not self._model_ok:
-            logging.warning('Create model first.')
             return None
         else:
-            return self._get_all_minimal_conflists_from_fsm()
+            return self._get_all_minimal_conflicts()
 
     def get_minimal_conflicts_for_observations(self):
         if not self._model_ok:
-            logging.warning('Create model first.')
             return None
         else:
-            function = self._generate_residual()
-            return self._solve_residual(function)
+            return self._get_residuals()
 
-    def get_minimal_diagnosis(self):
+    def get_all_minimal_diagnosis(self):
         if not self._model_ok:
-            logging.warning('Create model first.')
             return None
         else:
-            return self._get_minimal_diagnosis_from_minimal_conflicts()
+            return self._get_all_minimal_diagnosis()
 
     def _model_ok(self):
         # TODO: more complex model verification
@@ -84,32 +80,33 @@ class DiagnosisModel:
         self._model_definition = {'type': 'Symbolic',
                                   UNKNOWN_VARIABLES: x,
                                   FAULTS: f,
-                                  KNOWN_VARIABLES: z}
+                                  KNOWN_VARIABLES: z,
+                                  RELATIONS: r}
         sym.var(self._model_definition[UNKNOWN_VARIABLES])
         sym.var(self._model_definition[FAULTS])
         sym.var(self._model_definition[KNOWN_VARIABLES])
-        self._model_definition[RELATIONS] = r
 
     def _create_model(self):
         self._model = fdt.DiagnosisModel(self._model_definition)
 
-    def _get_all_minimal_conflists_from_fsm(self):
+    def _get_all_minimal_conflicts(self):
         conflicts = self._model_definition[FAULTS]
         fsm = self._get_filtered_fsm()
         minimal_conflicts = []
         for fsm_row in fsm:
-            value = []
-            indicator = 0
-            for fsm_row_element in fsm_row:
-                if fsm_row_element == 1:
-                    value.append(conflicts[indicator].split(PREFIX_FAULT)[1])
-                indicator += 1
-            value.sort()
-            minimal_conflicts.append(value)
+            conflict_list = [conflicts[i].split(PREFIX_FAULT)[1]
+                             for i, elem in enumerate(fsm_row) if elem == 1]
+            minimal_conflicts.append(sorted(conflict_list))
         return minimal_conflicts
 
-    def _get_minimal_diagnosis_from_minimal_conflicts(self):
-        pass
+    def _get_all_minimal_diagnosis(self):
+        hs_dag = HsDag(self._get_all_minimal_conflicts())
+        hs_dag.solve(True, False)
+        minimal_hittings = list(hs_dag.generate_minimal_hitting_sets())
+        for i, hitting_set in enumerate(minimal_hittings):
+            minimal_hittings[i] = sorted(hitting_set)
+        minimal_hittings.sort()
+        return minimal_hittings
 
     def _get_mso_from_model(self):
         return self._model.MSO()
@@ -121,11 +118,7 @@ class DiagnosisModel:
         fsm = self._get_fsm_from_mso()
         filtered_fsm = []
         for fsm_row in fsm:
-            row_to_romove = True
-            for fsm_row_element in fsm_row:
-                if fsm_row_element == 0:
-                    row_to_romove = False
-            if not row_to_romove:
+            if any(element != 0 for element in fsm_row):
                 filtered_fsm.append(fsm_row)
         return filtered_fsm
 
@@ -136,9 +129,10 @@ class DiagnosisModel:
             rels.append(equation)
 
     def _create_equations_for_known_variables(self, rels, known_variables, unknown_variables):
-        common_elements = set(known_variables) & set(unknown_variables)
-        self._signal_equations_count = len(common_elements)
-        for element in common_elements:
+        common_elements = set(unknown_variables) & set(known_variables)
+        sorted_common_elements = sorted(common_elements)
+        self._signal_equations_count = len(sorted_common_elements)
+        for element in sorted_common_elements:
             equation = self._transform_expression_variable(element)
             rels.append(equation)
 
@@ -160,23 +154,40 @@ class DiagnosisModel:
     def _transform_to_symbolic(self, equation):
         return sym.sympify(equation)
 
-    def _generate_residual(self):
-        equations = self._get_equations_for_residual()
+    def _get_residuals(self):
+        residuals = []
+        for i in range(len(self._get_mso_from_model())):
+            function = self._generate_residuals(i)
+            residual = self._solve_residuals(function)
+            residuals.append(residual)
+        return residuals
+
+    def _generate_residuals(self, iterator):
+        equations, selected_equation = self._prepare_equations_for_residuals(iterator)
+        function_name = self._generate_residuals_function(equations, selected_equation)
+        return function_name
+
+    def _prepare_equations_for_residuals(self, iterator):
+        equations = self._get_equations_for_residual(iterator)
         selected_equation = self._get_selected_equation_for_residual(equations)
         equations_without_selected = [equation for equation in equations if equation != selected_equation]
-        gamma = self._model.Matching(equations_without_selected)
-        function = f'{self._variables[TITLE].replace(" ", "_")}_ResGen'
-        self._model.SeqResGen(gamma, selected_equation, f'{function}')
-        return function
+        print(f'Equations: {equations_without_selected}')
+        return equations_without_selected, selected_equation
 
-    def _solve_residual(self, function_name):
+    def _generate_residuals_function(self, equations, selected_equation):
+        gamma = self._model.Matching(equations)
+        function_name = f'{self._variables[TITLE].replace(" ", "_")}_ResGen'
+        self._model.SeqResGen(gamma, selected_equation, f'{function_name}')
+        return function_name
+
+    def _solve_residuals(self, function_name):
         residuals_module = importlib.import_module(function_name)
         function = getattr(residuals_module, function_name)
         residuals, _ = function(self._variables[OBSERVATIONS], [], None, 1)
         return residuals
 
-    def _get_equations_for_residual(self):
-        return self._get_mso_from_model()[0]
+    def _get_equations_for_residual(self, iterator):
+        return self._get_mso_from_model()[iterator]
 
     def _get_selected_equation_for_residual(self, equations):
         for equation in equations:
