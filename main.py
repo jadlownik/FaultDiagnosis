@@ -5,7 +5,7 @@ from config import PATH_EXAMPLES, TITLE
 
 reader = ExampleReader()
 print_service = PrintService()
-variables = reader.read(f'{PATH_EXAMPLES}\example_1.txt')
+variables = reader.read(f'{PATH_EXAMPLES}example_1.txt')
 
 if reader.varaibles_ok():
     model = DiagnosisModel()
@@ -13,6 +13,7 @@ if reader.varaibles_ok():
     all_minimal_conflicts = model.get_all_minimal_conflicts()
     all_minimal_diagnosis = model.get_all_minimal_diagnosis()
     residuals = model._get_residuals()
+
     print(f'Solution for {variables[TITLE]}:')
     print_service.print_list(all_minimal_conflicts, 'All minimal conflicts:')
     print_service.print_list(all_minimal_diagnosis, 'All minimal diagnosis:')

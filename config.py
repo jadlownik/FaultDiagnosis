@@ -1,4 +1,4 @@
-PATH_EXAMPLES = 'examples'
+PATH_EXAMPLES = 'examples\\'
 TITLE = 'title'
 UNKNOWN_VARIABLES = 'x'
 FAULTS = 'f'
