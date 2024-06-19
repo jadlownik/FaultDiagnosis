@@ -188,9 +188,7 @@ class HsDag(mhs.MinimalHittingSetsProblem):
 
     def _label_node(self, node_in_processing: HsDagNode):
         for conflict_set in self._working_list_of_conflicts:
-            # Konwersja conflict_set na zestaw
             conflict_set = set(conflict_set)
-            # Konwersja path_from_root na zestaw
             path_from_root = set(node_in_processing.path_from_root)
             if conflict_set.isdisjoint(path_from_root):
                 node_in_processing.label = conflict_set

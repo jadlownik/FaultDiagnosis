@@ -3,4 +3,4 @@ class PrintService:
         if title is not None:
             print(title)
         for ele in list:
-            print(", ".join(ele))
+            print(", ".join(map(str, ele)))

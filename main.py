@@ -16,4 +16,4 @@ if reader.varaibles_ok():
     print(f'Solution for {variables[TITLE]}:')
     print_service.print_list(all_minimal_conflicts, 'All minimal conflicts:')
     print_service.print_list(all_minimal_diagnosis, 'All minimal diagnosis:')
-    print(f'Residuals: {residuals}')
+    print_service.print_list(residuals, 'Residuals:')

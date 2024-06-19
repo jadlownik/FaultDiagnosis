@@ -155,21 +155,24 @@ class DiagnosisModel:
         return sym.sympify(equation)
 
     def _get_residuals(self):
-        residuals = []
+        residuals_all = []
         for i in range(len(self._get_mso_from_model())):
-            function = self._generate_residuals(i)
-            residual = self._solve_residuals(function)
-            residuals.append(residual)
-        return residuals
+            residuals = []
+            for j in self._get_equations_for_residual(i):
+                function = self._generate_residuals(i, j)
+                residual = self._solve_residuals(function)
+                residuals.append(residual)
+            residuals_all.append(residuals)
+        return residuals_all
 
-    def _generate_residuals(self, iterator):
-        equations, selected_equation = self._prepare_equations_for_residuals(iterator)
+    def _generate_residuals(self, iterator, selected):
+        equations, selected_equation = self._prepare_equations_for_residuals(iterator, selected)
         function_name = self._generate_residuals_function(equations, selected_equation)
         return function_name
 
-    def _prepare_equations_for_residuals(self, iterator):
+    def _prepare_equations_for_residuals(self, iterator, selected_equation):
         equations = self._get_equations_for_residual(iterator)
-        selected_equation = self._get_selected_equation_for_residual(equations)
+        # selected_equation = self._get_selected_equation_for_residual(equations)
         equations_without_selected = [equation for equation in equations if equation != selected_equation]
         print(f'Equations: {equations_without_selected}')
         return equations_without_selected, selected_equation

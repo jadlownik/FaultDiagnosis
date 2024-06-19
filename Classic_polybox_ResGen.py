@@ -15,7 +15,7 @@ def Classic_polybox_ResGen(z,state,params,Ts):
         r[k], state = Classic_polybox_ResGen( zk, state, params, Ts )
 
     State is a dictionary with the keys: 
-    File generated Wed Jun 19 21:59:18 2024
+    File generated Wed Jun 19 22:16:45 2024
     """
     def Classic_polybox_ResGen_core(z, state, params, Ts):
         # Known signals
@@ -28,17 +28,17 @@ def Classic_polybox_ResGen(z,state,params,Ts):
 
         # Residual generator body
         g = u_g # e12
-        f = u_f # e11
         e = u_e # e10
         d = u_d # e9
         b = u_b # e7
         y = b*d # e2
-        x = f - y # e4
         z = g - y # e5
+        c = z/e # e3
         a = u_a # e6
-        c = x/a # e1
+        x = a*c # e1
+        f = x + y # e4
          
-        r = c*e - z # e3
+        r = -f + u_f # e11
 
         return (r, state)
 
