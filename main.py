@@ -10,11 +10,15 @@ variables = reader.read(f'{PATH_EXAMPLES}example_1.txt')
 if reader.varaibles_ok():
     model = DiagnosisModel()
     model.create(variables)
+    title = variables[TITLE]
     all_minimal_conflicts = model.get_all_minimal_conflicts()
     all_minimal_diagnosis = model.get_all_minimal_diagnosis()
-    residuals = model._get_residuals()
+    minimal_conflicts = model.get_minimal_conflicts()
+    minimal_diagnosis = model.get_minimal_diagnosis()
+    gpt_minimal_conflicts = []
+    gpt_minimal_diagnosis = []
 
-    print(f'Solution for {variables[TITLE]}:')
-    print_service.print_list(all_minimal_conflicts, 'All minimal conflicts:')
-    print_service.print_list(all_minimal_diagnosis, 'All minimal diagnosis:')
-    print_service.print_list(residuals, 'Residuals:')
+    print_service.print_table(title,
+                              all_minimal_conflicts, all_minimal_diagnosis,
+                              minimal_conflicts, minimal_diagnosis,
+                              gpt_minimal_conflicts, gpt_minimal_diagnosis)

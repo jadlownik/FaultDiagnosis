@@ -88,7 +88,7 @@ class MinimalHittingSetsProblem(abc.ABC):
         if sort:
             # noinspection PyTypeChecker
             self._working_list_of_conflicts = sorted(self.list_of_conflicts,
-                                                    key=len)
+                                                     key=len)
         else:
             if isinstance(self.list_of_conflicts, Generator):
                 self.list_of_conflicts = list(self.list_of_conflicts)
