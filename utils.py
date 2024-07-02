@@ -13,3 +13,7 @@ def format_data(data):
 
 def get_observations(data):
     return [f"{char} = {value}" for char, value in zip(data[KNOWN_VARIABLES], data[OBSERVATIONS])]
+
+
+def are_lists_on_list(data):
+    return isinstance(data, list) and all(isinstance(elem, list) for elem in data)

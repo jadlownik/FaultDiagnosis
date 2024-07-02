@@ -3,7 +3,6 @@ import sympy as sym
 import importlib
 import re
 import os
-from minihit.hsdag import HsDag
 from config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
                    PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, \
                    TITLE, OBSERVATIONS
@@ -105,12 +104,10 @@ class DiagnosisModel:
         return self._get_conflicts(residulas)
 
     def _get_all_minimal_diagnosis(self):
-        data = HsDag(self._get_all_minimal_conflicts())
-        return self._get_diagnosis(data)
+        return self._get_diagnosis(self._get_all_minimal_conflicts())
 
     def _get_minimal_diagnosis(self):
-        data = HsDag(self._get_minimal_conflicts())
-        return self._get_diagnosis(data)
+        return self._get_diagnosis(self._get_minimal_conflicts())
 
     def _get_conflicts(self, data):
         conflicts = self._model_definition[FAULTS]
@@ -123,13 +120,28 @@ class DiagnosisModel:
         result.sort(key=lambda x: (len(x), x))
         return result
 
-    def _get_diagnosis(self, data):
-        data.solve(True, False)
-        result = list(data.generate_minimal_hitting_sets())
-        for i, hitting_set in enumerate(result):
-            result[i] = sorted(hitting_set)
-        result.sort(key=lambda x: (len(x), x))
-        return result
+    def _get_diagnosis(self, minimal_conflicts):
+        diagnosis_collection = [set()]
+        for conflict in minimal_conflicts:
+            current_diagnoses = list(diagnosis_collection)
+            for diagnosis in current_diagnoses:
+                if diagnosis.isdisjoint(conflict):
+                    diagnosis_collection = self._update_diagnosis(diagnosis, diagnosis_collection, conflict)
+        for i, hitting_set in enumerate(diagnosis_collection):
+            diagnosis_collection[i] = sorted(hitting_set)
+        diagnosis_collection.sort(key=lambda x: (len(x), x))
+        return [list(hit_set) for hit_set in diagnosis_collection]
+
+    def _update_diagnosis(self, diagnosis, diagnosis_collection, conflict):
+        diagnosis_collection = [c for c in diagnosis_collection if c != diagnosis]
+        new_diagnoses = []
+        for component in conflict:
+            new_diagnosis = diagnosis.union({component})
+            new_diagnoses.append(new_diagnosis)
+        diagnosis_collection.extend(new_diagnoses)
+        diagnosis_collection = list(set(tuple(sorted(c)) for c in diagnosis_collection))
+        diagnosis_collection = [set(c) for c in diagnosis_collection]
+        return diagnosis_collection
 
     def _get_mso_from_model(self):
         return self._model.MSO()
@@ -141,7 +153,7 @@ class DiagnosisModel:
         fsm = self._get_fsm_from_mso()
         filtered_fsm = []
         for fsm_row in fsm:
-            if any(element == 0 for element in fsm_row):
+            if any(element == 0 for element in fsm_row) or len(fsm) == 1:
                 filtered_fsm.append(fsm_row)
         return filtered_fsm
 
@@ -150,7 +162,7 @@ class DiagnosisModel:
         mso = self._get_mso_from_model()
         filtered_mso = []
         for i, fsm_row in enumerate(fsm):
-            if any(element == 0 for element in fsm_row):
+            if any(element == 0 for element in fsm_row) or len(fsm) == 1:
                 filtered_mso.append(mso[i])
         return filtered_mso
 
@@ -167,18 +179,18 @@ class DiagnosisModel:
             relations.append(relation)
 
     def _transform_expression_logic(self, expression):
-        pattern = re.compile(r'(.+?)\s*=\s*(\S+)\s*\((\S+)\)')
+        pattern = re.compile(r'(\S+):\s*(.+?)\s*=\s*(\S+)')
         match = pattern.match(expression)
         if match:
-            left_side = match.group(1).strip()
-            result = match.group(2).strip()
-            fault = match.group(3)
+            fault = match.group(1).strip()
+            left_side = match.group(2).strip().replace('&', 'and').replace("|", "or")
+            result = match.group(3)
             transformed_expression = self._transform_to_symbolic(
-                f"-{result}+{left_side}+{PREFIX_FAULT}{fault}")
+                f"-{result} + ({left_side}) + {PREFIX_FAULT}{fault}")
             return transformed_expression
 
     def _transform_expression_variable(self, variable):
-        transformed_expression = self._transform_to_symbolic(f"-{variable}+{PREFIX_SIGNAL}{variable}")
+        transformed_expression = self._transform_to_symbolic(f"-{variable} + {PREFIX_SIGNAL}{variable}")
         return transformed_expression
 
     def _transform_to_symbolic(self, equation):

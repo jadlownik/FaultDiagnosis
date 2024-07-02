@@ -1,0 +1,9 @@
+title = 'Three And'
+x = ['a', 'b', 'c', 'd', 'e', 'x', 'y']
+f = ['AND1', 'AND2', 'AND3']
+z = ['a', 'b', 'c', 'd', 'e']
+r = ['AND1: a & b = x',
+     'AND2: c & d = y',
+     'AND3: x & y = e']
+o = [[1, 1, 1, 1, 1],
+     [1, 1, 1, 1, 0]]
