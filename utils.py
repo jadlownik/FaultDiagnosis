@@ -12,7 +12,7 @@ def format_data(data):
 
 
 def get_observations(data):
-    return [f"{char} = {value}" for char, value in zip(data[KNOWN_VARIABLES], data[OBSERVATIONS])]
+    return [f"{variable} = {value}" for variable, value in zip(data[KNOWN_VARIABLES], data[OBSERVATIONS])]
 
 
 def are_lists_on_list(data):

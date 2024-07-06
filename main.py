@@ -1,14 +1,17 @@
 from reader import ExampleReader
 from diagnosismodel import DiagnosisModel
 from printservice import PrintService
+from folservice import FOLService
 from utils import format_data, get_observations, are_lists_on_list
-from config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS
+from config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, FAULTS, KNOWN_VARIABLES
+
 
 iterator = 1
 collected_data = []
 
 reader = ExampleReader()
 print_service = PrintService()
+fol_service = FOLService()
 
 
 def generate_single_row(variables):
@@ -23,7 +26,10 @@ def generate_single_row(variables):
     all_minimal_diagnosis = model.get_all_minimal_diagnosis()
     minimal_conflicts = model.get_minimal_conflicts()
     minimal_diagnosis = model.get_minimal_diagnosis()
-    gpt_minimal_conflicts = []
+    gpt_minimal_conflicts = fol_service.convert_to_FOL(variables[EQUATIONS],
+                                                       variables[FAULTS],
+                                                       variables[KNOWN_VARIABLES],
+                                                       variables[OBSERVATIONS])
     gpt_minimal_diagnosis = []
 
     formatted_equations = format_data(rels)
@@ -32,7 +38,7 @@ def generate_single_row(variables):
     formatted_all_minimal_diagnosis = format_data(all_minimal_diagnosis)
     formatted_minimal_conflicts = format_data(minimal_conflicts)
     formatted_minimal_diagnosis = format_data(minimal_diagnosis)
-    formatted_gpt_minimal_conflicts = format_data(gpt_minimal_conflicts)
+    formatted_gpt_minimal_conflicts = gpt_minimal_conflicts
     formatted_gpt_minimal_diagnosis = format_data(gpt_minimal_diagnosis)
 
     row = [
