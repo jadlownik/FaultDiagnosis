@@ -137,8 +137,10 @@ class DiagnosisModel:
         new_diagnoses = []
         for component in conflict:
             new_diagnosis = diagnosis.union({component})
-            new_diagnoses.append(new_diagnosis)
+            if not any(new_diagnosis > existing for existing in diagnosis_collection):
+                new_diagnoses.append(new_diagnosis)
         diagnosis_collection.extend(new_diagnoses)
+        diagnosis_collection = [d for d in diagnosis_collection if not any(d > n_d for n_d in new_diagnoses)]
         diagnosis_collection = list(set(tuple(sorted(c)) for c in diagnosis_collection))
         diagnosis_collection = [set(c) for c in diagnosis_collection]
         return diagnosis_collection
@@ -183,14 +185,17 @@ class DiagnosisModel:
         match = pattern.match(expression)
         if match:
             fault = match.group(1).strip()
-            left_side = match.group(2).strip().replace('&', 'and').replace("|", "or")
+            left_side = match.group(2)\
+                             .strip() \
+                             .replace('&', 'and') \
+                             .replace('|', 'or')
             result = match.group(3)
             transformed_expression = self._transform_to_symbolic(
-                f"-{result} + ({left_side}) + {PREFIX_FAULT}{fault}")
+                f'-{result} + ({left_side}) + {PREFIX_FAULT}{fault}')
             return transformed_expression
 
     def _transform_expression_variable(self, variable):
-        transformed_expression = self._transform_to_symbolic(f"-{variable} + {PREFIX_SIGNAL}{variable}")
+        transformed_expression = self._transform_to_symbolic(f'-{variable} + {PREFIX_SIGNAL}{variable}')
         return transformed_expression
 
     def _transform_to_symbolic(self, equation):
@@ -224,7 +229,7 @@ class DiagnosisModel:
 
     def _generate_residual_function(self, equations, selected_equation, iterator):
         gamma = self._model.Matching(equations)
-        function_name = f'{self._variables[TITLE].replace(" ", "_")}_ResGen{iterator}'
+        function_name = f'{self._variables[TITLE].replace(' ', '_')}_ResGen{iterator}'
         self._model.SeqResGen(gamma, selected_equation, f'{function_name}')
         return function_name
 

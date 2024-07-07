@@ -1,3 +1,7 @@
+from config import SD_ARITHMETIC_ADD, SD_ARITHMETIC_MULT, SD_LOGIC_AND, SD_LOGIC_OR, \
+                   SD_INPUT, SD_OUTPUT
+
+
 class FOLService:
     def __init__(self):
         pass
@@ -12,32 +16,42 @@ class FOLService:
         return fol
 
     def _get_components(self, faults):
-        return "COMPS = " + "{ " + ", ".join(faults) + " }\n"
+        return 'COMPS = ' + '{ ' + ', '.join(faults) + ' } '
 
     def _get_system_description(self, equations):
-        system_description = ""
-        system_description = self._get_system_description_introduction(system_description)
-        system_description += "\n"
+        system_description = 'SD = { '
+        system_description = self._get_system_description_introduction(system_description, equations)
         system_description = self._get_system_description_components(system_description, equations)
-        system_description += "\n"
         system_description = self._get_system_description_equations(system_description, equations)
-        system_description += "\n"
         return system_description
 
-    def _get_system_description_introduction(self, system_description):
-        system_description += "SD = { ADD(x) ∧ ¬AB(x) ⇒ Output(x) = Input1(x) + Input2(x),\n"
-        system_description += "MULT(x) ∧ ¬AB(x) ⇒ Output(x) = Input1(x) × Input2(x),"
+    def _get_system_description_introduction(self, system_description, equations):
+        sd_desc = []
+        for equation in equations:
+            if '+' in equation and SD_ARITHMETIC_ADD not in sd_desc:
+                sd_desc.append(SD_ARITHMETIC_ADD)
+            if '*' in equation and SD_ARITHMETIC_MULT not in sd_desc:
+                sd_desc.append(SD_ARITHMETIC_MULT)
+            if '&' in equation and SD_LOGIC_AND not in sd_desc:
+                sd_desc.append(SD_LOGIC_AND)
+            if '|' in equation and SD_LOGIC_OR not in sd_desc:
+                sd_desc.append(SD_LOGIC_OR)
+        system_description += ', '.join(sd_desc) + ', '
         return system_description
 
-    def _get_system_description_components(self, system_description, relations):
+    def _get_system_description_components(self, system_description, equations):
         sd_comps = []
-        for i in relations:
-            if "*" in i:
-                sd_comps.append(f"MULT({i.split(':')[0].strip()})")
-            elif "+" in i:
-                sd_comps.append(f"ADD({i.split(':')[0].strip()})")
+        for equation in equations:
+            if '*' in equation:
+                sd_comps.append(f'MULT({equation.split(':')[0].strip()})')
+            elif '+' in equation:
+                sd_comps.append(f'ADD({equation.split(':')[0].strip()})')
+            elif '&' in equation:
+                sd_comps.append(f'ANDgate({equation.split(':')[0].strip()})')
+            elif '|' in equation:
+                sd_comps.append(f'ORgate({equation.split(':')[0].strip()})')
 
-        system_description += ", ".join(sd_comps) + ", "
+        system_description += ', '.join(sd_comps) + ', '
         return system_description
 
     def _get_system_description_equations(self, system_description, equations):
@@ -46,18 +60,21 @@ class FOLService:
         relations = []
 
         for eq in equations:
-            equation = eq.replace(" ", "")
+            equation = eq.replace(' ', '')
             parts = equation.split(':')
             component = parts[0]
             expression = parts[1]
 
             if '=' in expression:
                 left, right = expression.split('=')
-                terms = left.split('+') if '+' in left else left.split('*')
+                terms = left.split('+') if '+' in left else \
+                    left.split('*') if '*' in left else \
+                    left.split('&') if '&' in left else \
+                    left.split('|')
 
                 for i, term in enumerate(terms):
                     if term in outputs:
-                        relations.append(f'Output({outputs[term]}) = Input{i+1}({component})')
+                        relations.append(f'{SD_OUTPUT}({outputs[term]}) = {SD_INPUT}{i+1}({component})')
 
                 outputs[right] = component
                 inputs_sources[component] = (terms), right
@@ -68,18 +85,19 @@ class FOLService:
                     if blk_key != key and \
                        input in blk_inputs and \
                        self._is_output_not_input_for_any_equation(blk_output, inputs_sources):
-                        relation = f"Input{i+1}({key}) = Input{blk_inputs.index(input)+1}({blk_key})"
-                        rev_relation = f"Input{blk_inputs.index(input)+1}({blk_key}) = Input{i+1}({key})"
+                        relation = f'{SD_INPUT}{i+1}({key}) = \
+                                     {SD_INPUT}{blk_inputs.index(input)+1}({blk_key})'
+                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input)+1}({blk_key}) = \
+                                         {SD_INPUT}{i+1}({key})'
                         if relation not in relations and rev_relation not in relations:
                             relations.append(relation)
 
-        system_description += ", ".join(relations) + " }"
+        system_description += ', '.join(relations) + ' } '
         return system_description
 
     def _is_output_not_input_for_any_equation(self, output, all_inputs):
         for key, (inputs, outputs) in all_inputs.items():
-            nok = output in inputs
-            if nok:
+            if output in inputs:
                 return True
         return False
 
@@ -87,7 +105,7 @@ class FOLService:
         obs = []
         obs_dict = self._get_observations_dictionary(variables, observations)
         for eq in equations:
-            equation = eq.replace(" ", "")
+            equation = eq.replace(' ', '')
             parts = equation.split(':')
             component = parts[0]
             expression = parts[1]
@@ -98,12 +116,12 @@ class FOLService:
 
                 for i, input in enumerate(inputs_variables):
                     if input in variables:
-                        obs.append(f'Input{i+1}({component}) = {obs_dict[input]}')
+                        obs.append(f'{SD_INPUT}{i+1}({component}) = {obs_dict[input]}')
 
                 if output in variables:
-                    obs.append(f'Output({component}) = {obs_dict[output]}')
+                    obs.append(f'{SD_OUTPUT}({component}) = {obs_dict[output]}')
 
-        return "OBS = { " + ", ".join(obs) + " }"
+        return 'OBS = { ' + ', '.join(obs) + ' }'
 
     def _get_observations_dictionary(self, variables, observations):
         return {variable: value for variable, value in zip(variables, observations)}
