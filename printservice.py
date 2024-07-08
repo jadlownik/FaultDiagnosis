@@ -27,6 +27,7 @@ class PrintService:
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']
 
         data.pop(-1)
+
         formatted_table = tabulate(data, headers=headers, tablefmt='pretty')
 
         with open(filename, 'w',  encoding='utf-8') as file:
