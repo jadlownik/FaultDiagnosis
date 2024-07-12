@@ -57,7 +57,7 @@ def generate_single_row(variables, iterator):
                                               variables[FAULTS],
                                               variables[KNOWN_VARIABLES],
                                               variables[OBSERVATIONS])
-    gpt_minimal_conflicts, gpt_minimal_diagnosis = [], [] # gpt_model.get_solution(fol_notation)
+    gpt_minimal_conflicts, gpt_minimal_diagnosis = gpt_model.get_solution(fol_notation)
 
     formatted_equations = format_data(rels)
     formatted_observations = format_data(obs)
