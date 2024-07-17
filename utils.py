@@ -1,4 +1,4 @@
-from config import OBSERVATIONS, KNOWN_VARIABLES
+from config.config import OBSERVATIONS, KNOWN_VARIABLES
 
 
 def format_data(data):
@@ -12,8 +12,10 @@ def format_data(data):
 
 
 def get_observations(data):
-    return [f'{variable} = {value}' for variable, value in zip(data[KNOWN_VARIABLES], data[OBSERVATIONS])]
+    return [f'{variable} = {value}' for variable, value in
+            zip(data[KNOWN_VARIABLES], data[OBSERVATIONS])]
 
 
 def are_lists_on_list(data):
-    return isinstance(data, list) and all(isinstance(elem, list) for elem in data)
+    return isinstance(data, list) \
+           and all(isinstance(elem, list) for elem in data)

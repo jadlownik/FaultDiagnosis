@@ -1,10 +1,10 @@
-from config import KNOWN_VARIABLES, FAULTS, UNKNOWN_VARIABLES, \
-                    EQUATIONS, OBSERVATIONS, PATH_EXAMPLES
+from config.config import KNOWN_VARIABLES, FAULTS, UNKNOWN_VARIABLES, \
+                          EQUATIONS, OBSERVATIONS, PATH_EXAMPLES
 import os
 import re
 
 
-class ExampleReader:
+class ReaderService:
     _variables = None
 
     def get_all_examples(self):

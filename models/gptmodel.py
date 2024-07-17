@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-from config import OPENAI_API_MODEL, GPT_SYSTEM_DESC, GPT_EXAMPLES, \
+from config.config import OPENAI_API_MODEL, GPT_SYSTEM_DESC, GPT_EXAMPLES, \
                    JSON_KEY_CONFLICTS, JSON_KEY_DIAGNOSIS
 
 
@@ -12,7 +12,9 @@ class GPTModel:
         self._client = OpenAI()
 
     def get_solution(self, fol):
-        self._messages = [{'role': 'system', 'content': f'{GPT_SYSTEM_DESC}\n{GPT_EXAMPLES}'}]
+        start_message = f'{GPT_SYSTEM_DESC}\
+                          {GPT_EXAMPLES}'
+        self._messages = [{'role': 'system', 'content': start_message}]
         self._messages.append({'role': 'user', 'content': fol})
         response = self._client.chat.completions.create(
             model=f'{OPENAI_API_MODEL}',

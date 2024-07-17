@@ -1,4 +1,5 @@
-from config import SD_ARITHMETIC_ADD, SD_ARITHMETIC_MULT, SD_LOGIC_AND, SD_LOGIC_OR, \
+from config.config import SD_ARITHMETIC_ADD, SD_ARITHMETIC_MULT, SD_LOGIC_AND, SD_LOGIC_OR, \
+                   SD_LOGIC_NAND, SD_LOGIC_NOR, SD_LOGIC_NOT, SD_LOGIC_XOR, SD_LOGIC_XNOR, \
                    SD_INPUT, SD_OUTPUT
 
 
@@ -30,14 +31,27 @@ class FOLService:
         for equation in equations:
             if '+' in equation and SD_ARITHMETIC_ADD not in sd_desc:
                 sd_desc.append(SD_ARITHMETIC_ADD)
-            if '*' in equation and SD_ARITHMETIC_MULT not in sd_desc:
+            elif '*' in equation and SD_ARITHMETIC_MULT not in sd_desc:
                 sd_desc.append(SD_ARITHMETIC_MULT)
-            if '&' in equation and SD_LOGIC_AND not in sd_desc:
+            elif '~^' in equation and SD_LOGIC_XNOR not in sd_desc:
+                sd_desc.append(SD_LOGIC_XNOR)
+            elif '~&' in equation and SD_LOGIC_NAND not in sd_desc:
+                sd_desc.append(SD_LOGIC_NAND)
+            elif '~|' in equation and SD_LOGIC_NOR not in sd_desc:
+                sd_desc.append(SD_LOGIC_NOR)
+            elif '~' in equation and SD_LOGIC_NOT not in sd_desc:
+                sd_desc.append(SD_LOGIC_NOT)
+            elif '&' in equation and SD_LOGIC_AND not in sd_desc:
                 sd_desc.append(SD_LOGIC_AND)
-            if '|' in equation and SD_LOGIC_OR not in sd_desc:
+            elif '|' in equation and SD_LOGIC_OR not in sd_desc:
                 sd_desc.append(SD_LOGIC_OR)
+            elif '^' in equation and SD_LOGIC_XOR not in sd_desc:
+                sd_desc.append(SD_LOGIC_XOR)
         system_description += ', '.join(sd_desc) + ', '
         return system_description
+
+    def _get_system_description_introduction_element():
+        pass
 
     def _get_system_description_components(self, system_description, equations):
         sd_comps = []
@@ -46,10 +60,20 @@ class FOLService:
                 sd_comps.append(f'MULT({equation.split(':')[0].strip()})')
             elif '+' in equation:
                 sd_comps.append(f'ADD({equation.split(':')[0].strip()})')
+            elif '~^' in equation:
+                sd_comps.append(f'XNORgate({equation.split(':')[0].strip()})')
+            elif '~&' in equation:
+                sd_comps.append(f'NANDgate({equation.split(':')[0].strip()})')
+            elif '~|' in equation:
+                sd_comps.append(f'NORgate({equation.split(':')[0].strip()})')
+            elif '~' in equation:
+                sd_comps.append(f'NOTgate({equation.split(':')[0].strip()})')
             elif '&' in equation:
                 sd_comps.append(f'ANDgate({equation.split(':')[0].strip()})')
             elif '|' in equation:
                 sd_comps.append(f'ORgate({equation.split(':')[0].strip()})')
+            elif '^' in equation:
+                sd_comps.append(f'XORgate({equation.split(':')[0].strip()})')
 
         system_description += ', '.join(sd_comps) + ', '
         return system_description
@@ -69,8 +93,13 @@ class FOLService:
                 left, right = expression.split('=')
                 terms = left.split('+') if '+' in left else \
                     left.split('*') if '*' in left else \
+                    left.split('~^') if '~^' in left else \
+                    left.split('~&') if '~&' in left else \
+                    left.split('~|') if '~|' in left else \
                     left.split('&') if '&' in left else \
-                    left.split('|')
+                    left.split('|') if '|' in left else \
+                    left.split('^') if '^' in left else \
+                    left.split('~')
 
                 for i, term in enumerate(terms):
                     if term in outputs:
@@ -85,10 +114,8 @@ class FOLService:
                     if blk_key != key and \
                        input in blk_inputs and \
                        self._is_output_not_input_for_any_equation(blk_output, inputs_sources):
-                        relation = f'{SD_INPUT}{i+1}({key}) = \
-                                     {SD_INPUT}{blk_inputs.index(input)+1}({blk_key})'
-                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input)+1}({blk_key}) = \
-                                         {SD_INPUT}{i+1}({key})'
+                        relation = f'{SD_INPUT}{i+1}({key}) = {SD_INPUT}{blk_inputs.index(input)+1}({blk_key})'
+                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input)+1}({blk_key}) = {SD_INPUT}{i+1}({key})'
                         if relation not in relations and rev_relation not in relations:
                             relations.append(relation)
 
@@ -112,7 +139,15 @@ class FOLService:
 
             if '=' in expression:
                 inputs, output = expression.split('=')
-                inputs_variables = inputs.split('+') if '+' in inputs else inputs.split('*')
+                inputs_variables = inputs.split('+') if '+' in inputs else \
+                    inputs.split('*') if '*' in inputs else \
+                    inputs.split('~^') if '~^' in inputs else \
+                    inputs.split('~&') if '~&' in inputs else \
+                    inputs.split('~|') if '~|' in inputs else \
+                    inputs.split('&') if '&' in inputs else \
+                    inputs.split('|') if '|' in inputs else \
+                    inputs.split('^') if '^' in inputs else \
+                    inputs.split('~')
 
                 for i, input in enumerate(inputs_variables):
                     if input in variables:

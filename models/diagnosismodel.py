@@ -3,7 +3,7 @@ import sympy as sym
 import importlib
 import re
 import os
-from config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
+from config.config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
                    PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, \
                    TITLE, OBSERVATIONS
 
@@ -187,11 +187,24 @@ class DiagnosisModel:
             fault = match.group(1).strip()
             left_side = match.group(2)\
                              .strip() \
+                             .replace('~^', 'xnor') \
+                             .replace('~&', 'nand') \
+                             .replace('~|', 'nor') \
                              .replace('&', 'and') \
-                             .replace('|', 'or')
+                             .replace('|', 'or') \
+                             .replace('~', 'not') \
+                             .replace('^', 'xor')
+            left_side = f'({left_side})'
             result = match.group(3)
+            if 'nand' in left_side:
+                left_side = f'(1 - {left_side.replace('nand', 'and')})'
+            elif 'nor' in left_side:
+                left_side = f'(1 - {left_side.replace('nor', 'or')})'
+            elif 'xnor' in left_side:
+                left_side = f'(1 - {left_side.replace('xnor', 'xor')})'
+
             transformed_expression = self._transform_to_symbolic(
-                f'-{result} + ({left_side}) + {PREFIX_FAULT}{fault}')
+                f'-{result} + {left_side} + {PREFIX_FAULT}{fault}')
             return transformed_expression
 
     def _transform_expression_variable(self, variable):
