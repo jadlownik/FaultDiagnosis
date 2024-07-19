@@ -3,9 +3,10 @@ import sympy as sym
 import importlib
 import re
 import os
+from .utils import external_functions
 from config.config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
                    PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, \
-                   TITLE, OBSERVATIONS
+                   OBSERVATIONS
 
 
 class DiagnosisModel:
@@ -13,6 +14,14 @@ class DiagnosisModel:
     _model_definition = None
     _model = None
     _logic_equations = -1
+
+    AND = sym.Function('AND')
+    OR = sym.Function('OR')
+    NOT = sym.Function('NOT')
+    XOR = sym.Function('XOR')
+    NOR = sym.Function('NOR')
+    NAND = sym.Function('NAND')
+    XNOR = sym.Function('XNOR')
 
     def __init__(self):
         pass
@@ -185,23 +194,29 @@ class DiagnosisModel:
         match = pattern.match(expression)
         if match:
             fault = match.group(1).strip()
-            left_side = match.group(2)\
-                             .strip() \
-                             .replace('~^', 'xnor') \
-                             .replace('~&', 'nand') \
-                             .replace('~|', 'nor') \
-                             .replace('&', 'and') \
-                             .replace('|', 'or') \
-                             .replace('~', 'not') \
-                             .replace('^', 'xor')
-            left_side = f'({left_side})'
+            left_side = match.group(2).strip()
+            variables = left_side.split('~^') if '~^' in left_side else \
+                left_side.split('~&') if '~&' in left_side else \
+                left_side.split('~|') if '~|' in left_side else \
+                left_side.split('&') if '&' in left_side else \
+                left_side.split('|') if '|' in left_side else \
+                left_side.split('^') if '^' in left_side else \
+                left_side.split('~')
             result = match.group(3)
-            if 'nand' in left_side:
-                left_side = f'(1 - {left_side.replace('nand', 'and')})'
-            elif 'nor' in left_side:
-                left_side = f'(1 - {left_side.replace('nor', 'or')})'
-            elif 'xnor' in left_side:
-                left_side = f'(1 - {left_side.replace('xnor', 'xor')})'
+            if '~^' in left_side:
+                left_side = f'XNOR({', '.join(variables)})'
+            elif '~&' in left_side:
+                left_side = f'NAND({', '.join(variables)})'
+            elif '~|' in left_side:
+                left_side = f'NOR({', '.join(variables)})'
+            elif '&' in left_side:
+                left_side = f'AND({', '.join(variables)})'
+            elif '|' in left_side:
+                left_side = f'OR({', '.join(variables)})'
+            elif '^' in left_side:
+                left_side = f'XOR({', '.join(variables)})'
+            elif '~' in left_side:
+                left_side = f'NOT({', '.join(variables)})'
 
             transformed_expression = self._transform_to_symbolic(
                 f'-{result} + {left_side} + {PREFIX_FAULT}{fault}')
@@ -242,8 +257,9 @@ class DiagnosisModel:
 
     def _generate_residual_function(self, equations, selected_equation, iterator):
         gamma = self._model.Matching(equations)
-        function_name = f'{self._variables[TITLE].replace(' ', '_')}_ResGen{iterator}'
-        self._model.SeqResGen(gamma, selected_equation, f'{function_name}')
+        function_name = f'ResGen{iterator}'
+        self._model.SeqResGen(gamma, selected_equation, f'{function_name}',
+                              user_functions=external_functions, external_src=['models.utils.py'])
         return function_name
 
     def _solve_residual(self, function_name):
