@@ -5,9 +5,9 @@ from services.printservice import PrintService
 from services.folservice import FOLService
 from models.diagnosismodel import DiagnosisModel
 from models.gptmodel import GPTModel
-from utils import format_data, get_observations, are_lists_on_list
+from utils import format_data, get_observations, are_lists_on_list, equations_format_for_gpt_mso
 from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, FAULTS, \
-                   KNOWN_VARIABLES, PRINT_TO_CONSOLE
+                   KNOWN_VARIABLES, PRINT_TO_CONSOLE, UNKNOWN_VARIABLES
 
 
 class FaultDiagnosis:
@@ -77,12 +77,15 @@ class FaultDiagnosis:
         all_minimal_diagnosis = model.get_all_minimal_diagnosis()
         minimal_conflicts = model.get_minimal_conflicts()
         minimal_diagnosis = model.get_minimal_diagnosis()
-        fol_notation = self._fol_service.convert_to_FOL(variables[EQUATIONS],
-                                                        variables[FAULTS],
-                                                        variables[KNOWN_VARIABLES],
-                                                        variables[OBSERVATIONS])
-
-        gpt_minimal_conflicts, gpt_minimal_diagnosis = [], []  # self._gpt_model.get_solution(fol_notation)
+        # fol_notation = self._fol_service.convert_to_FOL(variables[EQUATIONS],
+        #                                                 variables[FAULTS],
+        #                                                 variables[KNOWN_VARIABLES],
+        #                                                 variables[OBSERVATIONS])
+        mso_unknown = sorted(list(set(variables[UNKNOWN_VARIABLES]) - set(variables[KNOWN_VARIABLES])))
+        mso_format = equations_format_for_gpt_mso(mso_unknown, rels)
+        mso_input_data = f'equations_part1 = {mso_format}'
+        gpt_input_data = f'equations_part1 = {mso_format}, equations_part2 = {rels}, data = {obs}'
+        gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(mso_input_data, gpt_input_data)
 
         formatted_equations = format_data(rels)
         formatted_observations = format_data(obs)
@@ -115,6 +118,7 @@ class FaultDiagnosis:
         self._collected_data.append(separator_row)
 
     def _init_print_settings(self):
+        return 
         self._enable_print = sys.stdout
         sys.stdout = open(os.devnull, 'w')
         self._disable_print = sys.stdout

@@ -175,12 +175,15 @@ class DiagnosisModel:
         for i, fsm_row in enumerate(fsm):
             if any(element == 0 for element in fsm_row) or len(fsm) == 1:
                 filtered_mso.append(mso[i])
+        self.gpt_mso = [[item for item in sublist if item < self._equations_logic_count]
+                        for sublist in filtered_mso]
         return filtered_mso
 
     def _create_relations_for_logic(self, relations, equations):
         for equation in equations:
             relation = self._transform_expression_logic(equation)
             relations.append(relation)
+        self._equations_logic_count = len(relations)
 
     def _create_relations_for_known_variables(self, relations, known_variables, unknown_variables):
         common_elements = set(unknown_variables) & set(known_variables)
