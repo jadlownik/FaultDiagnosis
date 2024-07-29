@@ -1,29 +1,29 @@
-def AND(a, b):
-    return int(a & b)
+def AND(*args):
+    return int(all(args))
 
 
-def OR(a, b):
-    return int(a | b)
+def OR(*args):
+    return int(any(args))
 
 
 def NOT(a):
-    return int(1 - a)
+    return int(not a)
 
 
-def XOR(a, b):
-    return int(a + b - 2 * a * b)
+def XOR(*args):
+    return int(sum(args) % 2)
 
 
-def NOR(a, b):
-    return int(1 - (OR(a, b)))
+def NOR(*args):
+    return int(not any(args))
 
 
-def NAND(a, b):
-    return int(1 - (AND(a, b)))
+def NAND(*args):
+    return int(not all(args))
 
 
-def XNOR(a, b):
-    return int(1 - (XOR(a, b)))
+def XNOR(*args):
+    return int(sum(args) % 2 == 0)
 
 
 external_functions = {
@@ -33,5 +33,4 @@ external_functions = {
     'XOR': 'XOR',
     'NOR': 'NOR',
     'NAND': 'NAND',
-    'XNOR': 'XNOR'
-    }
+    'XNOR': 'XNOR'}

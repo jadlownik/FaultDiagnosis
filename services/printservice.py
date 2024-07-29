@@ -11,6 +11,8 @@ class PrintService:
     def print_table(self, data):
         headers = ['Lp.', 'Title',
                    'Equations', 'Observations',
+                   'All minimal conflicts FDT', 'All minimal diagnosis FDT',
+                   'Minimal conflicts FDT', 'Minimal diagnosis FDT',
                    'All minimal conflicts', 'All minimal diagnosis',
                    'Minimal conflicts', 'Minimal diagnosis',
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']
@@ -22,6 +24,8 @@ class PrintService:
     def save_table_to_file(self, data, filename):
         headers = ['Lp.', 'Title',
                    'Equations', 'Observations',
+                   'All minimal conflicts FDT', 'All minimal diagnosis FDT',
+                   'Minimal conflicts FDT', 'Minimal diagnosis FDT',
                    'All minimal conflicts', 'All minimal diagnosis',
                    'Minimal conflicts', 'Minimal diagnosis',
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']

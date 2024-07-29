@@ -1,18 +1,21 @@
 import faultdiagnosistoolbox as fdt
-import sympy as sym
 import importlib
+import sympy as sym
+import random
 import re
 import os
 from .utils import external_functions
-from config.config import FAULTS, KNOWN_VARIABLES, UNKNOWN_VARIABLES, \
-                   PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, \
-                   OBSERVATIONS
+from config.config import FAULTS, KNOWN_VARIABLES, ALL_VARIABLES, \
+    PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, OBSERVATIONS
+importlib.reload(fdt)
 
 
 class DiagnosisModel:
     _variables = None
     _model_definition = None
     _model = None
+    _mso = None
+    _fsm = None
     _logic_equations = -1
 
     AND = sym.Function('AND')
@@ -28,13 +31,15 @@ class DiagnosisModel:
 
     def create(self, variables):
         self._variables = variables
-        x = self._create_unknown_variables(variables[UNKNOWN_VARIABLES])
+        x = self._create_unknown_variables(variables[ALL_VARIABLES])
         f = self._create_faults(variables[FAULTS])
         z = self._create_known_variables(variables[KNOWN_VARIABLES])
-        r = self._create_relations(variables[EQUATIONS], variables[UNKNOWN_VARIABLES],
+        r = self._create_relations(variables[EQUATIONS], variables[ALL_VARIABLES],
                                    variables[KNOWN_VARIABLES])
         self._create_model_definition(x, f, z, r)
         self._create_model()
+        self._get_mso()
+        self._get_fsm()
 
     def get_all_minimal_conflicts(self):
         if not self._model_ok:
@@ -93,11 +98,11 @@ class DiagnosisModel:
 
     def _create_model_definition(self, x, f, z, r):
         self._model_definition = {'type': 'Symbolic',
-                                  UNKNOWN_VARIABLES: x,
+                                  ALL_VARIABLES: x,
                                   FAULTS: f,
                                   KNOWN_VARIABLES: z,
                                   RELATIONS: r}
-        sym.var(self._model_definition[UNKNOWN_VARIABLES])
+        sym.var(self._model_definition[ALL_VARIABLES])
         sym.var(self._model_definition[FAULTS])
         sym.var(self._model_definition[KNOWN_VARIABLES])
 
@@ -105,8 +110,7 @@ class DiagnosisModel:
         self._model = fdt.DiagnosisModel(self._model_definition)
 
     def _get_all_minimal_conflicts(self):
-        fsm = self._get_filtered_fsm()
-        return self._get_conflicts(fsm)
+        return self._get_conflicts(self._fsm)
 
     def _get_minimal_conflicts(self):
         residulas = self._get_residuals()
@@ -154,30 +158,11 @@ class DiagnosisModel:
         diagnosis_collection = [set(c) for c in diagnosis_collection]
         return diagnosis_collection
 
-    def _get_mso_from_model(self):
-        return self._model.MSO()
+    def _get_mso(self):
+        self._mso = self._model.MTES()
 
-    def _get_fsm_from_mso(self):
-        return self._model.FSM(self._get_mso_from_model())
-
-    def _get_filtered_fsm(self):
-        fsm = self._get_fsm_from_mso()
-        filtered_fsm = []
-        for fsm_row in fsm:
-            if any(element == 0 for element in fsm_row) or len(fsm) == 1:
-                filtered_fsm.append(fsm_row)
-        return filtered_fsm
-
-    def _get_filtered_mso(self):
-        fsm = self._get_fsm_from_mso()
-        mso = self._get_mso_from_model()
-        filtered_mso = []
-        for i, fsm_row in enumerate(fsm):
-            if any(element == 0 for element in fsm_row) or len(fsm) == 1:
-                filtered_mso.append(mso[i])
-        self.gpt_mso = [[item for item in sublist if item < self._equations_logic_count]
-                        for sublist in filtered_mso]
-        return filtered_mso
+    def _get_fsm(self):
+        self._fsm = self._model.FSM(self._mso)
 
     def _create_relations_for_logic(self, relations, equations):
         for equation in equations:
@@ -222,11 +207,11 @@ class DiagnosisModel:
                 left_side = f'NOT({', '.join(variables)})'
 
             transformed_expression = self._transform_to_symbolic(
-                f'-{result} + {left_side} + {PREFIX_FAULT}{fault}')
+                f'- {result} + {left_side} + {PREFIX_FAULT}{fault}')
             return transformed_expression
 
     def _transform_expression_variable(self, variable):
-        transformed_expression = self._transform_to_symbolic(f'-{variable} + {PREFIX_SIGNAL}{variable}')
+        transformed_expression = self._transform_to_symbolic(f'- {variable} + {PREFIX_SIGNAL}{variable}')
         return transformed_expression
 
     def _transform_to_symbolic(self, equation):
@@ -234,18 +219,17 @@ class DiagnosisModel:
 
     def _get_residuals(self):
         residuals = []
-        fsm = self._get_filtered_fsm()
-        for i in range(len(self._get_filtered_mso())):
+        for i in range(len(self._mso)):
             function = self._generate_residual(i)
             residual = self._solve_residual(function)
             if residual != 0:
-                residuals.append(fsm[i])
+                residuals.append(self._fsm[i])
             self._remove_residual_function(function)
         return residuals
 
     def _generate_residual(self, iterator):
         equations, selected_equation = self._prepare_equations_for_residual(iterator)
-        function_name = self._generate_residual_function(equations, selected_equation, iterator)
+        function_name = self._generate_residual_function(equations, selected_equation)
         return function_name
 
     def _remove_residual_function(self, function):
@@ -258,10 +242,10 @@ class DiagnosisModel:
         equations_without_selected = [equation for equation in equations if equation != selected_equation]
         return equations_without_selected, selected_equation
 
-    def _generate_residual_function(self, equations, selected_equation, iterator):
+    def _generate_residual_function(self, equations, selected_equation):
         gamma = self._model.Matching(equations)
-        function_name = f'ResGen{iterator}'
-        self._model.SeqResGen(gamma, selected_equation, f'{function_name}',
+        function_name = f'ResGen{self._get_random_number()}'
+        self._model.SeqResGen(gamma, selected_equation, function_name,
                               user_functions=external_functions, external_src=['models.utils.py'])
         return function_name
 
@@ -272,7 +256,10 @@ class DiagnosisModel:
         return residual
 
     def _get_equations_for_residual(self, iterator):
-        return self._get_mso_from_model()[iterator]
+        return self._mso[iterator]
 
     def _get_selected_equation_for_residual(self, equations):
         return max(equations)
+
+    def _get_random_number(self):
+        return random.randint(0, 9999)

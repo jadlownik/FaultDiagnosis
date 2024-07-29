@@ -1,13 +1,13 @@
 import sys
 import os
+from models.smalldiagnosismodel import SmallDiagnosisModel
 from services.readerservice import ReaderService
 from services.printservice import PrintService
 from services.folservice import FOLService
 from models.diagnosismodel import DiagnosisModel
 from models.gptmodel import GPTModel
-from utils import format_data, get_observations, are_lists_on_list, equations_format_for_gpt_mso
-from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, FAULTS, \
-                   KNOWN_VARIABLES, PRINT_TO_CONSOLE, UNKNOWN_VARIABLES
+from utils import format_data, get_observations, are_lists_on_list
+from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, PRINT_TO_CONSOLE
 
 
 class FaultDiagnosis:
@@ -47,6 +47,10 @@ class FaultDiagnosis:
     def _print_results_to_console(self,
                                   formatted_equations,
                                   formatted_observations,
+                                  formatted_fdt_all_minimal_conflicts,
+                                  formatted_fdt_all_minimal_diagnosis,
+                                  formatted_fdt_minimal_conflicts,
+                                  formatted_fdt_minimal_diagnosis,
                                   formatted_all_minimal_conflicts,
                                   formatted_all_minimal_diagnosis,
                                   formatted_minimal_conflicts,
@@ -56,6 +60,10 @@ class FaultDiagnosis:
         sys.stdout = self._enable_print
         print(f'Equations:\n{formatted_equations}')
         print(f'Observations:\n{formatted_observations}')
+        print(f'All minimal conflicts FDT:\n{formatted_fdt_all_minimal_conflicts}')
+        print(f'All minimal diagnosis FDT:\n{formatted_fdt_all_minimal_diagnosis}')
+        print(f'Minimal conflicts FDT:\n{formatted_fdt_minimal_conflicts}')
+        print(f'Minimal diagnosis FDT:\n{formatted_fdt_minimal_diagnosis}')
         print(f'All minimal conflicts:\n{formatted_all_minimal_conflicts}')
         print(f'All minimal diagnosis:\n{formatted_all_minimal_diagnosis}')
         print(f'Minimal conflicts:\n{formatted_minimal_conflicts}')
@@ -68,27 +76,28 @@ class FaultDiagnosis:
     def _generate_single_row(self, variables, iterator):
         model = DiagnosisModel()
         model.create(variables)
+        fdt_all_minimal_conflicts = model.get_all_minimal_conflicts()
+        fdt_all_minimal_diagnosis = model.get_all_minimal_diagnosis()
+        fdt_minimal_conflicts = model.get_minimal_conflicts()
+        fdt_minimal_diagnosis = model.get_minimal_diagnosis()
 
-        lp = iterator
-        title = variables[TITLE]
-        rels = variables[EQUATIONS]
-        obs = get_observations(variables)
-        all_minimal_conflicts = model.get_all_minimal_conflicts()
-        all_minimal_diagnosis = model.get_all_minimal_diagnosis()
-        minimal_conflicts = model.get_minimal_conflicts()
-        minimal_diagnosis = model.get_minimal_diagnosis()
-        # fol_notation = self._fol_service.convert_to_FOL(variables[EQUATIONS],
-        #                                                 variables[FAULTS],
-        #                                                 variables[KNOWN_VARIABLES],
-        #                                                 variables[OBSERVATIONS])
-        mso_unknown = sorted(list(set(variables[UNKNOWN_VARIABLES]) - set(variables[KNOWN_VARIABLES])))
-        mso_format = equations_format_for_gpt_mso(mso_unknown, rels)
-        mso_input_data = f'equations_part1 = {mso_format}'
-        gpt_input_data = f'equations_part1 = {mso_format}, equations_part2 = {rels}, data = {obs}'
-        gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(mso_input_data, gpt_input_data)
+        small_model = SmallDiagnosisModel()
+        small_model.create(variables)
+        all_minimal_conflicts, all_minimal_diagnosis, minimal_conflicts, minimal_diagnosis = small_model.get_result()
+        # mso_unknown = sorted(list(set(variables[UNKNOWN_VARIABLES]) - set(variables[KNOWN_VARIABLES])))
+        # equations_gpt = format_equations_for_gpt(mso_unknown, rels)
+        # obs_gpt = prepare_observations(variables)
+        # gpt_input_data = f'equations = {equations_gpt}, data = {obs_gpt}'
+        # gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
 
-        formatted_equations = format_data(rels)
-        formatted_observations = format_data(obs)
+        gpt_minimal_conflicts, gpt_minimal_diagnosis = [], []
+
+        formatted_equations = format_data(variables[EQUATIONS])
+        formatted_observations = format_data(get_observations(variables))
+        formatted_fdt_all_minimal_conflicts = format_data(fdt_all_minimal_conflicts)
+        formatted_fdt_all_minimal_diagnosis = format_data(fdt_all_minimal_diagnosis)
+        formatted_fdt_minimal_conflicts = format_data(fdt_minimal_conflicts)
+        formatted_fdt_minimal_diagnosis = format_data(fdt_minimal_diagnosis)
         formatted_all_minimal_conflicts = format_data(all_minimal_conflicts)
         formatted_all_minimal_diagnosis = format_data(all_minimal_diagnosis)
         formatted_minimal_conflicts = format_data(minimal_conflicts)
@@ -98,6 +107,10 @@ class FaultDiagnosis:
 
         if PRINT_TO_CONSOLE:
             self._print_results_to_console(formatted_equations, formatted_observations,
+                                           formatted_fdt_all_minimal_conflicts,
+                                           formatted_fdt_all_minimal_diagnosis,
+                                           formatted_fdt_minimal_conflicts,
+                                           formatted_fdt_minimal_diagnosis,
                                            formatted_all_minimal_conflicts,
                                            formatted_all_minimal_diagnosis,
                                            formatted_minimal_conflicts,
@@ -106,8 +119,10 @@ class FaultDiagnosis:
                                            formatted_gpt_minimal_diagnosis)
 
         row = [
-            lp, title,
+            iterator, variables[TITLE],
             formatted_equations, formatted_observations,
+            formatted_fdt_all_minimal_conflicts, formatted_fdt_all_minimal_diagnosis,
+            formatted_fdt_minimal_conflicts, formatted_fdt_minimal_diagnosis,
             formatted_all_minimal_conflicts, formatted_all_minimal_diagnosis,
             formatted_minimal_conflicts, formatted_minimal_diagnosis,
             formatted_gpt_minimal_conflicts, formatted_gpt_minimal_diagnosis
@@ -118,7 +133,6 @@ class FaultDiagnosis:
         self._collected_data.append(separator_row)
 
     def _init_print_settings(self):
-        return 
         self._enable_print = sys.stdout
         sys.stdout = open(os.devnull, 'w')
         self._disable_print = sys.stdout

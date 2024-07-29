@@ -1,7 +1,7 @@
 PATH_EXAMPLES = 'examples\\'
 PRINT_TO_CONSOLE = True
 TITLE = 'title'
-UNKNOWN_VARIABLES = 'x'
+ALL_VARIABLES = 'x'
 FAULTS = 'f'
 KNOWN_VARIABLES = 'z'
 EQUATIONS = 'r'
@@ -137,6 +137,196 @@ GPT_EXAMPLES = (
         '</example_4>'
     '</examples>'
             )
+
+GPT_INSTRUCTIONS = '''
+Imagine your are an engineer specialized in fault diagnosis. Your task is divided to three part.
+You have to realize first part before second part, and second part before third part. 
+Use result from first part to get result for second part and use second part 
+results to get final result. Final result should be in JSON format and should consist 
+'minimal_conflicts' from second part and 'minimal_diagnoses' from third part. 
+You can use code interpreter but in the answer i want only JSON with 
+two keys 'minimal_conflicts' and 'minimal_diagnoses'. 
+<part1>
+Use 'equations_part1' as 'equations'. 
+'equations' the equations building the system in format 
+(numer of equation, equation, unkonwns in equation). 
+Generate MSO using algorithm below. 
+<algorithm> 
+Algorithm: FindMSO 
+Input: 
+    A set of equations M, which is a Proper Structurally Overdetermined (PSO) set. 
+Output: 
+    The set of all MSO (Maximally Structurally Overdetermined) sets contained in M. 
+Steps: 
+1. Initialize the Output Set: 
+    Create an empty set MMSO to store the found MSO sets. 
+2. Base Case - Check Structural Redundancy: 
+    If the structural redundancy φ(M) = 1, then M is an MSO set. Add M to MMSO. Return MMSO. 
+3. Recursive Case - Reduce the Model: 
+    If φ(M) > 1: 
+        For each equation e in M: 
+            Remove e from M to form M' = M - {e}. 
+            Compute the overdetermined part of M', denoted as (M')+. 
+            Recursively call the algorithm with (M')+: FindMSO((M')+). 
+            Union the result with MMSO. 
+
+4. Return the Result:
+    Return MMSO, which now contains all the MSO sets found.
+
+Structural Redundancy - The difference between the number of equations and the number of unknowns in the set.
+Overdetermined Part - The subset of equations in M that remains overdetermined when an equation is removed.
+Variables Connected to Equations - The set of variables present in the set of equations M
+</algorithm> 
+As the result give me the list of lists with numbers of eqautions. 
+Plaese use code interperter aand code belowe to give me right answer. 
+Remember THE SUM OF UNKONOWNS VARIABLES MUST BE ONE LESS THEN THE NUMBER OF EQUATIONS! 
+<example>
+<input>
+equations = [
+('A1', 'a + b = x02', ['x02']), 
+('M1', 'c * d = x01', ['x01']), 
+('M2', 'e * x01 = x03', ['x01', 'x03']), 
+('A2', 'x02 + x03 = x04', ['x02', 'x03', 'x04']), 
+('M3', 'f * x04 = h', ['x04']), 
+('M4', 'x04 * g = i', ['x04'])
+]
+</input>
+For equations number [0, 1, 3] we have: 
+unknowns: x01, x02. 
+number of equations: 3, 
+number of unknowns: 2, 
+number of occurrences of x01: 2, 
+number of occurrences of x02: 2. 
+<output>
+{
+"mso" = [[0, 1, 3]]
+}
+</output>
+</example>
+</part1>
+<part2>
+Use 'equations_part2' as 'equations'. 
+Use 'mso' from first part. 
+Your task is to generate equations and solve them. In 'equations', 
+all equations are numbered starting from 0. In 'mso', each list 
+consists of numbers representing the equation numbers from 
+'equations' and together they form a system of equations. 
+Each system of equations can be solved using the variable values 
+from 'data'. The solved system of equations may be inconsistent. 
+This means that the obtained result for the given variables does 
+not match the expected result, for example, 10 ≠ 12, or when from 
+two independent equations, the result for the same variable is 
+different, for example, x02 = 4, x02 = 6, 4 ≠ 6.If the system  
+of equations is correct you can go chech the next system of eqautions. 
+If the system  of equations is incorrect, check which for which list 
+from 'mso' the system of equations was created and for each element
+from list, add to the value that appears before the colon ':'. 
+Create a new list of lists called 'minimal_conflicts' and return 
+it in output. Please solve the following problem. Final answer should 
+contain json with 'minimal_conflicts'. 
+Between <example></example> you have solved example. 
+[DO NOT USE CODE INTERPRETER] 
+[MAKE CALCULATION MANUALLY] 
+<example>
+<input>
+equations = ['M1: a * c = x01', 
+'M2: b * d = x02', 
+'M3: c * e = x03', 
+'A1: x01 + x02 = f', 
+'A2: x02 + x03 = g '] 
+mso = [[2, 4, 1], 
+[2, 4, 0, 3], 
+[1, 0, 3]] 
+data = ['a = 2', 'b = 2', 'c = 3', 'd = 3', 'e = 2', 'f = 12', 'g = 10'] 
+</input>
+<operations>
+For MSO [2, 4, 1]: 
+    Equations involved: 
+    M3: c * e = x03 
+    A2: x02 + x03 = g 
+    M2: b * d = x02 
+    Substituting data values: 
+    M3: 3 * 2 = x03 ⟹ x03 = 6 
+    M2: 2 * 3 = x02 ⟹ x02 = 6 
+    A2: x02 + x03 = 10 ⟹ 6 + 6 = 10 ⟹ 12 ≠ 10 
+    This system is inconsistent. The labels for the involved equations are M3, A2, and M2. 
+
+For MSO [2, 4, 0, 3]: 
+    Equations involved: 
+    M3: c * e = x03 
+    A2: x02 + x03 = g 
+    M1: a * c = x01 
+    A1: x01 + x02 = f 
+    Substituting data values: 
+    M3: 3 * 2 = x03 ⟹ x03 = 6 
+    M2: 2 * 3 = x02 ⟹ x02 = 6 
+    M1: 2 * 3 = x01 ⟹ x01 = 6 
+    A2: x02 + x03 = 10 ⟹ 6 + 6 = 10 ⟹ 12 ≠ 10 
+    A1: x01 + x02 = 12 ⟹ 6 + 6 = 12 
+    This system is inconsistent. The labels for the involved equations are M3, A2, M1, and A1.` 
+
+For MSO [1, 0, 3]: 
+    Equations involved: 
+    M2: b * d = x02 
+    M1: a * c = x01 
+    A1: x01 + x02 = f 
+    Substituting data values: 
+    M2: 2 * 3 = x02 ⟹ x02 = 6 
+    M1: 2 * 3 = x01 ⟹ x01 = 6 
+    A1: x01 + x02 = 12 ⟹ 6 + 6 = 12 ⟹ 12 = 12 
+    This system is consistent. 
+
+Based on the evaluation, the minimal conflicts list for the inconsistent systems are: 
+    For [2, 4, 1]: ['M3', 'A2', 'M2'] 
+    For [2, 4, 0, 3]: ['M3', 'A2', 'M1', 'A1'] 
+</operations> 
+<output> 
+{ 
+"minimal_conflicts": [['M3', 'A2', 'M2'], ['M3', 'A2', 'M1', 'A1']] 
+} 
+</output> 
+</example>
+</part2>
+<part3>
+Use 'minimal_conflicts from second part. 
+Use algorithm below to generate minimal diagnoses. 
+Translate the algorithm steps into Python functions: 
+- Convert the high-level pseudocode into Python functions, 
+  maintaining the same logic and operations. 
+- Implement the main logic in a method: Implement 
+  the main loop of the algorithm, handling conflicts 
+  and candidates (diagnoses) generation. 
+- Handle updates and filtering: Implement the logic to 
+  update the candidates (diagnoses) collection and ensure 
+  duplicates and non-minimal elements are removed. 
+[USE CODE INTERPRETER] 
+<algorithm>
+Algorithm 1: Conflicts guide candidates generation. 
+    Inputs: MinimalConflicts 
+    CandidatesCollection←{∅} 
+    for each Conflict ∈ MinimalConflics do 
+        CurrentCandidates←CandidatesCollection 
+    for each Candidate ∈ CurrentCandidates do 
+        if Candidate ∩ Conflict = ∅ then 
+            CandidatesCollection←UpdateCandidates(Candidate, CandidatesCollection, Conflict) 
+    Return CandidatesCollection 
+Algorithm 2: UpdateCandidates. 
+    Inputs: Candidate, CandidatesCollection, Conflict 
+    CandidatesCollection←CandidatesCollection - Candidate 
+    for each Component ∈ Conflict do 
+        NewCandidate←Candidate ∪ { Component } 
+        CandidatesCollection←CandidatesCollection ∪ NewCandidate 
+    Remove duplicates and non-minimal elements from CandidatesCollection 
+    Return CandidatesCollection 
+</algorithm>
+<output>
+{
+"minimal_diagnoses": [['A1'],['M1'],['A2', 'M2'],['M2', 'M3']]
+}
+</output>
+</part3>
+'''
+
 
 GPT_TO_MSO_GENERATE = '''
 'equations' the equations building the system in format (numer of equation, equation, unkonwns in equation). 
