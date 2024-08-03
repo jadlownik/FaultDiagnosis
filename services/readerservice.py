@@ -1,5 +1,5 @@
 from config.config import KNOWN_VARIABLES, FAULTS, ALL_VARIABLES, \
-                          EQUATIONS, OBSERVATIONS, PATH_EXAMPLES
+    EQUATIONS, OBSERVATIONS, PATH_EXAMPLES
 import os
 import re
 
@@ -21,10 +21,10 @@ class ReaderService:
 
     def variables_ok(self):
         return KNOWN_VARIABLES in self._variables and \
-               FAULTS in self._variables and \
-               ALL_VARIABLES in self._variables and \
-               EQUATIONS in self._variables and \
-               OBSERVATIONS in self._variables
+            FAULTS in self._variables and \
+            ALL_VARIABLES in self._variables and \
+            EQUATIONS in self._variables and \
+            OBSERVATIONS in self._variables
 
     def _extract_number(self, filename):
         match = re.search(r'(\d+)', filename)

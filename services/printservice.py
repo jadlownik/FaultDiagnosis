@@ -34,5 +34,5 @@ class PrintService:
 
         formatted_table = tabulate(data, headers=headers, tablefmt='pretty')
 
-        with open(filename, 'w',  encoding='utf-8') as file:
+        with open(filename, 'w', encoding='utf-8') as file:
             file.write(formatted_table)

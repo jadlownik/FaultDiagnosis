@@ -114,8 +114,8 @@ class FOLService:
                     if blk_key != key and \
                        input in blk_inputs and \
                        self._is_output_not_input_for_any_equation(blk_output, inputs_sources):
-                        relation = f'{SD_INPUT}{i+1}({key}) = {SD_INPUT}{blk_inputs.index(input)+1}({blk_key})'
-                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input) + 1}({blk_key}) = {SD_INPUT}{i+1}({key})'
+                        relation = f'{SD_INPUT}{i + 1}({key}) = {SD_INPUT}{blk_inputs.index(input) + 1}({blk_key})'
+                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input) + 1}({blk_key}) = {SD_INPUT}{i + 1}({key})'
                         if relation not in relations and rev_relation not in relations:
                             relations.append(relation)
 
@@ -151,7 +151,7 @@ class FOLService:
 
                 for i, input in enumerate(inputs_variables):
                     if input in variables:
-                        obs.append(f'{SD_INPUT}{i+1}({component}) = {obs_dict[input]}')
+                        obs.append(f'{SD_INPUT}{i + 1}({component}) = {obs_dict[input]}')
 
                 if output in variables:
                     obs.append(f'{SD_OUTPUT}({component}) = {obs_dict[output]}')
