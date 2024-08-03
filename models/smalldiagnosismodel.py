@@ -1,16 +1,15 @@
 from typing import Set, List, Tuple
 from sympy import symbols, Eq, solve, Not, Xor, Nand, Nor
 from itertools import product, combinations
-from config.config import EQUATIONS, KNOWN_VARIABLES, ALL_VARIABLES, OBSERVATIONS
 
 
 class SmallDiagnosisModel:
     def create(self, variables):
-        self._equations = {eq.split(': ', 1)[0].strip(): eq.split(': ', 1)[1].strip() for eq in variables[EQUATIONS]}
-        self._unknowns = set(variables[ALL_VARIABLES]) - set(variables[KNOWN_VARIABLES])
+        self._equations = {eq.split(': ', 1)[0].strip(): eq.split(': ', 1)[1].strip() for eq in variables['r']}
+        self._unknowns = set(variables['x']) - set(variables['z'])
         self._is_logical = any(char in equation for equation in self._equations.values() for char in ['~', '&', '|', '^'])
         self._observations = {variable: (True if value == 1 else False) if self._is_logical else value for variable, value
-                              in zip(variables[ALL_VARIABLES], variables[OBSERVATIONS])}
+                              in zip(variables['x'], variables['o'])}
         self._equation_to_variables = {eq_name: set(v.strip() for v in eq_content.replace('=', ' ').split() if v.strip()
                                        not in ['*', '+', '~&', '~|', '~^', '~', '&', '|', '^', '='])
                                        for eq_name, eq_content in self._equations.items()}

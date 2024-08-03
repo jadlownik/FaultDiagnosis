@@ -6,7 +6,8 @@ from services.printservice import PrintService
 from services.folservice import FOLService
 from models.diagnosismodel import DiagnosisModel
 from models.gptmodel import GPTModel
-from utils import format_data, get_observations, are_lists_on_list
+from utils import format_data, get_observations, are_lists_on_list, \
+    prepare_equations_for_gpt, prepare_observations_for_gpt
 from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, PRINT_TO_CONSOLE
 
 
@@ -84,11 +85,11 @@ class FaultDiagnosis:
         small_model = SmallDiagnosisModel()
         small_model.create(variables)
         all_minimal_conflicts, all_minimal_diagnosis, minimal_conflicts, minimal_diagnosis = small_model.get_result()
-        # mso_unknown = sorted(list(set(variables[UNKNOWN_VARIABLES]) - set(variables[KNOWN_VARIABLES])))
-        # equations_gpt = format_equations_for_gpt(mso_unknown, rels)
-        # obs_gpt = prepare_observations(variables)
-        # gpt_input_data = f'equations = {equations_gpt}, data = {obs_gpt}'
-        # gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
+        # fol = self._fol_service.convert_to_FOL(variables)
+        equations_gpt = prepare_equations_for_gpt(variables)
+        obs_gpt = prepare_observations_for_gpt(variables)
+        gpt_input_data = f'equations = {equations_gpt}, data = {obs_gpt}'
+        gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
 
         gpt_minimal_conflicts, gpt_minimal_diagnosis = [], []
 

@@ -1,16 +1,16 @@
 from config.config import SD_ARITHMETIC_ADD, SD_ARITHMETIC_MULT, SD_LOGIC_AND, SD_LOGIC_OR, \
-                   SD_LOGIC_NAND, SD_LOGIC_NOR, SD_LOGIC_NOT, SD_LOGIC_XOR, SD_LOGIC_XNOR, \
-                   SD_INPUT, SD_OUTPUT
+    SD_LOGIC_NAND, SD_LOGIC_NOR, SD_LOGIC_NOT, SD_LOGIC_XOR, SD_LOGIC_XNOR, \
+    SD_INPUT, SD_OUTPUT, FAULTS, EQUATIONS, OBSERVATIONS, KNOWN_VARIABLES
 
 
 class FOLService:
     def __init__(self):
         pass
 
-    def convert_to_FOL(self, r, f, z, o):
-        comps = self._get_components(f)
-        sd = self._get_system_description(r)
-        obs = self._get_observations(r, z, o)
+    def convert_to_FOL(self, variables):
+        comps = self._get_components(variables[FAULTS])
+        sd = self._get_system_description(variables[EQUATIONS])
+        obs = self._get_observations(variables[EQUATIONS], variables[KNOWN_VARIABLES], variables[OBSERVATIONS])
 
         fol = comps + sd + obs
 
@@ -103,7 +103,7 @@ class FOLService:
 
                 for i, term in enumerate(terms):
                     if term in outputs:
-                        relations.append(f'{SD_OUTPUT}({outputs[term]}) = {SD_INPUT}{i+1}({component})')
+                        relations.append(f'{SD_OUTPUT}({outputs[term]}) = {SD_INPUT}{i + 1}({component})')
 
                 outputs[right] = component
                 inputs_sources[component] = (terms), right
@@ -115,7 +115,7 @@ class FOLService:
                        input in blk_inputs and \
                        self._is_output_not_input_for_any_equation(blk_output, inputs_sources):
                         relation = f'{SD_INPUT}{i+1}({key}) = {SD_INPUT}{blk_inputs.index(input)+1}({blk_key})'
-                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input)+1}({blk_key}) = {SD_INPUT}{i+1}({key})'
+                        rev_relation = f'{SD_INPUT}{blk_inputs.index(input) + 1}({blk_key}) = {SD_INPUT}{i+1}({key})'
                         if relation not in relations and rev_relation not in relations:
                             relations.append(relation)
 
