@@ -132,7 +132,7 @@ class DiagnosisModel:
             result.append(sorted_conflicts)
         result.sort(key=lambda x: (len(x), x))
         return result
-
+    
     def _get_diagnosis(self, minimal_conflicts):
         diagnosis_collection = [set()]
         for conflict in minimal_conflicts:

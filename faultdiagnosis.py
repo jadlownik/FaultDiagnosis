@@ -86,9 +86,9 @@ class FaultDiagnosis:
         small_model.create(variables)
         all_minimal_conflicts, all_minimal_diagnosis, minimal_conflicts, minimal_diagnosis = small_model.get_result()
         # fol = self._fol_service.convert_to_FOL(variables)
-        equations_gpt = prepare_equations_for_gpt(variables)
-        obs_gpt = prepare_observations_for_gpt(variables)
-        gpt_input_data = f'equations = {equations_gpt}, data = {obs_gpt}'
+        gpt_equations = prepare_equations_for_gpt(variables)
+        gpt_obs = prepare_observations_for_gpt(variables)
+        gpt_input_data = f'equations = {gpt_equations}, data = {gpt_obs}'
         gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
 
         gpt_minimal_conflicts, gpt_minimal_diagnosis = [], []
