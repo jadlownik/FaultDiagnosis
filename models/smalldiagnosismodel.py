@@ -39,20 +39,6 @@ class SmallDiagnosisModel:
                     mso.append(sorted(eq_set))
         return sorted(mso, key=lambda x: (len(x), x))
 
-    def _define_equations(self):
-        symbols_dict = {f'x{i:02d}': symbols(f'x{i:02d}') for i in range(1, len(self._equations) + 1)}
-        symbols_dict.update({k: symbols(k) for k in self._observations})
-
-        def parse_equation(eq_str):
-            left, right = map(str.strip, eq_str.split('='))
-            operators = {'~&': Nand, '~|': Nor, '~^': lambda a, b: Not(Xor(a, b))}
-            for op, func in operators.items():
-                if op in left:
-                    a, b = map(str.strip, left.split(op))
-                    return Eq(func(symbols_dict[a], symbols_dict[b]), symbols_dict[right])
-            return Eq(eval(left, {**globals(), **symbols_dict}), eval(right, {**globals(), **symbols_dict}))
-        return {eq_name: parse_equation(eq_str) for eq_name, eq_str in self._equations.items()}
-
     def _get_minimal_conflicts(self, mso: List[Set[str]]) -> List[List[str]]:
         minimal_conflicts = []
         for group in mso:
@@ -66,6 +52,20 @@ class SmallDiagnosisModel:
                    or (len(eq_list) != 1 and (not solution or any(any(not eq.subs(sol) for eq in eq_list) for sol in solution))):
                     minimal_conflicts.append(sorted(group))
         return sorted(minimal_conflicts, key=lambda x: (len(x), x))
+
+    def _define_equations(self):
+        symbols_dict = {f'x{i:02d}': symbols(f'x{i:02d}') for i in range(1, len(self._equations) + 1)}
+        symbols_dict.update({k: symbols(k) for k in self._observations})
+
+        def parse_equation(eq_str):
+            left, right = map(str.strip, eq_str.split('='))
+            operators = {'~&': Nand, '~|': Nor, '~^': lambda a, b: Not(Xor(a, b))}
+            for op, func in operators.items():
+                if op in left:
+                    a, b = map(str.strip, left.split(op))
+                    return Eq(func(symbols_dict[a], symbols_dict[b]), symbols_dict[right])
+            return Eq(eval(left, {**globals(), **symbols_dict}), eval(right, {**globals(), **symbols_dict}))
+        return {eq_name: parse_equation(eq_str) for eq_name, eq_str in self._equations.items()}
 
     def _is_contradictory(self, equations):
         symbols = {s for eq in equations for s in eq.free_symbols}

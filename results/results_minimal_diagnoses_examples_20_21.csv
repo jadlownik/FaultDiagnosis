@@ -1,0 +1,234 @@
+Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
+1;Example 20;"M1: a * b * c = x01
+M2: c * d * e = x02
+M3: e * f * g = x03
+A1: a + x01 + x02 = h
+M4: g * x02 * x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 3
+i = 1";"A1, M1, M2
+M2, M3, M4
+A1, M1, M3, M4";"A1, M2
+A1, M3
+A1, M4
+M1, M2
+M1, M3
+M1, M4
+M2, M3
+M2, M4";;;;
+2;Example 20;"M1: a * b * c = x01
+M2: c * d * e = x02
+M3: e * f * g = x03
+A1: a + x01 + x02 = h
+M4: g * x02 * x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 2
+i = 1";"A1, M1, M2
+M2, M3, M4
+A1, M1, M3, M4";"A1, M2
+A1, M3
+A1, M4
+M1, M2
+M1, M3
+M1, M4
+M2, M3
+M2, M4";"A1, M1, M2
+A1, M1, M3, M4";"A1
+M1
+M2, M3
+M2, M4";;"M2, M4
+M3, M2
+M1
+A1"
+3;Example 20;"M1: a * b * c = x01
+M2: c * d * e = x02
+M3: e * f * g = x03
+A1: a + x01 + x02 = h
+M4: g * x02 * x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 3
+i = 2";"A1, M1, M2
+M2, M3, M4
+A1, M1, M3, M4";"A1, M2
+A1, M3
+A1, M4
+M1, M2
+M1, M3
+M1, M4
+M2, M3
+M2, M4";"M2, M3, M4
+A1, M1, M3, M4";"M3
+M4
+A1, M2
+M1, M2";;"M2, A1
+M4
+M1, M2
+M3"
+4;Example 20;"M1: a * b * c = x01
+M2: c * d * e = x02
+M3: e * f * g = x03
+A1: a + x01 + x02 = h
+M4: g * x02 * x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 2
+i = 2";"A1, M1, M2
+M2, M3, M4
+A1, M1, M3, M4";"A1, M2
+A1, M3
+A1, M4
+M1, M2
+M1, M3
+M1, M4
+M2, M3
+M2, M4";"A1, M1, M2
+M2, M3, M4
+A1, M1, M3, M4";"A1, M2
+A1, M3
+A1, M4
+M1, M2
+M1, M3
+M1, M4
+M2, M3
+M2, M4";;"M2, A1
+M1, M4
+M3, M2
+M2, M4
+M1, M3
+M3, A1
+M4, A1
+M1, M2"
+5;Example 21;"O1: a | b | c = x01
+O2: c | d | e = x02
+O3: e | f | g = x03
+A1: a & x01 & x02 = h
+O4: g | x02 | x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1";"A1, O1, O2
+O2, O3, O4
+A1, O1, O3, O4";"A1, O2
+A1, O3
+A1, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";;;;
+6;Example 21;"O1: a | b | c = x01
+O2: c | d | e = x02
+O3: e | f | g = x03
+A1: a & x01 & x02 = h
+O4: g | x02 | x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 0";"A1, O1, O2
+O2, O3, O4
+A1, O1, O3, O4";"A1, O2
+A1, O3
+A1, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";"O2, O3, O4
+A1, O1, O3, O4";"O3
+O4
+A1, O2
+O1, O2";;"O3
+O4
+O2, A1
+O1, O2"
+7;Example 21;"O1: a | b | c = x01
+O2: c | d | e = x02
+O3: e | f | g = x03
+A1: a & x01 & x02 = h
+O4: g | x02 | x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 0
+i = 1";"A1, O1, O2
+O2, O3, O4
+A1, O1, O3, O4";"A1, O2
+A1, O3
+A1, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";A1, O1, O2;"A1
+O1
+O2";;"O1
+A1
+O2"
+8;Example 21;"O1: a | b | c = x01
+O2: c | d | e = x02
+O3: e | f | g = x03
+A1: a & x01 & x02 = h
+O4: g | x02 | x03 = i ";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 0
+i = 0";"A1, O1, O2
+O2, O3, O4
+A1, O1, O3, O4";"A1, O2
+A1, O3
+A1, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";"A1, O1, O2
+O2, O3, O4
+A1, O1, O3, O4";"A1, O2
+A1, O3
+A1, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";;"O1, O3
+O1, O4
+O2, O4
+O2, O3
+A1, O4
+A1, O3
+O1, O2
+O2, A1"

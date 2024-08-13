@@ -1,0 +1,497 @@
+Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
+1;Example 15 mixed A and O;"A1: a & b = x01
+O1: b | c = x02
+O2: c | d = x03
+A2: d & e = x04
+A3: x01 & x02 = x05
+A4: x03 & x04 = g
+O3: x05 | f = h";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1";"A2, A4, O2
+A1, A3, O1, O3";"A1, A2
+A1, A4
+A1, O2
+A2, A3
+A2, O1
+A2, O3
+A3, A4
+A3, O2
+A4, O1
+A4, O3
+O1, O2
+O2, O3";;;;
+2;Example 15 mixed A and O;"A1: a & b = x01
+O1: b | c = x02
+O2: c | d = x03
+A2: d & e = x04
+A3: x01 & x02 = x05
+A4: x03 & x04 = g
+O3: x05 | f = h";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 0
+h = 1";"A2, A4, O2
+A1, A3, O1, O3";"A1, A2
+A1, A4
+A1, O2
+A2, A3
+A2, O1
+A2, O3
+A3, A4
+A3, O2
+A4, O1
+A4, O3
+O1, O2
+O2, O3";A2, A4, O2;"A2
+A4
+O2";;"A2
+O2
+A4"
+3;Example 15 mixed A and O;"A1: a & b = x01
+O1: b | c = x02
+O2: c | d = x03
+A2: d & e = x04
+A3: x01 & x02 = x05
+A4: x03 & x04 = g
+O3: x05 | f = h";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 0";"A2, A4, O2
+A1, A3, O1, O3";"A1, A2
+A1, A4
+A1, O2
+A2, A3
+A2, O1
+A2, O3
+A3, A4
+A3, O2
+A4, O1
+A4, O3
+O1, O2
+O2, O3";A1, A3, O1, O3;"A1
+A3
+O1
+O3";;"O1
+A1
+O3
+A3"
+4;Example 15 mixed A and O;"A1: a & b = x01
+O1: b | c = x02
+O2: c | d = x03
+A2: d & e = x04
+A3: x01 & x02 = x05
+A4: x03 & x04 = g
+O3: x05 | f = h";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 0
+h = 0";"A2, A4, O2
+A1, A3, O1, O3";"A1, A2
+A1, A4
+A1, O2
+A2, A3
+A2, O1
+A2, O3
+A3, A4
+A3, O2
+A4, O1
+A4, O3
+O1, O2
+O2, O3";"A2, A4, O2
+A1, A3, O1, O3";"A1, A2
+A1, A4
+A1, O2
+A2, A3
+A2, O1
+A2, O3
+A3, A4
+A3, O2
+A4, O1
+A4, O3
+O1, O2
+O2, O3";;"A2, A1
+A2, O3
+A3, A4
+O2, O3
+A2, A3
+A2, O1
+A1, A4
+O2, A3
+O2, O1
+O3, A4
+O2, A1
+O1, A4"
+5;Example 16;"A1: a & b = x01
+A2: d & e = x02
+A3: g & h = x03
+O1: c | x01 = x04
+O2: f | x02 = x05
+O3: i | x03 = x06
+A4: x04 & x05 = j
+O4: x05 | x06 = k";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1";"A1, A2, A4, O1, O2
+A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A1, A2
+A1, A3
+A1, O2
+A1, O3
+A1, O4
+A2, A3
+A2, A4
+A2, O1
+A2, O3
+A2, O4
+A3, A4
+A3, O1
+A3, O2
+A4, O2
+A4, O3
+A4, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";;;;
+6;Example 16;"A1: a & b = x01
+A2: d & e = x02
+A3: g & h = x03
+O1: c | x01 = x04
+O2: f | x02 = x05
+O3: i | x03 = x06
+A4: x04 & x05 = j
+O4: x05 | x06 = k";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 0
+k = 1";"A1, A2, A4, O1, O2
+A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A1, A2
+A1, A3
+A1, O2
+A1, O3
+A1, O4
+A2, A3
+A2, A4
+A2, O1
+A2, O3
+A2, O4
+A3, A4
+A3, O1
+A3, O2
+A4, O2
+A4, O3
+A4, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";A1, A2, A4, O1, O2;"A1
+A2
+A4
+O1
+O2";;"O2
+A4
+A1
+A2
+O1"
+7;Example 16;"A1: a & b = x01
+A2: d & e = x02
+A3: g & h = x03
+O1: c | x01 = x04
+O2: f | x02 = x05
+O3: i | x03 = x06
+A4: x04 & x05 = j
+O4: x05 | x06 = k";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 0";"A1, A2, A4, O1, O2
+A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A1, A2
+A1, A3
+A1, O2
+A1, O3
+A1, O4
+A2, A3
+A2, A4
+A2, O1
+A2, O3
+A2, O4
+A3, A4
+A3, O1
+A3, O2
+A4, O2
+A4, O3
+A4, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";"A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A3
+O3
+O4
+A1, A2
+A1, O2
+A2, A4
+A2, O1
+A4, O2
+O1, O2";;"A2, A1
+O4
+O2, A4
+A2, O1
+O2, O1
+O3
+A2, A4
+O2, A1
+A3"
+8;Example 16;"A1: a & b = x01
+A2: d & e = x02
+A3: g & h = x03
+O1: c | x01 = x04
+O2: f | x02 = x05
+O3: i | x03 = x06
+A4: x04 & x05 = j
+O4: x05 | x06 = k";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 0
+k = 0";"A1, A2, A4, O1, O2
+A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A1, A2
+A1, A3
+A1, O2
+A1, O3
+A1, O4
+A2, A3
+A2, A4
+A2, O1
+A2, O3
+A2, O4
+A3, A4
+A3, O1
+A3, O2
+A4, O2
+A4, O3
+A4, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";"A1, A2, A4, O1, O2
+A2, A3, O2, O3, O4
+A1, A3, A4, O1, O3, O4";"A1, A2
+A1, A3
+A1, O2
+A1, O3
+A1, O4
+A2, A3
+A2, A4
+A2, O1
+A2, O3
+A2, O4
+A3, A4
+A3, O1
+A3, O2
+A4, O2
+A4, O3
+A4, O4
+O1, O2
+O1, O3
+O1, O4
+O2, O3
+O2, O4";;"O2, A3
+O3, A1
+O4, A1
+O2, A1
+A3, A1
+A2, O1
+O3, O1
+A2, O3
+O4, O2
+A2, A3
+O3, A4
+A2, A4
+A3, A4
+A2, A1
+O2, A4
+O4, A4
+O2, O3
+A3, O1
+O4, A2
+O4, O1
+O2, O1"
+9;Example 17;"A1: a & b = x02
+O1: c | d = x01
+O2: e | x01 = x03
+A2: x02 & x03 = x04
+O3: f | x04 = h
+O4: x04 | g = i";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1";"O3, O4
+A1, A2, O1, O2, O3
+A1, A2, O1, O2, O4";"A1, O3
+A1, O4
+A2, O3
+A2, O4
+O1, O3
+O1, O4
+O2, O3
+O2, O4
+O3, O4";;;;
+10;Example 17;"A1: a & b = x02
+O1: c | d = x01
+O2: e | x01 = x03
+A2: x02 & x03 = x04
+O3: f | x04 = h
+O4: x04 | g = i";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 0
+i = 1";"O3, O4
+A1, A2, O1, O2, O3
+A1, A2, O1, O2, O4";"A1, O3
+A1, O4
+A2, O3
+A2, O4
+O1, O3
+O1, O4
+O2, O3
+O2, O4
+O3, O4";"O3, O4
+A1, A2, O1, O2, O3";"O3
+A1, O4
+A2, O4
+O1, O4
+O2, O4";;"O4, O2
+O4, A2
+O4, O1
+O3
+O4, A1"
+11;Example 17;"A1: a & b = x02
+O1: c | d = x01
+O2: e | x01 = x03
+A2: x02 & x03 = x04
+O3: f | x04 = h
+O4: x04 | g = i";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 0";"O3, O4
+A1, A2, O1, O2, O3
+A1, A2, O1, O2, O4";"A1, O3
+A1, O4
+A2, O3
+A2, O4
+O1, O3
+O1, O4
+O2, O3
+O2, O4
+O3, O4";"O3, O4
+A1, A2, O1, O2, O4";"O4
+A1, O3
+A2, O3
+O1, O3
+O2, O3";;"O4
+O3, O1
+A2, O3
+O3, O2
+O3, A1"
+12;Example 17;"A1: a & b = x02
+O1: c | d = x01
+O2: e | x01 = x03
+A2: x02 & x03 = x04
+O3: f | x04 = h
+O4: x04 | g = i";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 0
+i = 0";"O3, O4
+A1, A2, O1, O2, O3
+A1, A2, O1, O2, O4";"A1, O3
+A1, O4
+A2, O3
+A2, O4
+O1, O3
+O1, O4
+O2, O3
+O2, O4
+O3, O4";"O3, O4
+A1, A2, O1, O2, O3
+A1, A2, O1, O2, O4";"A1, O3
+A1, O4
+A2, O3
+A2, O4
+O1, O3
+O1, O4
+O2, O3
+O2, O4
+O3, O4";;"O3, O1
+A2, O3
+O3, O2
+O4, O2
+O4, O3
+O4, A2
+O4, O1
+O3, A1
+O4, A1"

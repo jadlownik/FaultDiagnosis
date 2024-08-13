@@ -1,0 +1,2496 @@
+Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
+1;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 3
+q = 4
+r = 3";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";;;;
+2;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 2
+q = 3
+r = 3";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A1, A5, M1, M2, M7
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2
+A1, A3
+A1, M2
+A1, M3
+A1, M4
+A1, M9
+A2, A5
+A2, M1
+A2, M2
+A2, M7
+A3, A5
+A3, M1
+A3, M2
+A3, M7
+A5, M2
+A5, M3
+A5, M4
+A5, M9
+M1, M2
+M1, M3
+M1, M4
+M1, M9
+M2, M3
+M2, M4
+M2, M7
+M2, M9
+M3, M7
+M4, M7
+M7, M9
+A1, A4, M5
+A1, A6, M5
+A1, M5, M6
+A1, M5, M8
+A4, A5, M5
+A4, M1, M5
+A4, M2, M5
+A4, M5, M7
+A5, A6, M5
+A5, M5, M6
+A5, M5, M8
+A6, M1, M5
+A6, M2, M5
+A6, M5, M7
+M1, M5, M6
+M1, M5, M8
+M2, M5, M6
+M2, M5, M8
+M5, M6, M7
+M5, M7, M8";;"M6, M5, M2
+A2, M2
+M9, M7
+A1, M3
+A6, M5, M2
+M5, A6, A5
+M9, M1
+M5, M8, A5
+A2, M7
+M9, M2
+A1, M4
+M7, M4
+A1, A2
+M5, A6, M7
+M3, M1
+M2, M4
+M8, M5, M2
+A1, A6, M5
+A3, M1
+M2, M1
+M2, M3
+M5, M6, A5
+A2, A5
+A2, M1
+M5, M8, M7
+A3, M7
+M4, M1
+M7, M2
+M5, A5, A4
+A1, M9
+M7, M3
+M5, M7, A4
+M6, M5, M1
+A3, M2
+A3, A5
+A5, M2
+A1, M6, M5
+A4, M5, M2
+A4, A1, M5
+M9, A5
+M8, M5, M1
+A5, M3
+A1, A3
+A1, M2
+A1, M8, M5
+M5, M6, M7
+A4, M5, M1
+A6, M5, M1
+A5, M4"
+3;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 2
+q = 2
+r = 3";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A1, A5, M1, M2, M7
+A2, A3, M2, M3, M4, M5, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9";"M2
+A1, A2
+A1, A3
+A1, M3
+A1, M4
+A1, M9
+A2, A5
+A2, M1
+A2, M7
+A3, A5
+A3, M1
+A3, M7
+A5, M3
+A5, M4
+A5, M9
+M1, M3
+M1, M4
+M1, M9
+M3, M7
+M4, M7
+M7, M9
+A1, A4, M5
+A1, A6, M5
+A1, M5, M6
+A1, M5, M8
+A4, A5, M5
+A4, M1, M5
+A4, M5, M7
+A5, A6, M5
+A5, M5, M6
+A5, M5, M8
+A6, M1, M5
+A6, M5, M7
+M1, M5, M6
+M1, M5, M8
+M5, M6, M7
+M5, M7, M8";;"M9, M7
+A1, M3
+M5, A6, A5
+M5, M8, A5
+M9, M1
+A2, M7
+M2
+A1, M4
+M7, M4
+A1, A2
+M5, A6, M7
+M3, M1
+A1, A6, M5
+A3, M1
+M5, M6, A5
+A2, A5
+A2, M1
+M5, M8, M7
+A3, M7
+M4, M1
+M5, A5, A4
+A1, M9
+M7, M3
+M5, M7, A4
+M6, M5, M1
+A3, A5
+A1, M6, M5
+A4, A1, M5
+M9, A5
+M8, M5, M1
+A5, M3
+A1, A3
+A1, M8, M5
+M5, M6, M7
+A4, M5, M1
+A6, M5, M1
+A5, M4"
+4;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 2
+q = 3
+r = 2";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";;"M5, A6, A5
+A6, M7, M4
+M4, M5, M1
+A6, A3, M1
+M5, A3, M7
+M8, A5, M4
+A4, M9, A5
+A6, A5, M2
+M6, A5, M4
+M6, M9, M1
+M5, A5, M3
+A1, A3, M5
+A2, M6, M1
+A4, M2, M1
+A4, A5, M2
+M8, A3, M2
+A4, A2, M1
+M6, M5, M1
+M6, A5, A3
+A2, A6, M7
+A1, M6, M3
+M6, M7, M9
+A1, M6, M5
+A2, M5, M1
+A4, M7, M4
+A1, M8, M3
+M8, M9, M7
+M8, A2, M2
+A4, A1, A3
+A4, A1, M5
+M8, M5, M1
+A4, M7, M2
+A4, M2, M4
+A6, M5, M1
+M6, M2, M4
+M5, M9, A5
+A6, M7, M9
+A1, A6, M3
+M9, M5, M1
+A1, M8, M4
+A4, M7, M3
+A4, A1, M9
+M8, M9, M1
+A6, M5, M2
+A6, M2, M1
+M5, M7, M2
+M6, A5, M9
+M5, A3, A5
+M5, A6, M7
+A1, A6, M4
+A4, A2, A5
+M8, M5, M2
+M8, M2, M1
+M6, A5, M3
+M5, M6, A5
+A1, M5, M2
+A2, M6, M2
+A4, A3, M1
+A4, A3, A5
+M5, A5, A4
+M8, M3, M1
+M8, M7, M4
+M8, M9, M2
+M8, M7, A2
+M8, M7, M2
+M3, A6, M1
+A6, A5, M3
+A1, M9, M5
+M5, M7, M3
+A2, A6, M2
+M6, M9, M2
+A4, M4, M1
+A4, A3, M7
+A4, A1, M4
+M5, M2, M4
+M5, M6, M7
+A1, M6, M9
+M6, M7, M3
+A2, A6, A5
+A6, A5, M4
+A6, M4, M1
+M5, M7, M4
+M6, M5, M2
+A2, M6, A5
+A4, A1, A2
+M8, A5, M2
+M5, M2, A5
+M5, A2, A5
+A4, M9, M7
+A4, A1, M3
+A4, A2, M2
+M8, A3, M1
+M8, M2, M4
+A4, M9, M2
+A4, A2, M7
+M6, M7, M2
+A1, A6, A3
+A1, M5, M4
+A2, M6, M7
+M5, M7, A4
+A4, A5, M4
+A1, M9, M8
+A4, M9, M1
+M8, M7, M3
+M8, M4, M1
+M8, A3, M7
+A6, M2, A3
+M6, M4, M1
+A1, A6, A2
+A6, M2, M3
+A1, M6, A2
+M6, M2, M3
+M6, M2, M1
+A6, M7, A3
+A3, M5, M1
+A6, A5, M9
+A1, M6, M2
+M8, A1, M2
+A4, M2, M3
+A4, A3, M2
+A1, M8, A2
+A6, M2, M4
+A3, M5, M2
+M3, M6, M1
+A1, M5, A2
+A4, A5, M3
+M8, A3, A5
+M5, M8, A5
+A6, A5, A3
+M5, A5, M4
+A1, A6, M5
+M8, M9, A5
+M5, M8, M7
+M6, M7, A3
+M9, M5, M2
+A2, A6, M1
+A1, A6, M2
+M5, A2, M7
+A1, M6, M4
+A6, M7, M3
+A1, A6, M9
+M6, A5, M2
+M6, M2, A3
+M3, M5, M1
+A6, M9, M1
+A1, M5, M3
+M5, M9, M7
+A2, M5, M2
+M8, A2, M1
+M8, A5, A2
+A4, M5, M2
+A4, A1, M2
+M8, M2, M3
+M6, M7, M4
+M6, A3, M1
+A6, M7, M2
+M5, M2, M1
+M5, M2, M3
+A6, M9, M2
+A1, M6, A3
+A1, A3, M8
+A1, M8, M5
+A4, M5, M1
+A4, A3, M1
+M8, A5, M3"
+5;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 3
+q = 2
+r = 2";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9";"M5
+A2, A4
+A2, A6
+A2, M6
+A2, M8
+A3, A4
+A3, A6
+A3, M6
+A3, M8
+A4, M3
+A4, M4
+A4, M9
+A6, M3
+A6, M4
+A6, M9
+M3, M6
+M3, M8
+M4, M6
+M4, M8
+M6, M9
+M8, M9
+A1, A4, M2
+A1, A6, M2
+A1, M2, M6
+A1, M2, M8
+A4, A5, M2
+A4, M1, M2
+A4, M2, M7
+A5, A6, M2
+A5, M2, M6
+A5, M2, M8
+A6, M1, M2
+A6, M2, M7
+M1, M2, M6
+M1, M2, M8
+M2, M6, M7
+M2, M7, M8";;"A4, M9
+M6, M4
+A4, A3
+A6, M2, M1
+M8, A5, M2
+A4, A2
+M6, A3
+A6, M9
+M8, M4
+A6, A5, M2
+A6, M3
+A4, M3
+M8, A2
+M5
+M8, M2, M1
+A4, M4
+A6, M4
+M8, M9
+A4, M2, M1
+A4, A5, M2
+A6, A3
+M6, M7, M2
+A1, A6, M2
+M6, A5, M2
+M6, M3
+M8, M7, M2
+A4, A1, M2
+A4, M7, M2
+A6, M7, M2
+M6, M2, M1
+A1, M6, M2
+A2, M6
+M8, A1, M2
+M8, M3
+A2, A6
+M6, M9
+M8, A3"
+6;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 3
+q = 2
+r = 3";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A2
+A3
+M3
+M4
+M9
+A1, M2
+A4, M5
+A5, M2
+A6, M5
+M1, M2
+M2, M7
+M5, M6
+M5, M8";;"A6, M5
+A4, M5
+M9
+A5, M2
+M2, M1
+A1, M2
+A3
+M8, M5
+M6, M5
+M4
+M7, M2
+A2
+M3"
+7;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 3
+q = 3
+r = 2";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A2, A4
+A2, A6
+A2, M5
+A2, M6
+A2, M8
+A3, A4
+A3, A6
+A3, M5
+A3, M6
+A3, M8
+A4, M3
+A4, M4
+A4, M5
+A4, M9
+A6, M3
+A6, M4
+A6, M5
+A6, M9
+M3, M5
+M3, M6
+M3, M8
+M4, M5
+M4, M6
+M4, M8
+M5, M6
+M5, M8
+M5, M9
+M6, M9
+M8, M9
+A1, A4, M2
+A1, A6, M2
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A4, A5, M2
+A4, M1, M2
+A4, M2, M7
+A5, A6, M2
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A6, M1, M2
+A6, M2, M7
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M2, M5, M7
+M2, M6, M7
+M2, M7, M8";;"A4, M9
+M6, M4
+A4, A3
+M5, M7, M2
+A6, M2, M1
+M8, A5, M2
+M8, M5
+A4, A2
+M5, M2, A5
+M6, M5
+M6, A3
+A2, M5
+A6, M9
+M8, M4
+A6, A5, M2
+A6, M3
+A4, M3
+M8, A2
+A4, M5
+M9, M5
+M8, M2, M1
+A4, M4
+A6, M4
+A3, M5
+M8, M9
+A1, M5, M2
+A4, M2, M1
+A4, A5, M2
+A6, A3
+M6, M7, M2
+A6, M5
+A1, A6, M2
+M6, A5, M2
+M6, M3
+M8, M7, M2
+M5, M4
+A4, A1, M2
+A4, M7, M2
+A6, M7, M2
+M6, M2, M1
+M5, M2, M1
+A1, M6, M2
+A2, M6
+M8, A1, M2
+M8, M3
+A2, A6
+M6, M9
+M8, A3
+M5, M3"
+8;Example 9 nine M and six A;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+M4: f * h = x04
+M5: g * i = x05
+M6: h * j = x06
+M7: k * m = x07
+A1: x01 + x02 = x08
+A2: x02 + x03 = x09
+A3: x04 + x05 = x10
+A4: x05 + x06 = x11
+M8: n * o = x12
+A5: x07 + x08 = p
+M9: x09 * x10 = q
+A6: x11 + x12 = r";"a = 1
+b = 1
+c = 1
+d = 1
+e = 1
+f = 1
+g = 1
+h = 1
+i = 1
+j = 1
+k = 1
+m = 1
+n = 1
+o = 1
+p = 2
+q = 2
+r = 2";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, A2, A4
+A1, A2, A6
+A1, A2, M5
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M5
+A1, A3, M6
+A1, A3, M8
+A1, A4, M2
+A1, A4, M3
+A1, A4, M4
+A1, A4, M5
+A1, A4, M9
+A1, A6, M2
+A1, A6, M3
+A1, A6, M4
+A1, A6, M5
+A1, A6, M9
+A1, M2, M5
+A1, M2, M6
+A1, M2, M8
+A1, M3, M5
+A1, M3, M6
+A1, M3, M8
+A1, M4, M5
+A1, M4, M6
+A1, M4, M8
+A1, M5, M6
+A1, M5, M8
+A1, M5, M9
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M2
+A2, A4, M7
+A2, A5, A6
+A2, A5, M5
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M2
+A2, A6, M7
+A2, M1, M5
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M2, M6
+A2, M2, M8
+A2, M5, M7
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M2
+A3, A4, M7
+A3, A5, A6
+A3, A5, M5
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M2
+A3, A6, M7
+A3, M1, M5
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M2, M6
+A3, M2, M8
+A3, M5, M7
+A3, M6, M7
+A3, M7, M8
+A4, A5, M2
+A4, A5, M3
+A4, A5, M4
+A4, A5, M5
+A4, A5, M9
+A4, M1, M2
+A4, M1, M3
+A4, M1, M4
+A4, M1, M5
+A4, M1, M9
+A4, M2, M3
+A4, M2, M4
+A4, M2, M5
+A4, M2, M7
+A4, M2, M9
+A4, M3, M7
+A4, M4, M7
+A4, M5, M7
+A4, M7, M9
+A5, A6, M2
+A5, A6, M3
+A5, A6, M4
+A5, A6, M5
+A5, A6, M9
+A5, M2, M5
+A5, M2, M6
+A5, M2, M8
+A5, M3, M5
+A5, M3, M6
+A5, M3, M8
+A5, M4, M5
+A5, M4, M6
+A5, M4, M8
+A5, M5, M6
+A5, M5, M8
+A5, M5, M9
+A5, M6, M9
+A5, M8, M9
+A6, M1, M2
+A6, M1, M3
+A6, M1, M4
+A6, M1, M5
+A6, M1, M9
+A6, M2, M3
+A6, M2, M4
+A6, M2, M5
+A6, M2, M7
+A6, M2, M9
+A6, M3, M7
+A6, M4, M7
+A6, M5, M7
+A6, M7, M9
+M1, M2, M5
+M1, M2, M6
+M1, M2, M8
+M1, M3, M5
+M1, M3, M6
+M1, M3, M8
+M1, M4, M5
+M1, M4, M6
+M1, M4, M8
+M1, M5, M6
+M1, M5, M8
+M1, M5, M9
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M3, M6
+M2, M3, M8
+M2, M4, M5
+M2, M4, M6
+M2, M4, M8
+M2, M5, M6
+M2, M5, M7
+M2, M5, M8
+M2, M5, M9
+M2, M6, M7
+M2, M6, M9
+M2, M7, M8
+M2, M8, M9
+M3, M5, M7
+M3, M6, M7
+M3, M7, M8
+M4, M5, M7
+M4, M6, M7
+M4, M7, M8
+M5, M6, M7
+M5, M7, M8
+M5, M7, M9
+M6, M7, M9
+M7, M8, M9";"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A1, M5
+A4, M2
+A5, M5
+A6, M2
+M1, M5
+M2, M6
+M2, M8
+M5, M7
+A1, A2, A4
+A1, A2, A6
+A1, A2, M6
+A1, A2, M8
+A1, A3, A4
+A1, A3, A6
+A1, A3, M6
+A1, A3, M8
+A1, A4, M3
+A1, A4, M4
+A1, A4, M9
+A1, A6, M3
+A1, A6, M4
+A1, A6, M9
+A1, M3, M6
+A1, M3, M8
+A1, M4, M6
+A1, M4, M8
+A1, M6, M9
+A1, M8, M9
+A2, A4, A5
+A2, A4, M1
+A2, A4, M7
+A2, A5, A6
+A2, A5, M6
+A2, A5, M8
+A2, A6, M1
+A2, A6, M7
+A2, M1, M6
+A2, M1, M8
+A2, M2, M5
+A2, M6, M7
+A2, M7, M8
+A3, A4, A5
+A3, A4, M1
+A3, A4, M7
+A3, A5, A6
+A3, A5, M6
+A3, A5, M8
+A3, A6, M1
+A3, A6, M7
+A3, M1, M6
+A3, M1, M8
+A3, M2, M5
+A3, M6, M7
+A3, M7, M8
+A4, A5, M3
+A4, A5, M4
+A4, A5, M9
+A4, M1, M3
+A4, M1, M4
+A4, M1, M9
+A4, M3, M7
+A4, M4, M7
+A4, M7, M9
+A5, A6, M3
+A5, A6, M4
+A5, A6, M9
+A5, M3, M6
+A5, M3, M8
+A5, M4, M6
+A5, M4, M8
+A5, M6, M9
+A5, M8, M9
+A6, M1, M3
+A6, M1, M4
+A6, M1, M9
+A6, M3, M7
+A6, M4, M7
+A6, M7, M9
+M1, M3, M6
+M1, M3, M8
+M1, M4, M6
+M1, M4, M8
+M1, M6, M9
+M1, M8, M9
+M2, M3, M5
+M2, M4, M5
+M2, M5, M9
+M3, M6, M7
+M3, M7, M8
+M4, M6, M7
+M4, M7, M8
+M6, M7, M9
+M7, M8, M9";;"A6, M7, M4
+A6, A3, M1
+M8, A5, M4
+A4, M9, A5
+M5, M7
+M6, A5, M4
+M6, M9, M1
+A2, M6, M1
+A4, A2, M1
+M6, A5, A3
+A2, A6, M7
+A1, M6, M3
+M6, M7, M9
+A4, M7, M4
+M8, M9, M7
+A1, M8, M3
+A4, A1, A3
+A1, A6, M3
+A6, M7, M9
+A1, M8, M4
+A4, M7, M3
+A4, A1, M9
+M8, M9, M1
+M6, A5, M9
+A1, A6, M4
+A4, A2, A5
+M5, M1
+M6, A5, M3
+A4, A3, M1
+A4, A3, A5
+M8, M3, M1
+M8, M7, M4
+M8, M7, A2
+M3, A6, M1
+A6, A5, M3
+A4, M4, M1
+A4, A3, M7
+A4, A1, M4
+M5, M2, M4
+A1, M6, M9
+M6, M7, M3
+A2, A6, A5
+A6, A5, M4
+A6, M4, M1
+A2, M6, A5
+A4, A1, A2
+M6, M2
+A1, M5
+A4, M9, M7
+A4, A1, M3
+M8, A3, M1
+A4, A2, M7
+A6, M2
+A1, A6, A3
+A2, M6, M7
+A4, A5, M4
+A1, M9, M8
+A4, M9, M1
+M8, M7, M3
+M8, M4, M1
+M8, A3, M7
+M6, M4, M1
+A1, A6, A2
+A1, M6, A2
+A6, M7, A3
+A6, A5, M9
+A1, M8, A2
+A3, M5, M2
+M3, M6, M1
+M5, A5
+A4, A5, M3
+A4, M2
+M8, A3, A5
+A6, A5, A3
+M8, M9, A5
+M6, M7, A3
+M9, M5, M2
+A2, A6, M1
+A1, M6, M4
+A6, M7, M3
+A1, A6, M9
+A6, M9, M1
+A2, M5, M2
+M8, A2, M1
+M8, A5, A2
+M6, M7, M4
+M6, A3, M1
+M5, M2, M3
+A1, M6, A3
+A1, A3, M8
+A4, M3, M1
+M8, A5, M3
+M8, M2"

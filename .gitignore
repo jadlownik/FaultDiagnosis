@@ -1,15 +1,14 @@
-examples/example_22.txt
-__pycache__/faultdiagnosis.cpython-312.pyc
-__pycache__/ResGen0.cpython-312.pyc
-__pycache__/utils.cpython-312.pyc
-config/__pycache__/__init__.cpython-312.pyc
-config/__pycache__/config.cpython-312.pyc
-examples/example_22.txt
-models/__pycache__/__init__.cpython-312.pyc
-models/__pycache__/diagnosismodel.cpython-312.pyc
-models/__pycache__/gptmodel.cpython-312.pyc
-models/__pycache__/utils.cpython-312.pyc
-services/__pycache__/__init__.cpython-312.pyc
-services/__pycache__/folservice.cpython-312.pyc
-services/__pycache__/printservice.cpython-312.pyc
-services/__pycache__/readerservice.cpython-312.pyc
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+__pycache__

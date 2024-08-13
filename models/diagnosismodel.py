@@ -7,7 +7,6 @@ import os
 from .utils import external_functions
 from config.config import FAULTS, KNOWN_VARIABLES, ALL_VARIABLES, \
     PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, OBSERVATIONS
-importlib.reload(fdt)
 
 
 class DiagnosisModel:
@@ -132,7 +131,7 @@ class DiagnosisModel:
             result.append(sorted_conflicts)
         result.sort(key=lambda x: (len(x), x))
         return result
-    
+
     def _get_diagnosis(self, minimal_conflicts):
         diagnosis_collection = [set()]
         for conflict in minimal_conflicts:
