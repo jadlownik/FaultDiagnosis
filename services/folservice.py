@@ -123,7 +123,7 @@ class FOLService:
         return system_description
 
     def _is_output_not_input_for_any_equation(self, output, all_inputs):
-        for key, (inputs, outputs) in all_inputs.items():
+        for _, (inputs, _) in all_inputs.items():
             if output in inputs:
                 return True
         return False
