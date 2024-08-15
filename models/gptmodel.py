@@ -34,12 +34,17 @@ class GPTModel:
             self._messages = self._client.beta.threads.messages.list(
                 thread_id=self._thread.id
             )
-            minimal_conflicts = self.extract_from_message(JSON_KEY_CONFLICTS, self._messages.data[0].content[0].text.value)
-            minimal_diagnoses = self.extract_from_message(JSON_KEY_DIAGNOSES, self._messages.data[0].content[0].text.value)
+            minimal_conflicts, minimal_diagnoses = self._extract_conflicts_and_diagnoses(self._messages.data[0].content[0].text.value)
+
             return minimal_conflicts, minimal_diagnoses
         return ['OpenAI Error'], ['OpenAI Error']
 
-    def extract_from_message(self, key, message):
+    def _extract_conflicts_and_diagnoses(self, message):
+        minimal_conflicts = self.extract_from_message(JSON_KEY_CONFLICTS, message)
+        minimal_diagnoses = self.extract_from_message(JSON_KEY_DIAGNOSES, message)
+        return minimal_conflicts, minimal_diagnoses
+
+    def _extract_from_message(self, key, message):
         json_regex = re.search(r'\{[\s\S]*\}', message)
 
         if json_regex:

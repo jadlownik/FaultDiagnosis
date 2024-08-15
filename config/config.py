@@ -290,7 +290,6 @@ equations = [
 </example>
 </part1>
 <part2>
-Imagine you are an engineer specialized in fault diagnosis.
 Create a class with the following components:
 Initialize the class with three parameters:
     A list of lists containing equation names (call it 'mso')
@@ -311,14 +310,7 @@ Implement a private method that defines and parses equations:
             For each item in 'data', if the key is in symbols_dict, replace the value
         Build the equation based on the operator:
             Check for '&', '|', '^', '~^', '~', '~&', '~|' in the left_side
-                For your information what means these symbols :
-                    NAND ('~&')
-                    NOR ('~|')
-                    XNOR ('~^')
-                    XOR ('^')
-                    NOT ('~')
-                    AND ('&')
-                    OR ('|')
+                For your information what means these symbols: NAND ('~&'), NOR ('~|'), XNOR ('~^'), XOR ('^'), NOT ('~'), AND ('&'), OR ('|')
             For each case, create a parsed_expression using SymPy functions (Not, And, Or, Xor)
             Use list comprehensions to get the relevant symbols from symbols_dict
             Convert to equality using Eq(parsed_expression, symbols_dict[right_side])

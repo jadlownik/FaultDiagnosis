@@ -1,4 +1,4 @@
-from config.config import OBSERVATIONS, KNOWN_VARIABLES, RELATIONS, EQUATIONS
+from config.config import OBSERVATIONS, KNOWN_VARIABLES, EQUATIONS
 
 
 def format_data(data):
@@ -21,7 +21,7 @@ def are_lists_on_list(data):
 
 
 def prepare_equations_for_gpt(variables):
-    return {eq.split(': ', 1)[0].strip(): eq.split(': ', 1)[1].strip() for eq in variables[RELATIONS]}
+    return {eq.split(': ', 1)[0].strip(): eq.split(': ', 1)[1].strip() for eq in variables[EQUATIONS]}
 
 
 def prepare_observations_for_gpt(variables):
