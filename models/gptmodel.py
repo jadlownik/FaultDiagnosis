@@ -2,7 +2,7 @@ import re
 import json
 from openai import OpenAI
 from config.config import OPENAI_API_MODEL, GPT_INSTRUCTION, \
-    JSON_KEY_CONFLICTS, JSON_KEY_DIAGNOSES, GPT_INSTRUCTION_PART_2, JSON_KEY_MSO
+    JSON_KEY_CONFLICTS, JSON_KEY_DIAGNOSES, JSON_KEY_MSO
 
 
 class GPTModel:
@@ -12,8 +12,8 @@ class GPTModel:
         self._client = OpenAI()
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",
-            instructions=GPT_INSTRUCTION_PART_2,
-            temperature=0.01,
+            instructions=GPT_INSTRUCTION,
+            temperature=1.0,
             top_p=1.0,
             tools=[{"type": "code_interpreter"}],
             model=OPENAI_API_MODEL,
@@ -37,10 +37,8 @@ class GPTModel:
                 thread_id=self._thread.id
             )
             minimal_conflicts = self._extract_conflicts(self._messages.data[0].content[0].text.value)
-            # minimal_diagnoses = self._extract_diagnoses(self._messages.data[0].content[0].text.value)
-            return minimal_conflicts, []
-            # mso = self._extract_mso(self._messages.data[0].content[0].text.value)
-            # return mso, []
+            minimal_diagnoses = self._extract_diagnoses(self._messages.data[0].content[0].text.value)
+            return minimal_conflicts, minimal_diagnoses
         return ['OpenAI Error'], ['OpenAI Error']
 
     def _extract_conflicts(self, message):

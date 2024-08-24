@@ -32,7 +32,7 @@ SD_LOGIC_NOR = 'NORgate(x) ∧ ¬AB(x) ⇒ Output(x) = ¬(Input1(x) ∨ Input2(x
 SD_LOGIC_XNOR = 'XNORgate(x) ∧ ¬AB(x) ⇒ Output(x) = ¬(Input1(x) ⊕ Input2(x))'
 GPT_INSTRUCTION_PART_1 = '''
 Imagine you are an engineer specialized in fault diagnosis. The final result should be in JSON format and should consist of 'mso'.
-Use 'equations,' a list of tuples in the format (symbol, equation, list of unknowns in the equation), to build
+Use 'equations' a dictionary (key is a symbol, value is an equation), to build
 the system. Analyze all possible combinations of symbols and choose those which meet the following conditions:
 1. The set of equations must have exactly one structural redundancy. Structural redundancy is defined as the number 
 of equations minus the number of unknown variables that are present in these equations. 
@@ -42,13 +42,13 @@ The result is the list of lists with symbols of equations.
 [USE CODE INTERPRETER]
 <example>
 <input>
-equations = [
-('M1', 'a * c - x01', ['x01']),
-('M2', 'b * d - x02', ['x02']),
-('M3', 'c * e - x03', ['x03']),
-('A2', 'x01 + x02 - f', ['x01', 'x02']),
-('A1', 'x02 + x03 - g', ['x02', 'x03'])
-]
+equations = {
+'M1', 'a * c = x01',
+'M2', 'b * d = x02',
+'M3', 'c * e = x03',
+'A2', 'x01 + x02 = f',
+'A1', 'x02 + x03 = g',
+}
 </input>
 <output>
 {
