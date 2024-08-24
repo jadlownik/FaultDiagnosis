@@ -1,0 +1,123 @@
+Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
+1;Example 2 classic polybox;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+A1: x01 + x02 = f
+A2: x02 + x03 = g";"a = 2
+b = 2
+c = 3
+d = 3
+e = 2
+f = 12
+g = 12";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";;;No JSON;
+2;Example 2 classic polybox;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+A1: x01 + x02 = f
+A2: x02 + x03 = g";"a = 2
+b = 2
+c = 3
+d = 3
+e = 2
+f = 12
+g = 10";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";"A2, M2, M3
+A1, A2, M1, M3";"A2
+M3
+A1, M2
+M1, M2";No JSON;
+3;Example 2 classic polybox;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+A1: x01 + x02 = f
+A2: x02 + x03 = g";"a = 2
+b = 2
+c = 3
+d = 3
+e = 2
+f = 10
+g = 12";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";"A1, M1, M2
+A1, A2, M1, M3";"A1
+M1
+A2, M2
+M2, M3";No JSON;
+4;Example 2 classic polybox;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+A1: x01 + x02 = f
+A2: x02 + x03 = g";"a = 2
+b = 2
+c = 3
+d = 3
+e = 2
+f = 10
+g = 10";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";"A1, M1, M2
+A2, M2, M3";"M2
+A1, A2
+A1, M3
+A2, M1
+M1, M3";No JSON;
+5;Example 2 classic polybox;"M1: a * c = x01
+M2: b * d = x02
+M3: c * e = x03
+A1: x01 + x02 = f
+A2: x02 + x03 = g";"a = 2
+b = 2
+c = 3
+d = 3
+e = 2
+f = 10
+g = 14";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";"A1, A2
+A1, M2
+A1, M3
+A2, M1
+A2, M2
+M1, M2
+M1, M3
+M2, M3";No JSON;

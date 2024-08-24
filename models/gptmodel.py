@@ -2,7 +2,7 @@ import re
 import json
 from openai import OpenAI
 from config.config import OPENAI_API_MODEL, GPT_INSTRUCTION, \
-    JSON_KEY_CONFLICTS, JSON_KEY_DIAGNOSES
+    JSON_KEY_CONFLICTS, JSON_KEY_DIAGNOSES, GPT_INSTRUCTION_PART_2, JSON_KEY_MSO
 
 
 class GPTModel:
@@ -12,7 +12,7 @@ class GPTModel:
         self._client = OpenAI()
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",
-            instructions=GPT_INSTRUCTION,
+            instructions=GPT_INSTRUCTION_PART_2,
             temperature=0.01,
             top_p=1.0,
             tools=[{"type": "code_interpreter"}],
@@ -36,15 +36,24 @@ class GPTModel:
             self._messages = self._client.beta.threads.messages.list(
                 thread_id=self._thread.id
             )
-            minimal_conflicts, minimal_diagnoses = self._extract_conflicts_and_diagnoses(self._messages.data[0].content[0].text.value)
-
-            return minimal_conflicts, minimal_diagnoses
+            minimal_conflicts = self._extract_conflicts(self._messages.data[0].content[0].text.value)
+            # minimal_diagnoses = self._extract_diagnoses(self._messages.data[0].content[0].text.value)
+            return minimal_conflicts, []
+            # mso = self._extract_mso(self._messages.data[0].content[0].text.value)
+            # return mso, []
         return ['OpenAI Error'], ['OpenAI Error']
 
-    def _extract_conflicts_and_diagnoses(self, message):
-        minimal_conflicts = self.extract_from_message(JSON_KEY_CONFLICTS, message)
-        minimal_diagnoses = self.extract_from_message(JSON_KEY_DIAGNOSES, message)
-        return minimal_conflicts, minimal_diagnoses
+    def _extract_conflicts(self, message):
+        minimal_conflicts = self._extract_from_message(JSON_KEY_CONFLICTS, message)
+        return minimal_conflicts
+
+    def _extract_diagnoses(self, message):
+        minimal_diagnoses = self._extract_from_message(JSON_KEY_DIAGNOSES, message)
+        return minimal_diagnoses
+
+    def _extract_mso(self, message):
+        mso = self._extract_from_message(JSON_KEY_MSO, message)
+        return mso
 
     def _extract_from_message(self, key, message):
         json_regex = re.search(r'\{[\s\S]*\}', message)
