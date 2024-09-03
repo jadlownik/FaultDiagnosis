@@ -35,19 +35,19 @@ Imagine you are an engineer specialized in fault diagnosis. The final result sho
 Use 'equations' a dictionary (key is a symbol, value is an equation), to build
 the system. Analyze all possible combinations of symbols and choose those which meet the following conditions:
 1. The set of equations must have exactly one structural redundancy. Structural redundancy is defined as the number 
-of equations minus the number of unknown variables that are present in these equations. 
+of equations minus the number of unknown variables that are present in these equations. Unknown variables start with 'x'. 
 2. All proper subsets of this set must not be PSO. This means that the structural redundancy of each subset must be 0 or less.
-Check the number of unknowns at the end as they may be repeated
+Check the number of unknowns at the end as they may be repeated.
 The result is the list of lists with symbols of equations.
 [USE CODE INTERPRETER]
 <example>
 <input>
 equations = {
-'M1', 'a * c = x01',
-'M2', 'b * d = x02',
-'M3', 'c * e = x03',
-'A2', 'x01 + x02 = f',
-'A1', 'x02 + x03 = g',
+'M1': 'a * c = x01',
+'M2': 'b * d = x02',
+'M3': 'c * e = x03',
+'A2': 'x01 + x02 = f',
+'A1': 'x02 + x03 = g',
 }
 </input>
 <output>
@@ -249,6 +249,11 @@ Remove duplicates and non-minimal elements from CandidatesCollection
 Return CandidatesCollection
 
 </algorithm>
+<input>
+{
+"minimal_conflicts": [['M1', 'M2', 'A1'], ['M1', 'M3', 'A1', 'A2']]
+}
+</input>
 <output>
 {
 "minimal_diagnoses": [['A1'], ['M1'], ['A2', 'M2'], ['M2', 'M3']]

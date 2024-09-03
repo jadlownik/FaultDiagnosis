@@ -31,7 +31,7 @@ def calculate_rowwise_common_elements(file_path, column1, column2):
     return df[['CountNormalized1', 'CountNormalized2', 'CommonElements', 'IncorrectlyGenerated', 'CommonPercentage']]
 
 
-file_path = r'C:\Users\jakto\Desktop\FaultDiagnosis\FaultDiagnosis\results\results_minimal_diagnoses_examples_all.csv'
+file_path = r'C:\Users\jakto\Desktop\FaultDiagnosis\FaultDiagnosis\results\results.csv'
 column1 = 'Minimal diagnosis'
 column2 = 'Minimal diagnosis - GPT'
 

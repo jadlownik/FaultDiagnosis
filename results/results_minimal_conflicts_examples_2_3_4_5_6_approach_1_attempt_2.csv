@@ -1,5 +1,5 @@
 Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
-5;Example 2 classic polybox;"M1: a * c = x01
+1;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -18,8 +18,8 @@ A2, M1
 A2, M2
 M1, M2
 M1, M3
-M2, M3";;;No JSON;
-6;Example 2 classic polybox;"M1: a * c = x01
+M2, M3";;;;
+2;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -42,8 +42,9 @@ M2, M3";"A2, M2, M3
 A1, A2, M1, M3";"A2
 M3
 A1, M2
-M1, M2";No JSON;
-7;Example 2 classic polybox;"M1: a * c = x01
+M1, M2";"A2, M2, M3
+A1, A2, M1, M3";
+3;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -66,8 +67,9 @@ M2, M3";"A1, M1, M2
 A1, A2, M1, M3";"A1
 M1
 A2, M2
-M2, M3";No JSON;
-8;Example 2 classic polybox;"M1: a * c = x01
+M2, M3";"A1, M1, M2
+A1, A2, M1, M3";
+4;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -91,8 +93,9 @@ A2, M2, M3";"M2
 A1, A2
 A1, M3
 A2, M1
-M1, M3";No JSON;
-9;Example 2 classic polybox;"M1: a * c = x01
+M1, M3";"A1, M1, M2
+A2, M2, M3";
+5;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -120,8 +123,10 @@ A2, M1
 A2, M2
 M1, M2
 M1, M3
-M2, M3";No JSON;
-10;Example 3 only A;"A1: a + b = x01
+M2, M3";"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3";
+6;Example 3 only A;"A1: a + b = x01
 A2: b + c = x02
 A3: c + d = x03
 A4: d + e = x04
@@ -146,8 +151,8 @@ A3, A7
 A4, A5
 A4, A7
 A5, A6
-A6, A7";;;No JSON;
-11;Example 3 only A;"A1: a + b = x01
+A6, A7";;;;
+7;Example 3 only A;"A1: a + b = x01
 A2: b + c = x02
 A3: c + d = x03
 A4: d + e = x04
@@ -174,8 +179,8 @@ A4, A7
 A5, A6
 A6, A7";A3, A4, A6;"A3
 A4
-A6";No JSON;
-12;Example 3 only A;"A1: a + b = x01
+A6";A3, A4, A6;
+8;Example 3 only A;"A1: a + b = x01
 A2: b + c = x02
 A3: c + d = x03
 A4: d + e = x04
@@ -203,8 +208,8 @@ A5, A6
 A6, A7";A1, A2, A5, A7;"A1
 A2
 A5
-A7";No JSON;
-13;Example 3 only A;"A1: a + b = x01
+A7";A1, A2, A5, A7;
+9;Example 3 only A;"A1: a + b = x01
 A2: b + c = x02
 A3: c + d = x03
 A4: d + e = x04
@@ -241,8 +246,9 @@ A3, A7
 A4, A5
 A4, A7
 A5, A6
-A6, A7";No JSON;
-14;Example 4 only M;"M1: a * b = x01
+A6, A7";"A3, A4, A6
+A1, A2, A5, A7";
+10;Example 4 only M;"M1: a * b = x01
 M2: b * c = x02
 M3: c * d = x03
 M4: d * e = x04
@@ -267,8 +273,8 @@ M3, M7
 M4, M5
 M4, M7
 M5, M6
-M6, M7";;;No JSON;
-15;Example 4 only M;"M1: a * b = x01
+M6, M7";;;;
+11;Example 4 only M;"M1: a * b = x01
 M2: b * c = x02
 M3: c * d = x03
 M4: d * e = x04
@@ -296,8 +302,8 @@ M5, M6
 M6, M7";M1, M2, M5, M7;"M1
 M2
 M5
-M7";No JSON;
-16;Example 4 only M;"M1: a * b = x01
+M7";M1, M2, M5, M7;
+12;Example 4 only M;"M1: a * b = x01
 M2: b * c = x02
 M3: c * d = x03
 M4: d * e = x04
@@ -324,8 +330,8 @@ M4, M7
 M5, M6
 M6, M7";M3, M4, M6;"M3
 M4
-M6";No JSON;
-17;Example 4 only M;"M1: a * b = x01
+M6";M3, M4, M6;
+13;Example 4 only M;"M1: a * b = x01
 M2: b * c = x02
 M3: c * d = x03
 M4: d * e = x04
@@ -362,8 +368,9 @@ M3, M7
 M4, M5
 M4, M7
 M5, M6
-M6, M7";No JSON;
-18;Example 5 mixed A and M;"A1: a + b = x01
+M6, M7";"M3, M4, M6
+M1, M2, M5, M7";
+14;Example 5 mixed A and M;"A1: a + b = x01
 M1: b * c = x02
 M2: c * d = x03
 A2: d + e = x04
@@ -388,8 +395,8 @@ A3, M2
 A4, M1
 A4, M3
 M1, M2
-M2, M3";;;No JSON;
-19;Example 5 mixed A and M;"A1: a + b = x01
+M2, M3";;;;
+15;Example 5 mixed A and M;"A1: a + b = x01
 M1: b * c = x02
 M2: c * d = x03
 A2: d + e = x04
@@ -416,8 +423,8 @@ A4, M3
 M1, M2
 M2, M3";A2, A4, M2;"A2
 A4
-M2";No JSON;
-20;Example 5 mixed A and M;"A1: a + b = x01
+M2";A2, A4, M2;
+16;Example 5 mixed A and M;"A1: a + b = x01
 M1: b * c = x02
 M2: c * d = x03
 A2: d + e = x04
@@ -454,8 +461,9 @@ A3, M2
 A4, M1
 A4, M3
 M1, M2
-M2, M3";No JSON;
-21;Example 5 mixed A and M;"A1: a + b = x01
+M2, M3";"A2, A4, M2
+A1, A3, M1, M3";
+17;Example 5 mixed A and M;"A1: a + b = x01
 M1: b * c = x02
 M2: c * d = x03
 A2: d + e = x04
@@ -483,8 +491,8 @@ M1, M2
 M2, M3";A1, A3, M1, M3;"A1
 A3
 M1
-M3";No JSON;
-22;Example 6;"A1: a + b = x01
+M3";A1, A3, M1, M3;
+18;Example 6;"A1: a + b = x01
 A2: d + e = x02
 A3: g + h = x03
 M1: c * x01 = x04
@@ -523,8 +531,8 @@ M1, M2
 M1, M3
 M1, M4
 M2, M3
-M2, M4";;;No JSON;
-23;Example 6;"A1: a + b = x01
+M2, M4";;;;
+19;Example 6;"A1: a + b = x01
 A2: d + e = x02
 A3: g + h = x03
 M1: c * x01 = x04
@@ -572,8 +580,9 @@ A2, M3
 A2, M4
 A3, M2
 M2, M3
-M2, M4";No JSON;
-24;Example 6;"A1: a + b = x01
+M2, M4";"A1, A2, A4, M1, M2
+A1, A3, A4, M1, M3, M4";
+20;Example 6;"A1: a + b = x01
 A2: d + e = x02
 A3: g + h = x03
 M1: c * x01 = x04
@@ -621,8 +630,9 @@ A1, M2
 A2, A4
 A2, M1
 A4, M2
-M1, M2";No JSON;
-25;Example 6;"A1: a + b = x01
+M1, M2";"A2, A3, M2, M3, M4
+A1, A3, A4, M1, M3, M4";
+21;Example 6;"A1: a + b = x01
 A2: d + e = x02
 A3: g + h = x03
 M1: c * x01 = x04
@@ -683,4 +693,6 @@ M1, M2
 M1, M3
 M1, M4
 M2, M3
-M2, M4";No JSON;
+M2, M4";"A1, A2, A4, M1, M2
+A2, A3, M2, M3, M4
+A1, A3, A4, M1, M3, M4";

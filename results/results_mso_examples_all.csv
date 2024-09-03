@@ -1,5 +1,15 @@
-Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;Minimal conflicts;Minimal diagnosis;Minimal conflicts - GPT;Minimal diagnosis - GPT
-1;Example 2 classic polybox;"M1: a * c = x01
+Lp.;Title;Equations;Observations;All minimal conflicts;All minimal diagnosis;All minimal conflicts - GPT
+1;Example 0;A1: a + b = c;"a = 1
+b = 1
+c = 2";A1;A1;A1
+2;Example 1 inverted polybox;"A1: a + b = x01
+A2: c + d = x02
+M1: x01 * x02 = e";"a = 1
+b = 1
+c = 1
+d = 1
+e = 2";A1, A2, M1;A1, A2, M1;A1, A2, M1
+3;Example 2 classic polybox;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 A1: x01 + x02 = f
@@ -18,10 +28,10 @@ A2, M1
 A2, M2
 M1, M2
 M1, M3
-M2, M3";;;"M1, M2, A1
+M2, M3";"M1, M2, A1
 M2, M3, A2
-M1, M3, A1, A2";
-2;Example 3 only A;"A1: a + b = x01
+M1, M3, A1, A2"
+4;Example 3 only A;"A1: a + b = x01
 A2: b + c = x02
 A3: c + d = x03
 A4: d + e = x04
@@ -46,9 +56,9 @@ A3, A7
 A4, A5
 A4, A7
 A5, A6
-A6, A7";;;"A3, A4, A6
-A1, A2, A5, A7";
-3;Example 4 only M;"M1: a * b = x01
+A6, A7";"A3, A4, A6
+A1, A2, A5, A7"
+5;Example 4 only M;"M1: a * b = x01
 M2: b * c = x02
 M3: c * d = x03
 M4: d * e = x04
@@ -73,11 +83,9 @@ M3, M7
 M4, M5
 M4, M7
 M5, M6
-M6, M7";M3, M4, M6;"M3
-M4
-M6";"M3, M4, M6
-M1, M2, M5, M7";
-4;Example 5 mixed A and M;"A1: a + b = x01
+M6, M7";"M3, M4, M6
+M1, M2, M5, M7"
+6;Example 5 mixed A and M;"A1: a + b = x01
 M1: b * c = x02
 M2: c * d = x03
 A2: d + e = x04
@@ -102,9 +110,9 @@ A3, M2
 A4, M1
 A4, M3
 M1, M2
-M2, M3";;;"M2, A2, A4
-A1, M1, A3, M3";
-5;Example 6;"A1: a + b = x01
+M2, M3";"M2, A2, A4
+A1, M1, A3, M3"
+7;Example 6;"A1: a + b = x01
 A2: d + e = x02
 A3: g + h = x03
 M1: c * x01 = x04
@@ -143,10 +151,10 @@ M1, M2
 M1, M3
 M1, M4
 M2, M3
-M2, M4";;;"A1, A2, M1, M2, A4
+M2, M4";"A1, A2, M1, M2, A4
 A2, A3, M2, M3, M4
-A1, A3, M1, M3, A4, M4";
-6;Example 7;"A1: a + b = x02
+A1, A3, M1, M3, A4, M4"
+8;Example 7;"A1: a + b = x02
 M1: c * d = x01
 M2: e * x01 = x03
 A2: x02 + x03 = x04
@@ -169,10 +177,10 @@ M1, M3
 M1, M4
 M2, M3
 M2, M4
-M3, M4";;;"M3, M4
+M3, M4";"M3, M4
 A1, M1, M2, A2, M3
-A1, M1, M2, A2, M4";
-7;Example 8;"A1: a + b = x01
+A1, M1, M2, A2, M4"
+9;Example 8;"A1: a + b = x01
 M1: b * c = x02
 A2: c + d = x03
 M2: d * e = x04
@@ -260,35 +268,13 @@ A6, M4, M5
 M1, M2, M5
 M1, M4, M5
 M2, M3, M5
-M3, M4, M5";"A5, A6, M5
-A1, A4, M1, M3, M5
-A2, A3, A5, M2, M4, M5";"M5
-A1, A5
-A4, A5
-A5, M1
-A5, M3
-A1, A2, A6
-A1, A3, A6
-A1, A6, M2
-A1, A6, M4
-A2, A4, A6
-A2, A6, M1
-A2, A6, M3
-A3, A4, A6
-A3, A6, M1
-A3, A6, M3
-A4, A6, M2
-A4, A6, M4
-A6, M1, M2
-A6, M1, M4
-A6, M2, M3
-A6, M3, M4";"M5, A5, A6
+M3, M4, M5";"M5, A5, A6
 A1, M1, M3, A4, M5
 A2, M2, A3, M4, A6
 A1, M1, M3, A4, A5, A6
 A2, M2, A3, M4, M5, A5
-A1, M1, A2, M2, M3, A3, A4, M4, A5";
-8;Example 9 nine M and six A;"M1: a * c = x01
+A1, M1, A2, M2, M3, A3, A4, M4, A5"
+10;Example 9 nine M and six A;"M1: a * c = x01
 M2: b * d = x02
 M3: c * e = x03
 M4: f * h = x04
@@ -487,31 +473,16 @@ M5, M6, M7
 M5, M7, M8
 M5, M7, M9
 M6, M7, M9
-M7, M8, M9";"A2, A3, M2, M3, M4, M5, M9
-A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
-A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
-A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9";"A2
-A3
-M3
-M4
-M9
-A1, M2
-A4, M5
-A5, M2
-A6, M5
-M1, M2
-M2, M7
-M5, M6
-M5, M8";"M1, M2, M7, A1, A5
+M7, M8, M9";"M1, M2, M7, A1, A5
 M5, M6, A4, M8, A6
 M2, M3, M4, M5, A2, A3, M9
 M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
 M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
-M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";
-9;Example 10;A1: a & b = c;"a = 1
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6"
+11;Example 10;A1: a & b = c;"a = 1
 b = 1
-c = 1";A1;A1;;;A1;
-10;Example 11 inverted polybox;"A1: a & b = x01
+c = 1";A1;A1;A1
+12;Example 11 inverted polybox;"A1: a & b = x01
 A2: c & d = x02
 O1: x01 | x02 = e";"a = 1
 b = 1
@@ -519,8 +490,8 @@ c = 1
 d = 1
 e = 1";A1, A2, O1;"A1
 A2
-O1";;;A1, A2, O1;
-11;Example 12 classic polybox;"O1: a | c = x01
+O1";A1, A2, O1
+13;Example 12 classic polybox;"O1: a | c = x01
 O2: b | d = x02
 O3: c | e = x03
 A1: x01 & x02 = f
@@ -539,10 +510,10 @@ A2, O1
 A2, O2
 O1, O2
 O1, O3
-O2, O3";;;"O1, O2, A1
+O2, O3";"O1, O2, A1
 O2, O3, A2
-O1, O3, A1, A2";
-12;Example 13 only A;"A1: a & b = x01
+O1, O3, A1, A2"
+14;Example 13 only A;"A1: a & b = x01
 A2: b & c = x02
 A3: c & d = x03
 A4: d & e = x04
@@ -568,20 +539,8 @@ A4, A5
 A4, A7
 A5, A6
 A6, A7";"A3, A4, A6
-A1, A2, A5, A7";"A1, A3
-A1, A4
-A1, A6
-A2, A3
-A2, A4
-A2, A6
-A3, A5
-A3, A7
-A4, A5
-A4, A7
-A5, A6
-A6, A7";"A3, A4, A6
-A1, A2, A5, A7";
-13;Example 14 only O;"O1: a | b = x01
+A1, A2, A5, A7"
+15;Example 14 only O;"O1: a | b = x01
 O2: b | c = x02
 O3: c | d = x03
 O4: d | e = x04
@@ -606,9 +565,9 @@ O3, O7
 O4, O5
 O4, O7
 O5, O6
-O6, O7";;;"O3, O4, O6
-O1, O2, O5, O7";
-14;Example 15 mixed A and O;"A1: a & b = x01
+O6, O7";"O3, O4, O6
+O1, O2, O5, O7"
+16;Example 15 mixed A and O;"A1: a & b = x01
 O1: b | c = x02
 O2: c | d = x03
 A2: d & e = x04
@@ -633,9 +592,9 @@ A3, O2
 A4, O1
 A4, O3
 O1, O2
-O2, O3";;;"O2, A2, A4
-A1, O1, A3, O3";
-15;Example 16;"A1: a & b = x01
+O2, O3";"O2, A2, A4
+A1, O1, A3, O3"
+17;Example 16;"A1: a & b = x01
 A2: d & e = x02
 A3: g & h = x03
 O1: c | x01 = x04
@@ -674,10 +633,10 @@ O1, O2
 O1, O3
 O1, O4
 O2, O3
-O2, O4";;;"A1, A2, O1, O2, A4
+O2, O4";"A1, A2, O1, O2, A4
 A2, A3, O2, O3, O4
-A1, A3, O1, O3, A4, O4";
-16;Example 17;"A1: a & b = x02
+A1, A3, O1, O3, A4, O4"
+18;Example 17;"A1: a & b = x02
 O1: c | d = x01
 O2: e | x01 = x03
 A2: x02 & x03 = x04
@@ -700,10 +659,10 @@ O1, O3
 O1, O4
 O2, O3
 O2, O4
-O3, O4";;;"O3, O4
+O3, O4";"O3, O4
 A1, O1, O2, A2, O3
-A1, O1, O2, A2, O4";
-17;Example 18;"A1: a & b = x01
+A1, O1, O2, A2, O4"
+19;Example 18;"A1: a & b = x01
 O1: b | c = x02
 A2: c & d = x03
 O2: d | e = x04
@@ -791,13 +750,13 @@ A6, O4, O5
 O1, O2, O5
 O1, O4, O5
 O2, O3, O5
-O3, O4, O5";;;"O5, A5, A6
+O3, O4, O5";"O5, A5, A6
 A1, O1, O3, A4, O5
 A2, O2, A3, O4, A6
 A1, O1, O3, A4, A5, A6
 A2, O2, A3, O4, O5, A5
-A1, O1, A2, O2, O3, A3, A4, O4, A5";
-18;Example 19 nine O and six A;"O1: a | c = x01
+A1, O1, A2, O2, O3, A3, A4, O4, A5"
+20;Example 19 nine O and six A;"O1: a | c = x01
 O2: b | d = x02
 O3: c | e = x03
 O4: f | h = x04
@@ -996,13 +955,13 @@ O5, O6, O7
 O5, O7, O8
 O5, O7, O9
 O6, O7, O9
-O7, O8, O9";;;"O1, O2, O7, A1, A5
+O7, O8, O9";"O1, O2, O7, A1, A5
 O5, O6, A4, O8, A6
 O2, O3, O4, O5, A2, A3, O9
 O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
 O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
-O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";
-19;Example 20;"M1: a * b * c = x01
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6"
+21;Example 20;"M1: a * b * c = x01
 M2: c * d * e = x02
 M3: e * f * g = x03
 A1: a + x01 + x02 = h
@@ -1023,10 +982,10 @@ M1, M2
 M1, M3
 M1, M4
 M2, M3
-M2, M4";;;"M1, M2, A1
+M2, M4";"M1, M2, A1
 M2, M3, M4
-M1, M3, A1, M4";
-20;Example 21;"O1: a | b | c = x01
+M1, M3, A1, M4"
+22;Example 21;"O1: a | b | c = x01
 O2: c | d | e = x02
 O3: e | f | g = x03
 A1: a & x01 & x02 = h
@@ -1047,10 +1006,10 @@ O1, O2
 O1, O3
 O1, O4
 O2, O3
-O2, O4";;;"O1, O2, A1
+O2, O4";"O1, O2, A1
 O2, O3, O4
-O1, O3, A1, O4";
-21;Example 22 xor nor nand;"NA1: a ~& b = x01
+O1, O3, A1, O4"
+23;Example 22 xor nor nand;"NA1: a ~& b = x01
 NO2: c ~| d = x02
 NX1: x01 ~^ x02 = e";"a = 1
 b = 1
@@ -1058,4 +1017,4 @@ c = 1
 d = 1
 e = 1";NA1, NO2, NX1;"NA1
 NO2
-NX1";;;NA1, NO2, NX1;
+NX1";NA1, NO2, NX1
