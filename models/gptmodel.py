@@ -13,7 +13,7 @@ class GPTModel:
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",
             instructions=GPT_INSTRUCTION,
-            temperature=1.0,
+            temperature=0.01,
             top_p=1.0,
             tools=[{"type": "code_interpreter"}],
             model=OPENAI_API_MODEL,
