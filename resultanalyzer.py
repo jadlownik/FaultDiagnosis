@@ -31,10 +31,10 @@ def calculate_rowwise_common_elements(file_path, column1, column2):
     return df[['CountNormalized1', 'CountNormalized2', 'CommonElements', 'IncorrectlyGenerated', 'CommonPercentage']]
 
 
-file_path = r'C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results\results_minimal_diagnoses_examples_approach_1_attempt_2_overwrite.csv'
+file_path = r'.\results\results_minimal_diagnoses_examples_approach_1_attempt_2_overwrite.csv'
 column1 = 'Minimal diagnosis'
 column2 = 'Minimal diagnosis - GPT'
 
 result_df = calculate_rowwise_common_elements(file_path, column1, column2)
-output_file_path = r'C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results\results_analysis222.csv'
+output_file_path = r'.\results\results_analysis222.csv'
 result_df.to_csv(output_file_path, sep=';', index=False)

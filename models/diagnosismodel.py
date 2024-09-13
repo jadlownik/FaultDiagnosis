@@ -65,7 +65,6 @@ class DiagnosisModel:
             return self._get_minimal_diagnosis()
 
     def _model_ok(self):
-        # TODO: more complex model verification
         return self._model is not None
 
     def _create_unknown_variables(self, variables):

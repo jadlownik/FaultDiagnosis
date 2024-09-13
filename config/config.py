@@ -57,7 +57,6 @@ equations = {
 </output>
 </example>
 '''
-
 GPT_INSTRUCTION_PART_2 = '''
 Imagine you are an engineer specialized in fault diagnosis.
 Create a class with the following components:
@@ -216,7 +215,6 @@ For ['NA1', 'NO2', 'NX1'] system of eqautions are inconsistent so output should 
 }
 </example_3>
 '''
-
 GPT_INSTRUCTION_PART_3 = '''
 Imagine you are an engineer specialized in fault diagnosis.
 Use the 'minimal_conflicts' which contains lists of equation symbols
