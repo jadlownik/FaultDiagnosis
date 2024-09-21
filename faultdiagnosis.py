@@ -8,7 +8,8 @@ from models.diagnosismodel import DiagnosisModel
 from models.gptmodel import GPTModel
 from utils import format_data, get_observations, are_lists_on_list, \
     prepare_equations_for_gpt, prepare_observations_for_gpt
-from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS
+from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, ACTUAL_PART
+from enums import PartEnum
 
 
 class FaultDiagnosis:
@@ -38,6 +39,8 @@ class FaultDiagnosis:
                         variables[OBSERVATIONS] = observation
                         self._generate_single_row(variables, iterator)
                         iterator += 1
+                        if ACTUAL_PART == PartEnum.MSO.value:
+                            break
                 else:
                     variables[OBSERVATIONS] = observations
                     self._generate_single_row(variables, iterator)
@@ -69,6 +72,7 @@ class FaultDiagnosis:
         print(f'All minimal diagnosis:\n{formatted_all_minimal_diagnosis}')
         print(f'Minimal conflicts:\n{formatted_minimal_conflicts}')
         print(f'Minimal diagnosis:\n{formatted_minimal_diagnosis}')
+        print(f'GPT MSO:\n{formatted_gpt_minimal_conflicts}')
         print(f'GPT minimal conflicts:\n{formatted_gpt_minimal_conflicts}')
         print(f'GPT minimal diagnosis:\n{formatted_gpt_minimal_diagnosis}')
         print('------------------------')
@@ -89,8 +93,13 @@ class FaultDiagnosis:
 
         gpt_equations = prepare_equations_for_gpt(variables)
         gpt_observations = prepare_observations_for_gpt(variables)
-        gpt_input_data = f'equations = {gpt_equations}, data = {gpt_observations}'
-        gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
+        if ACTUAL_PART == PartEnum.MSO.value or ACTUAL_PART == PartEnum.ALL.value:
+            gpt_input_data = f'equations = {gpt_equations}, data = {gpt_observations}'
+        elif ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value:
+            gpt_input_data = f'mso = {all_minimal_conflicts}, equations = {gpt_equations}, data = {gpt_observations}'
+        elif ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value:
+            gpt_input_data = f'minimal_conflicts = {minimal_conflicts}'
+        gpt_mso, gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
 
         formatted_equations = format_data(variables[EQUATIONS])
         formatted_observations = format_data(get_observations(variables))
@@ -98,6 +107,7 @@ class FaultDiagnosis:
         formatted_all_minimal_diagnosis = format_data(all_minimal_diagnosis)
         formatted_minimal_conflicts = format_data(minimal_conflicts)
         formatted_minimal_diagnosis = format_data(minimal_diagnosis)
+        formatted_gpt_mso = format_data(gpt_mso)
         formatted_gpt_minimal_conflicts = format_data(gpt_minimal_conflicts)
         formatted_gpt_minimal_diagnosis = format_data(gpt_minimal_diagnosis)
 
@@ -106,7 +116,7 @@ class FaultDiagnosis:
             formatted_equations, formatted_observations,
             formatted_all_minimal_conflicts, formatted_all_minimal_diagnosis,
             formatted_minimal_conflicts, formatted_minimal_diagnosis,
-            formatted_gpt_minimal_conflicts, formatted_gpt_minimal_diagnosis
+            formatted_gpt_mso, formatted_gpt_minimal_conflicts, formatted_gpt_minimal_diagnosis
         ]
 
         self._collected_data.append(row)

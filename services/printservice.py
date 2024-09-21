@@ -13,7 +13,7 @@ class PrintService:
         headers = ['Lp.', 'Title',
                    'Equations', 'Observations',
                    'All minimal conflicts', 'All minimal diagnosis',
-                   'Minimal conflicts', 'Minimal diagnosis',
+                   'Minimal conflicts', 'Minimal diagnosis', 'MSO -GPT',
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']
 
         formatted_table = tabulate(data, headers=headers, tablefmt='pretty')
@@ -23,7 +23,7 @@ class PrintService:
         headers = ['Lp.', 'Title',
                    'Equations', 'Observations',
                    'All minimal conflicts', 'All minimal diagnosis',
-                   'Minimal conflicts', 'Minimal diagnosis',
+                   'Minimal conflicts', 'Minimal diagnosis', 'MSO -GPT',
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']
 
         with open(filename, mode='w', newline='', encoding='utf-8') as file:
@@ -35,7 +35,7 @@ class PrintService:
         headers = ['Lp.', 'Title',
                    'Equations', 'Observations',
                    'All minimal conflicts', 'All minimal diagnosis',
-                   'Minimal conflicts', 'Minimal diagnosis',
+                   'Minimal conflicts', 'Minimal diagnosis', 'MSO -GPT',
                    'Minimal conflicts - GPT', 'Minimal diagnosis - GPT']
 
         formatted_table = tabulate(data, headers=headers, tablefmt='pretty')

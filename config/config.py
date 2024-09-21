@@ -1,5 +1,9 @@
+from enums import PartEnum
+
+ACTUAL_PART = PartEnum.MSO.value
+OPENAI_API_MODEL = 'gpt-4o-mini'
+
 PATH_EXAMPLES = 'examples\\'
-PRINT_TO_CONSOLE = True
 TITLE = 'title'
 ALL_VARIABLES = 'x'
 FAULTS = 'f'
@@ -9,7 +13,6 @@ OBSERVATIONS = 'o'
 PREFIX_FAULT = 'f_'
 PREFIX_SIGNAL = 'u_'
 RELATIONS = 'rels'
-OPENAI_API_MODEL = 'gpt-4o-mini'
 JSON_KEY_MSO = 'mso'
 JSON_KEY_CONFLICTS = 'minimal_conflicts'
 JSON_KEY_DIAGNOSES = 'minimal_diagnoses'
