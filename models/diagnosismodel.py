@@ -7,6 +7,7 @@ import os
 from .utils import external_functions
 from config.config import FAULTS, KNOWN_VARIABLES, ALL_VARIABLES, \
     PREFIX_FAULT, PREFIX_SIGNAL, EQUATIONS, RELATIONS, OBSERVATIONS
+import json
 
 
 class DiagnosisModel:
@@ -28,14 +29,14 @@ class DiagnosisModel:
     def __init__(self):
         pass
 
-    def create(self, variables):
+    def create(self, variables, iterator):
         self._variables = variables
         x = self._create_unknown_variables(variables[ALL_VARIABLES])
         f = self._create_faults(variables[FAULTS])
         z = self._create_known_variables(variables[KNOWN_VARIABLES])
         r = self._create_relations(variables[EQUATIONS], variables[ALL_VARIABLES],
                                    variables[KNOWN_VARIABLES])
-        self._create_model_definition(x, f, z, r)
+        self._create_model_definition(x, f, z, r, iterator)
         self._create_model()
         self._get_mso()
         self._get_fsm()
@@ -94,12 +95,13 @@ class DiagnosisModel:
         self._equations_count = len(relations)
         return relations
 
-    def _create_model_definition(self, x, f, z, r):
+    def _create_model_definition(self, x, f, z, r, iterator):
         self._model_definition = {'type': 'Symbolic',
                                   ALL_VARIABLES: x,
                                   FAULTS: f,
                                   KNOWN_VARIABLES: z,
                                   RELATIONS: r}
+        self._save_model_definition_to_file(iterator)
         sym.var(self._model_definition[ALL_VARIABLES])
         sym.var(self._model_definition[FAULTS])
         sym.var(self._model_definition[KNOWN_VARIABLES])
@@ -261,3 +263,18 @@ class DiagnosisModel:
 
     def _get_random_number(self):
         return random.randint(0, 9999)
+
+    def _save_model_definition_to_file(self, iterator):
+        tmp_dir = "fdt"
+        if not os.path.exists(tmp_dir):
+            os.makedirs(tmp_dir)
+
+        serialized_model_definition = self._model_definition.copy()
+        serialized_model_definition["rels"] = [
+            str(expr) for expr in serialized_model_definition["rels"]
+        ]
+
+        filename = os.path.join(tmp_dir, f"model_definition_{iterator-1}.json")
+
+        with open(filename, "w") as file:
+            json.dump(serialized_model_definition, file, indent=4)

@@ -11,6 +11,7 @@ class GPTModel:
     _client = None
 
     def __init__(self):
+        return
         self._client = OpenAI()
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",

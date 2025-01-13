@@ -81,7 +81,7 @@ class FaultDiagnosis:
     def _generate_single_row(self, variables, iterator):
         if not any(char in equation for equation in variables[EQUATIONS] for char in ['~', '&', '|', '^']):
             model = DiagnosisModel()
-            model.create(variables)
+            model.create(variables, iterator)
             all_minimal_conflicts = model.get_all_minimal_conflicts()
             all_minimal_diagnosis = model.get_all_minimal_diagnosis()
             minimal_conflicts = model.get_minimal_conflicts()
@@ -99,7 +99,11 @@ class FaultDiagnosis:
             gpt_input_data = f'mso = {all_minimal_conflicts}, equations = {gpt_equations}, data = {gpt_observations}'
         elif ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value:
             gpt_input_data = f'minimal_conflicts = {minimal_conflicts}'
-        gpt_mso, gpt_minimal_conflicts, gpt_minimal_diagnosis = self._gpt_model.get_solution(gpt_input_data)
+        gpt_mso, gpt_minimal_conflicts, gpt_minimal_diagnosis = (
+            [],
+            [],
+            [],
+        )  # self._gpt_model.get_solution(gpt_input_data)
 
         formatted_equations = format_data(variables[EQUATIONS])
         formatted_observations = format_data(get_observations(variables))
