@@ -274,7 +274,7 @@ class DiagnosisModel:
             str(expr) for expr in serialized_model_definition["rels"]
         ]
 
-        filename = os.path.join(tmp_dir, f"model_definition_{iterator-1}.json")
+        filename = os.path.join(tmp_dir, f"model_definition_{iterator - 1}.json")
 
         with open(filename, "w") as file:
             json.dump(serialized_model_definition, file, indent=4)
