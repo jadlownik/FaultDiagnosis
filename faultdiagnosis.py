@@ -10,12 +10,15 @@ from utils import format_data, get_observations, are_lists_on_list, \
     prepare_equations_for_gpt, prepare_observations_for_gpt
 from config.config import PATH_EXAMPLES, TITLE, EQUATIONS, OBSERVATIONS, ACTUAL_PART
 from enums import PartEnum
+from datetime import datetime
 
 
 class FaultDiagnosis:
     _collected_data = []
     _enable_print = None
     _disable_print = None
+    _raw = []
+    _raw_messages = []
 
     def __init__(self):
         self._reader_service = ReaderService()
@@ -45,8 +48,23 @@ class FaultDiagnosis:
                     variables[OBSERVATIONS] = observations
                     self._generate_single_row(variables, iterator)
                     iterator += 1
-        self._print_service.save_to_csv(self._collected_data, 'results\\results.csv')
-        self._print_service.save_table_to_file(self._collected_data, 'results\\results.txt')
+        timestamp = datetime.now().strftime("%d_%m_%H_%M_%S")
+        self._print_service.save_to_csv(
+            self._collected_data,
+            f"results_article\\mso_conflicts_diagnoses\\csv\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.csv",
+        )
+        self._print_service.save_table_to_file(
+            self._collected_data,
+            f"results_article\\mso_conflicts_diagnoses\\txt\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+        )
+        self._print_service.save_array_to_file(
+            self._raw,
+            f"results_article\\mso_conflicts_diagnoses\\raw\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+        )
+        self._print_service.save_array_to_file(
+            self._raw_messages,
+            f"results_article\\mso_conflicts_diagnoses\\raw_messages\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+        )
 
     def _print_results_to_console(self,
                                   formatted_equations,
@@ -94,16 +112,15 @@ class FaultDiagnosis:
         gpt_equations = prepare_equations_for_gpt(variables)
         gpt_observations = prepare_observations_for_gpt(variables)
         if ACTUAL_PART == PartEnum.MSO.value or ACTUAL_PART == PartEnum.ALL.value:
-            gpt_input_data = f'equations = {gpt_equations}, data = {gpt_observations}'
+            gpt_input_data = f"equations = {gpt_equations}"
         elif ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value:
             gpt_input_data = f'mso = {all_minimal_conflicts}, equations = {gpt_equations}, data = {gpt_observations}'
         elif ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value:
             gpt_input_data = f'minimal_conflicts = {minimal_conflicts}'
+        self._raw.append(gpt_input_data)
         gpt_mso, gpt_minimal_conflicts, gpt_minimal_diagnosis = (
-            [],
-            [],
-            [],
-        )  # self._gpt_model.get_solution(gpt_input_data)
+            self._gpt_model.get_solution(gpt_input_data, self._raw_messages)
+        )
 
         formatted_equations = format_data(variables[EQUATIONS])
         formatted_observations = format_data(get_observations(variables))

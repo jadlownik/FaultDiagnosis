@@ -11,7 +11,6 @@ class GPTModel:
     _client = None
 
     def __init__(self):
-        return
         self._client = OpenAI()
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",
@@ -28,7 +27,7 @@ class GPTModel:
 
         self._thread = self._client.beta.threads.create()
 
-    def get_solution(self, input_data):
+    def get_solution(self, input_data, raw_messages):
         self._messages = self._client.beta.threads.messages.create(
             thread_id=self._thread.id,
             role="user",
@@ -43,6 +42,7 @@ class GPTModel:
             self._messages = self._client.beta.threads.messages.list(
                 thread_id=self._thread.id
             )
+            raw_messages.append(self._messages.data[0].content[0].text.value)
             if ACTUAL_PART == PartEnum.MSO.value:
                 gpt_mso = self._extract_mso(self._messages.data[0].content[0].text.value)
                 return gpt_mso, [], []

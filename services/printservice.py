@@ -42,3 +42,8 @@ class PrintService:
 
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(formatted_table)
+
+    def save_array_to_file(self, array, filename):
+        with open(filename, "w") as file:
+            for index, item in enumerate(array, start=1):
+                file.write(f"{index}. {item}\n\n")

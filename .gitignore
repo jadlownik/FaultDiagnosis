@@ -12,3 +12,4 @@
 *.vsix
 
 __pycache__
+.env

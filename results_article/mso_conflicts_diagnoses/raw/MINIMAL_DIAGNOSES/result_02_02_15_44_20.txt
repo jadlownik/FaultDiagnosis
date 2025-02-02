@@ -1,0 +1,198 @@
+1. minimal_conflicts = []
+
+2. minimal_conflicts = [['A2', 'M2', 'M3'], ['A1', 'A2', 'M1', 'M3']]
+
+3. minimal_conflicts = [['A1', 'M1', 'M2'], ['A1', 'A2', 'M1', 'M3']]
+
+4. minimal_conflicts = [['A1', 'M1', 'M2'], ['A2', 'M2', 'M3']]
+
+5. minimal_conflicts = [['A1', 'M1', 'M2'], ['A2', 'M2', 'M3'], ['A1', 'A2', 'M1', 'M3']]
+
+6. minimal_conflicts = []
+
+7. minimal_conflicts = [['A3', 'A4', 'A6']]
+
+8. minimal_conflicts = [['A1', 'A2', 'A5', 'A7']]
+
+9. minimal_conflicts = [['A3', 'A4', 'A6'], ['A1', 'A2', 'A5', 'A7']]
+
+10. minimal_conflicts = []
+
+11. minimal_conflicts = [['M1', 'M2', 'M5', 'M7']]
+
+12. minimal_conflicts = [['M3', 'M4', 'M6']]
+
+13. minimal_conflicts = [['M3', 'M4', 'M6'], ['M1', 'M2', 'M5', 'M7']]
+
+14. minimal_conflicts = []
+
+15. minimal_conflicts = [['A2', 'A4', 'M2']]
+
+16. minimal_conflicts = [['A2', 'A4', 'M2'], ['A1', 'A3', 'M1', 'M3']]
+
+17. minimal_conflicts = [['A1', 'A3', 'M1', 'M3']]
+
+18. minimal_conflicts = []
+
+19. minimal_conflicts = [['A1', 'A2', 'A4', 'M1', 'M2'], ['A1', 'A3', 'A4', 'M1', 'M3', 'M4']]
+
+20. minimal_conflicts = [['A2', 'A3', 'M2', 'M3', 'M4'], ['A1', 'A3', 'A4', 'M1', 'M3', 'M4']]
+
+21. minimal_conflicts = [['A1', 'A2', 'A4', 'M1', 'M2'], ['A2', 'A3', 'M2', 'M3', 'M4'], ['A1', 'A3', 'A4', 'M1', 'M3', 'M4']]
+
+22. minimal_conflicts = []
+
+23. minimal_conflicts = [['M3', 'M4'], ['A1', 'A2', 'M1', 'M2', 'M3']]
+
+24. minimal_conflicts = [['M3', 'M4'], ['A1', 'A2', 'M1', 'M2', 'M4']]
+
+25. minimal_conflicts = [['A1', 'A2', 'M1', 'M2', 'M3'], ['A1', 'A2', 'M1', 'M2', 'M4']]
+
+26. minimal_conflicts = []
+
+27. minimal_conflicts = [['A5', 'A6', 'M5'], ['A1', 'A4', 'M1', 'M3', 'M5'], ['A2', 'A3', 'A5', 'M2', 'M4', 'M5']]
+
+28. minimal_conflicts = [['A5', 'A6', 'M5'], ['A1', 'A4', 'A5', 'A6', 'M1', 'M3'], ['A2', 'A3', 'A5', 'M2', 'M4', 'M5'], ['A1', 'A2', 'A3', 'A4', 'A5', 'M1', 'M2', 'M3', 'M4']]
+
+29. minimal_conflicts = [['A5', 'A6', 'M5'], ['A2', 'A3', 'A6', 'M2', 'M4'], ['A1', 'A4', 'A5', 'A6', 'M1', 'M3']]
+
+30. minimal_conflicts = [['A5', 'A6', 'M5'], ['A1', 'A4', 'M1', 'M3', 'M5'], ['A2', 'A3', 'A6', 'M2', 'M4'], ['A2', 'A3', 'A5', 'M2', 'M4', 'M5'], ['A1', 'A2', 'A3', 'A4', 'A5', 'M1', 'M2', 'M3', 'M4']]
+
+31. minimal_conflicts = [['A5', 'A6', 'M5'], ['A1', 'A4', 'M1', 'M3', 'M5'], ['A1', 'A4', 'A5', 'A6', 'M1', 'M3'], ['A2', 'A3', 'A5', 'M2', 'M4', 'M5'], ['A1', 'A2', 'A3', 'A4', 'A5', 'M1', 'M2', 'M3', 'M4']]
+
+32. minimal_conflicts = [['A1', 'A4', 'M1', 'M3', 'M5'], ['A2', 'A3', 'A6', 'M2', 'M4'], ['A1', 'A4', 'A5', 'A6', 'M1', 'M3'], ['A2', 'A3', 'A5', 'M2', 'M4', 'M5']]
+
+33. minimal_conflicts = [['A2', 'A3', 'A6', 'M2', 'M4'], ['A1', 'A2', 'A3', 'A4', 'A5', 'M1', 'M2', 'M3', 'M4']]
+
+34. minimal_conflicts = []
+
+35. minimal_conflicts = [['A1', 'A5', 'M1', 'M2', 'M7'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A5', 'M1', 'M3', 'M4', 'M5', 'M7', 'M9'], ['A2', 'A3', 'A4', 'A6', 'M2', 'M3', 'M4', 'M6', 'M8', 'M9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'M1', 'M3', 'M4', 'M6', 'M7', 'M8', 'M9']]
+
+36. minimal_conflicts = [['A1', 'A5', 'M1', 'M2', 'M7'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A2', 'A3', 'A4', 'A6', 'M2', 'M3', 'M4', 'M6', 'M8', 'M9']]
+
+37. minimal_conflicts = [['A1', 'A5', 'M1', 'M2', 'M7'], ['A4', 'A6', 'M5', 'M6', 'M8'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A5', 'M1', 'M3', 'M4', 'M5', 'M7', 'M9'], ['A2', 'A3', 'A4', 'A6', 'M2', 'M3', 'M4', 'M6', 'M8', 'M9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'M1', 'M3', 'M4', 'M6', 'M7', 'M8', 'M9']]
+
+38. minimal_conflicts = [['A4', 'A6', 'M5', 'M6', 'M8'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A5', 'M1', 'M3', 'M4', 'M5', 'M7', 'M9']]
+
+39. minimal_conflicts = [['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A5', 'M1', 'M3', 'M4', 'M5', 'M7', 'M9'], ['A2', 'A3', 'A4', 'A6', 'M2', 'M3', 'M4', 'M6', 'M8', 'M9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'M1', 'M3', 'M4', 'M6', 'M7', 'M8', 'M9']]
+
+40. minimal_conflicts = [['A4', 'A6', 'M5', 'M6', 'M8'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A5', 'M1', 'M3', 'M4', 'M5', 'M7', 'M9'], ['A2', 'A3', 'A4', 'A6', 'M2', 'M3', 'M4', 'M6', 'M8', 'M9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'M1', 'M3', 'M4', 'M6', 'M7', 'M8', 'M9']]
+
+41. minimal_conflicts = [['A1', 'A5', 'M1', 'M2', 'M7'], ['A4', 'A6', 'M5', 'M6', 'M8'], ['A2', 'A3', 'M2', 'M3', 'M4', 'M5', 'M9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'M1', 'M3', 'M4', 'M6', 'M7', 'M8', 'M9']]
+
+42. minimal_conflicts = []
+
+43. minimal_conflicts = [['A1']]
+
+44. minimal_conflicts = []
+
+45. minimal_conflicts = [['A1', 'A2', 'O1']]
+
+46. minimal_conflicts = []
+
+47. minimal_conflicts = [['A1', 'O1', 'O2'], ['A1', 'A2', 'O1', 'O3']]
+
+48. minimal_conflicts = [['A2', 'O2', 'O3'], ['A1', 'A2', 'O1', 'O3']]
+
+49. minimal_conflicts = [['A1', 'O1', 'O2'], ['A2', 'O2', 'O3']]
+
+50. minimal_conflicts = []
+
+51. minimal_conflicts = [['A3', 'A4', 'A6']]
+
+52. minimal_conflicts = [['A1', 'A2', 'A5', 'A7']]
+
+53. minimal_conflicts = [['A3', 'A4', 'A6'], ['A1', 'A2', 'A5', 'A7']]
+
+54. minimal_conflicts = []
+
+55. minimal_conflicts = [['O3', 'O4', 'O6']]
+
+56. minimal_conflicts = [['O1', 'O2', 'O5', 'O7']]
+
+57. minimal_conflicts = [['O3', 'O4', 'O6'], ['O1', 'O2', 'O5', 'O7']]
+
+58. minimal_conflicts = []
+
+59. minimal_conflicts = [['A2', 'A4', 'O2']]
+
+60. minimal_conflicts = [['A1', 'A3', 'O1', 'O3']]
+
+61. minimal_conflicts = [['A2', 'A4', 'O2'], ['A1', 'A3', 'O1', 'O3']]
+
+62. minimal_conflicts = []
+
+63. minimal_conflicts = [['A1', 'A2', 'A4', 'O1', 'O2']]
+
+64. minimal_conflicts = [['A2', 'A3', 'O2', 'O3', 'O4'], ['A1', 'A3', 'A4', 'O1', 'O3', 'O4']]
+
+65. minimal_conflicts = [['A1', 'A2', 'A4', 'O1', 'O2'], ['A2', 'A3', 'O2', 'O3', 'O4'], ['A1', 'A3', 'A4', 'O1', 'O3', 'O4']]
+
+66. minimal_conflicts = []
+
+67. minimal_conflicts = [['O3', 'O4'], ['A1', 'A2', 'O1', 'O2', 'O3']]
+
+68. minimal_conflicts = [['O3', 'O4'], ['A1', 'A2', 'O1', 'O2', 'O4']]
+
+69. minimal_conflicts = [['O3', 'O4'], ['A1', 'A2', 'O1', 'O2', 'O3'], ['A1', 'A2', 'O1', 'O2', 'O4']]
+
+70. minimal_conflicts = []
+
+71. minimal_conflicts = [['A5', 'A6', 'O5'], ['A1', 'A4', 'O1', 'O3', 'O5'], ['A2', 'A3', 'A5', 'O2', 'O4', 'O5']]
+
+72. minimal_conflicts = [['A5', 'A6', 'O5'], ['A1', 'A4', 'O1', 'O3', 'O5'], ['A1', 'A4', 'A5', 'A6', 'O1', 'O3'], ['A2', 'A3', 'A5', 'O2', 'O4', 'O5'], ['A1', 'A2', 'A3', 'A4', 'A5', 'O1', 'O2', 'O3', 'O4']]
+
+73. minimal_conflicts = [['A5', 'A6', 'O5'], ['A1', 'A4', 'O1', 'O3', 'O5'], ['A2', 'A3', 'A6', 'O2', 'O4'], ['A1', 'A4', 'A5', 'A6', 'O1', 'O3'], ['A2', 'A3', 'A5', 'O2', 'O4', 'O5']]
+
+74. minimal_conflicts = [['A2', 'A3', 'A6', 'O2', 'O4'], ['A1', 'A2', 'A3', 'A4', 'A5', 'O1', 'O2', 'O3', 'O4']]
+
+75. minimal_conflicts = [['A1', 'A4', 'A5', 'A6', 'O1', 'O3'], ['A1', 'A2', 'A3', 'A4', 'A5', 'O1', 'O2', 'O3', 'O4']]
+
+76. minimal_conflicts = [['A5', 'A6', 'O5'], ['A2', 'A3', 'A6', 'O2', 'O4'], ['A1', 'A4', 'A5', 'A6', 'O1', 'O3']]
+
+77. minimal_conflicts = [['A5', 'A6', 'O5'], ['A1', 'A4', 'O1', 'O3', 'O5'], ['A2', 'A3', 'A6', 'O2', 'O4'], ['A2', 'A3', 'A5', 'O2', 'O4', 'O5'], ['A1', 'A2', 'A3', 'A4', 'A5', 'O1', 'O2', 'O3', 'O4']]
+
+78. minimal_conflicts = []
+
+79. minimal_conflicts = [['A1', 'A5', 'O1', 'O2', 'O7']]
+
+80. minimal_conflicts = [['A1', 'A5', 'O1', 'O2', 'O7'], ['A2', 'A3', 'O2', 'O3', 'O4', 'O5', 'O9'], ['A1', 'A2', 'A3', 'A5', 'O1', 'O3', 'O4', 'O5', 'O7', 'O9'], ['A2', 'A3', 'A4', 'A6', 'O2', 'O3', 'O4', 'O6', 'O8', 'O9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'O1', 'O3', 'O4', 'O6', 'O7', 'O8', 'O9']]
+
+81. minimal_conflicts = [['A1', 'A5', 'O1', 'O2', 'O7'], ['A4', 'A6', 'O5', 'O6', 'O8'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'O1', 'O3', 'O4', 'O6', 'O7', 'O8', 'O9']]
+
+82. minimal_conflicts = [['A4', 'A6', 'O5', 'O6', 'O8'], ['A2', 'A3', 'O2', 'O3', 'O4', 'O5', 'O9'], ['A1', 'A2', 'A3', 'A5', 'O1', 'O3', 'O4', 'O5', 'O7', 'O9'], ['A2', 'A3', 'A4', 'A6', 'O2', 'O3', 'O4', 'O6', 'O8', 'O9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'O1', 'O3', 'O4', 'O6', 'O7', 'O8', 'O9']]
+
+83. minimal_conflicts = [['A2', 'A3', 'O2', 'O3', 'O4', 'O5', 'O9'], ['A1', 'A2', 'A3', 'A5', 'O1', 'O3', 'O4', 'O5', 'O7', 'O9'], ['A2', 'A3', 'A4', 'A6', 'O2', 'O3', 'O4', 'O6', 'O8', 'O9'], ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'O1', 'O3', 'O4', 'O6', 'O7', 'O8', 'O9']]
+
+84. minimal_conflicts = [['A4', 'A6', 'O5', 'O6', 'O8']]
+
+85. minimal_conflicts = [['A1', 'A5', 'O1', 'O2', 'O7'], ['A4', 'A6', 'O5', 'O6', 'O8'], ['A2', 'A3', 'O2', 'O3', 'O4', 'O5', 'O9'], ['A1', 'A2', 'A3', 'A5', 'O1', 'O3', 'O4', 'O5', 'O7', 'O9'], ['A2', 'A3', 'A4', 'A6', 'O2', 'O3', 'O4', 'O6', 'O8', 'O9']]
+
+86. minimal_conflicts = []
+
+87. minimal_conflicts = [['A1', 'M1', 'M2'], ['A1', 'M1', 'M3', 'M4']]
+
+88. minimal_conflicts = [['M2', 'M3', 'M4'], ['A1', 'M1', 'M3', 'M4']]
+
+89. minimal_conflicts = [['A1', 'M1', 'M2'], ['M2', 'M3', 'M4'], ['A1', 'M1', 'M3', 'M4']]
+
+90. minimal_conflicts = []
+
+91. minimal_conflicts = [['O2', 'O3', 'O4'], ['A1', 'O1', 'O3', 'O4']]
+
+92. minimal_conflicts = [['A1', 'O1', 'O2']]
+
+93. minimal_conflicts = [['A1', 'O1', 'O2'], ['O2', 'O3', 'O4'], ['A1', 'O1', 'O3', 'O4']]
+
+94. minimal_conflicts = []
+
+95. minimal_conflicts = [['NA1', 'NO2', 'NX1']]
+
+96. minimal_conflicts = []
+
+97. minimal_conflicts = [['A1']]
+
+98. minimal_conflicts = []
+
+99. minimal_conflicts = [['A1', 'A2', 'M1']]
+

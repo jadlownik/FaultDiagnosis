@@ -1,0 +1,221 @@
+1. The analysis of the given equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M1', 'M2', 'A1'], ['M2', 'M3', 'A2'], ['M1', 'M3', 'A1', 'A2']]
+}
+```
+
+2. The analysis of the new equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['A3', 'A4', 'A6'], ['A1', 'A2', 'A5', 'A7']]
+}
+```
+
+3. The analysis of the final equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M3', 'M4', 'M6'], ['M1', 'M2', 'M5', 'M7']]
+}
+```
+
+4. The analysis of the mixed equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M2', 'A2', 'A4'], ['A1', 'M1', 'A3', 'M3']]
+}
+```
+
+5. The analysis of the latest equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['A1', 'A2', 'M1', 'M2', 'A4'],
+          ['A2', 'A3', 'M2', 'M3', 'M4'],
+          ['A1', 'A3', 'M1', 'M3', 'A4', 'M4']]
+}
+```
+
+6. The analysis of the latest equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M3', 'M4'],
+          ['A1', 'M1', 'M2', 'A2', 'M3'],
+          ['A1', 'M1', 'M2', 'A2', 'M4']]
+}
+```
+
+7. The analysis of the complex equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M5', 'A5', 'A6'],
+          ['A1', 'M1', 'M3', 'A4', 'M5'],
+          ['A2', 'M2', 'A3', 'M4', 'A6'],
+          ['A1', 'M1', 'M3', 'A4', 'A5', 'A6'],
+          ['A2', 'M2', 'A3', 'M4', 'M5', 'A5'],
+          ['A1', 'M1', 'A2', 'M2', 'M3', 'A3', 'A4', 'M4', 'A5']]
+}
+```
+
+8. The analysis of the final complex equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M1', 'M2', 'M7', 'A1', 'A5'],
+          ['M5', 'M6', 'A4', 'M8', 'A6'],
+          ['M2', 'M3', 'M4', 'M5', 'A2', 'A3', 'M9'],
+          ['M1', 'M3', 'M4', 'M5', 'M7', 'A1', 'A2', 'A3', 'A5', 'M9'],
+          ['M2', 'M3', 'M4', 'M6', 'A2', 'A3', 'A4', 'M8', 'M9', 'A6'],
+          ['M1', 'M3', 'M4', 'M6', 'M7', 'A1', 'A2', 'A3', 'A4', 'M8', 'A5', 'M9', 'A6']]
+}
+```
+
+9. The analysis of the simple equation system has not identified any Minimal Structurally Overdetermined (MSO) sets. 
+
+```json
+{
+  "mso": []
+}
+```
+
+10. The analysis of the logical equation system has identified the following Minimal Structurally Overdetermined (MSO) set:
+
+```json
+{
+  "mso": [['A1', 'A2', 'O1']]
+}
+```
+
+11. The analysis of the complex logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O1', 'O2', 'A1'],
+          ['O2', 'O3', 'A2'],
+          ['O1', 'O3', 'A1', 'A2']]
+}
+```
+
+12. The analysis of the final logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['A3', 'A4', 'A6'],
+          ['A1', 'A2', 'A5', 'A7']]
+}
+```
+
+13. The analysis of the final complex logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O3', 'O4', 'O6'],
+          ['O1', 'O2', 'O5', 'O7']]
+}
+```
+
+14. The analysis of the mixed logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O2', 'A2', 'A4'],
+          ['A1', 'O1', 'A3', 'O3']]
+}
+```
+
+15. The analysis of the mixed logical final equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['A1', 'A2', 'O1', 'O2', 'A4'],
+          ['A2', 'A3', 'O2', 'O3', 'O4'],
+          ['A1', 'A3', 'O1', 'O3', 'A4', 'O4']]
+}
+```
+
+16. The analysis of the final mixed logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O3', 'O4'],
+          ['A1', 'O1', 'O2', 'A2', 'O3'],
+          ['A1', 'O1', 'O2', 'A2', 'O4']]
+}
+```
+
+17. The analysis of the complex logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O5', 'A5', 'A6'],
+          ['A1', 'O1', 'O3', 'A4', 'O5'],
+          ['A2', 'O2', 'A3', 'O4', 'A6'],
+          ['A1', 'O1', 'O3', 'A4', 'A5', 'A6'],
+          ['A2', 'O2', 'A3', 'O4', 'O5', 'A5'],
+          ['A1', 'O1', 'A2', 'O2', 'O3', 'A3', 'A4', 'O4', 'A5']]
+}
+```
+
+18. The analysis of the complex logical equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O1', 'O2', 'O7', 'A1', 'A5'],
+          ['O5', 'O6', 'A4', 'O8', 'A6'],
+          ['O2', 'O3', 'O4', 'O5', 'A2', 'A3', 'O9'],
+          ['O1', 'O3', 'O4', 'O5', 'O7', 'A1', 'A2', 'A3', 'A5', 'O9'],
+          ['O2', 'O3', 'O4', 'O6', 'A2', 'A3', 'A4', 'O8', 'O9', 'A6'],
+          ['O1', 'O3', 'O4', 'O6', 'O7', 'A1', 'A2', 'A3', 'A4', 'O8', 'A5', 'O9', 'A6']]
+}
+```
+
+19. The analysis of the complex multiplicative equation system has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['M1', 'M2', 'A1'],
+          ['M2', 'M3', 'M4'],
+          ['M1', 'M3', 'A1', 'M4']]
+}
+```
+
+20. The analysis of the complex logical equation system with OR operations has identified the following Minimal Structurally Overdetermined (MSO) sets:
+
+```json
+{
+  "mso": [['O1', 'O2', 'A1'],
+          ['O2', 'O3', 'O4'],
+          ['O1', 'O3', 'A1', 'O4']]
+}
+```
+
+21. The analysis of the custom logical equation system has identified the following Minimal Structurally Overdetermined (MSO) set:
+
+```json
+{
+  "mso": [['NA1', 'NO2', 'NX1']]
+}
+```
+
+22. The analysis of the simple equation system has not identified any Minimal Structurally Overdetermined (MSO) sets.
+
+```json
+{
+  "mso": []
+}
+```
+
+23. The analysis of the simple multiplicative equation system has identified the following Minimal Structurally Overdetermined (MSO) set:
+
+```json
+{
+  "mso": [['A1', 'A2', 'M1']]
+}
+```
+

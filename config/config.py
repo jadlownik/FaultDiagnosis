@@ -1,6 +1,6 @@
 from enums import PartEnum
 
-ACTUAL_PART = PartEnum.MSO.value
+ACTUAL_PART = PartEnum.MINIMAL_CONFLICTS.value
 OPENAI_API_MODEL = 'gpt-4o-mini'
 
 PATH_EXAMPLES = 'examples\\'
@@ -33,15 +33,17 @@ SD_LOGIC_XOR = 'XORgate(x) ∧ ¬AB(x) ⇒ Output(x) = Input1(x) ⊕ Input2(x)'
 SD_LOGIC_NAND = 'NANDgate(x) ∧ ¬AB(x) ⇒ Output(x) = ¬(Input1(x) ∧ Input2(x))'
 SD_LOGIC_NOR = 'NORgate(x) ∧ ¬AB(x) ⇒ Output(x) = ¬(Input1(x) ∨ Input2(x))'
 SD_LOGIC_XNOR = 'XNORgate(x) ∧ ¬AB(x) ⇒ Output(x) = ¬(Input1(x) ⊕ Input2(x))'
-GPT_INSTRUCTION_PART_1 = '''
-Imagine you are an engineer specialized in fault diagnosis. The final result should be in JSON format and should consist of 'mso'.
-Use 'equations' a dictionary (key is a symbol, value is an equation), to build
-the system. Analyze all possible combinations of symbols and choose those which meet the following conditions:
-1. The set of equations must have exactly one structural redundancy. Structural redundancy is defined as the number 
-of equations minus the number of unknown variables that are present in these equations. Unknown variables start with 'x'. 
-2. All proper subsets of this set must not be PSO. This means that the structural redundancy of each subset must be 0 or less.
-Check the number of unknowns at the end as they may be repeated.
-The result is the list of lists with symbols of equations.
+GPT_INSTRUCTION_PART_1 = """
+Perform an analysis of the equation system equations and identify all Minimal Structurally Overdetermined (MSO) sets.
+Definitions:
+1. Unknown variables: These are only the variables that start with "x".
+2. Structural redundancy: This is the difference between the number of equations and the number of unique unknown variables in those equations: R=(number of equations)−(number of unique unknowns).
+3. PSO (Properly Structurally Observable): A subset is PSO if its structural redundancy is greater than 0.
+Conditions:
+1. The selected set of equations must have exactly one structural redundancy.
+2. None of its proper subsets can be PSO (all must have redundancy ≤ 0).
+Output:
+JSON format: { "mso": [...] }, where each inner list represents a valid MSO set.
 [USE CODE INTERPRETER]
 <example>
 <input>
@@ -59,7 +61,7 @@ equations = {
 }
 </output>
 </example>
-'''
+"""
 GPT_INSTRUCTION_PART_2 = '''
 Imagine you are an engineer specialized in fault diagnosis.
 Create a class with the following components:
@@ -262,7 +264,7 @@ Return CandidatesCollection
 </output>
 '''
 
-GPT_INSTRUCTION = '''
+GPT_INSTRUCTION = """
 Imagine you are an engineer specialized in fault diagnosis. Your task is divided into three parts.
 You have to complete the first part before the second part, and the second part before the third part.
 Use the result from the first part to get the result for the second part and use the second part results to get
@@ -270,23 +272,25 @@ the final result. The final result should be in JSON format and should consist o
 'minimal_conflicts' from the second part and 'minimal_diagnoses' from the third part. You can use the code 
 interpreter but in the answer, I want only JSON with two keys 'minimal_conflicts' and 'minimal_diagnoses'.
 <part1>
-Use 'equations,' a list of tuples in the format (symbol, equation, list of unknowns in the equation), to build
+Use 'equations,' a dictionary where key is a symbol, value is a equation, to build
 the system. Analyze all possible combinations of symbols and choose those which meet the following conditions:
 1. The set of equations must have exactly one structural redundancy. Structural redundancy is defined as the number 
 of equations minus the number of unknown variables that are present in these equations. 
 2. All proper subsets of this set must not be PSO. This means that the structural redundancy of each subset must be 0 or less.
+Unknowns are the variables that appear in the equations but are not keys in the 'data' dictionary.
 Check the number of unknowns at the end as they may be repeated
-The result is the list of lists with symbols of equations.
+The result is the list of lists with symbols of equations that satisfy the above conditions.
 [USE CODE INTERPRETER]
 <example>
 <input>
 equations = [
-('M1', 'a * c = x01', ['x01']),
-('M2', 'b * d = x02', ['x02']),
-('M3', 'c * e = x03', ['x03']),
-('A2', 'x01 + x02 = f', ['x01', 'x02']),
-('A1', 'x02 + x03 = g', ['x02', 'x03'])
+('M1', 'a * c = x01'),
+('M2', 'b * d = x02'),
+('M3', 'c * e = x03'),
+('A2', 'x01 + x02 = f'),
+('A1', 'x02 + x03 = g')
 ]
+data = {'a': 2, 'b': 2, 'c': 3, 'd': 3, 'e': 2, 'f': 12, 'g': 12}
 </input>
 <output>
 {
@@ -480,4 +484,4 @@ Return CandidatesCollection
 }
 </output>
 </part3>
-'''
+"""
