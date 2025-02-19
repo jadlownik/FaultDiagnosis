@@ -1,0 +1,165 @@
+1. The verbose output confirms that all groups are indeed consistent, as indicated by the "Is contradictory: False" messages for each group. 
+
+Here’s a summary of the findings:
+
+1. **Group ['A1', 'M1', 'M2']**: Not contradictory.
+2. **Group ['A2', 'M2', 'M3']**: Not contradictory.
+3. **Group ['A1', 'A2', 'M1', 'M3']**: Not contradictory.
+
+Since all groups are consistent, the output remains as follows:
+
+```json
+{
+  "minimal_conflicts": []
+}
+```
+
+This indicates that there are no minimal conflicts among the provided groups of equations. If you have any further questions or need additional tests, feel free to ask!
+
+2. The output for the new input indicates that there are indeed minimal conflicts among the groups of equations. Here’s the detailed breakdown:
+
+1. **Group ['A1', 'M1', 'M2']**:
+   - Equations:
+     - \( A1: x01 + x02 = 12 \)
+     - \( M1: 6 = x01 \)
+     - \( M2: 6 = x02 \)
+   - Result: Not contradictory.
+
+2. **Group ['A2', 'M2', 'M3']**:
+   - Equations:
+     - \( A2: x02 + x03 = 10 \)
+     - \( M2: 6 = x02 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 10 \) (not satisfied).
+   - Result: Contradictory.
+
+3. **Group ['A1', 'A2', 'M1', 'M3']**:
+   - Equations:
+     - \( A1: x01 + x02 = 12 \)
+     - \( A2: x02 + x03 = 10 \)
+     - \( M1: 6 = x01 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 12 \) for \( A1 \) (satisfied) and \( 6 + 6 = 10 \) for \( A2 \) (not satisfied).
+   - Result: Contradictory.
+
+The final output indicates the groups that are contradictory:
+
+```json
+{
+  "minimal_conflicts": [["A2", "M2", "M3"], ["A1", "A2", "M1", "M3"]]
+}
+```
+
+This means that the groups `['A2', 'M2', 'M3']` and `['A1', 'A2', 'M1', 'M3']` have conflicting equations based on the provided data. If you have any further questions or need additional tests, feel free to ask!
+
+3. The output for the new input indicates that there are minimal conflicts among the groups of equations. Here’s the detailed breakdown:
+
+1. **Group ['A1', 'M1', 'M2']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( M1: 6 = x01 \)
+     - \( M2: 6 = x02 \)
+   - Substituting gives \( 6 + 6 = 10 \) (not satisfied).
+   - Result: Contradictory.
+
+2. **Group ['A2', 'M2', 'M3']**:
+   - Equations:
+     - \( A2: x02 + x03 = 12 \)
+     - \( M2: 6 = x02 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 12 \) (satisfied).
+   - Result: Not contradictory.
+
+3. **Group ['A1', 'A2', 'M1', 'M3']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( A2: x02 + x03 = 12 \)
+     - \( M1: 6 = x01 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 10 \) for \( A1 \) (not satisfied) and \( 6 + 6 = 12 \) for \( A2 \) (satisfied).
+   - Result: Contradictory.
+
+The final output indicates the groups that are contradictory:
+
+```json
+{
+  "minimal_conflicts": [["A1", "M1", "M2"], ["A1", "A2", "M1", "M3"]]
+}
+```
+
+This means that the groups `['A1', 'M1', 'M2']` and `['A1', 'A2', 'M1', 'M3']` have conflicting equations based on the provided data. If you have any further questions or need additional tests, feel free to ask!
+
+4. The output for the final input indicates that there are minimal conflicts among the groups of equations. Here’s the detailed breakdown:
+
+1. **Group ['A1', 'M1', 'M2']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( M1: 6 = x01 \)
+     - \( M2: 6 = x02 \)
+   - Substituting gives \( 6 + 6 = 10 \) (not satisfied).
+   - Result: Contradictory.
+
+2. **Group ['A2', 'M2', 'M3']**:
+   - Equations:
+     - \( A2: x02 + x03 = 10 \)
+     - \( M2: 6 = x02 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 10 \) (not satisfied).
+   - Result: Contradictory.
+
+3. **Group ['A1', 'A2', 'M1', 'M3']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( A2: x02 + x03 = 10 \)
+     - \( M1: 6 = x01 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 10 \) for \( A1 \) (not satisfied) and \( 6 + 6 = 10 \) for \( A2 \) (not satisfied).
+   - Result: Not contradictory.
+
+The final output indicates the groups that are contradictory:
+
+```json
+{
+  "minimal_conflicts": [["A1", "M1", "M2"], ["A2", "M2", "M3"]]
+}
+```
+
+This means that the groups `['A1', 'M1', 'M2']` and `['A2', 'M2', 'M3']` have conflicting equations based on the provided data. If you have any further questions or need additional tests, feel free to ask!
+
+5. The output for the latest input indicates that all groups of equations are contradictory. Here’s the detailed breakdown:
+
+1. **Group ['A1', 'M1', 'M2']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( M1: 6 = x01 \)
+     - \( M2: 6 = x02 \)
+   - Substituting gives \( 6 + 6 = 10 \) (not satisfied).
+   - Result: Contradictory.
+
+2. **Group ['A2', 'M2', 'M3']**:
+   - Equations:
+     - \( A2: x02 + x03 = 14 \)
+     - \( M2: 6 = x02 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 14 \) (not satisfied).
+   - Result: Contradictory.
+
+3. **Group ['A1', 'A2', 'M1', 'M3']**:
+   - Equations:
+     - \( A1: x01 + x02 = 10 \)
+     - \( A2: x02 + x03 = 14 \)
+     - \( M1: 6 = x01 \)
+     - \( M3: 6 = x03 \)
+   - Substituting gives \( 6 + 6 = 10 \) for \( A1 \) (not satisfied) and \( 6 + 6 = 14 \) for \( A2 \) (not satisfied).
+   - Result: Contradictory.
+
+The final output indicates the groups that are contradictory:
+
+```json
+{
+  "minimal_conflicts": [["A1", "M1", "M2"], ["A2", "M2", "M3"], ["A1", "A2", "M1", "M3"]]
+}
+```
+
+This means that all three groups have conflicting equations based on the provided data. If you have any further questions or need additional tests, feel free to ask!
+

@@ -1,0 +1,330 @@
+CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT;CountNormalized1;CountNormalized2;CommonElements;IncorrectlyGenerated;CommonPercentage;MSO -GPT
+3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"M1, M2, A1
+M2, M3, A2
+M1, M3, A1, A2"
+2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7"
+2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7";2;2;2;0;1,0;"M3, M4, M6
+M1, M2, M5, M7"
+2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"M2, A2, A4
+A1, M1, A3, M3";2;1;0;1;0,0;No JSON;2;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;1;1;0;0,3333333333333333;A2, A3, M2, M3, M4;3;3;3;0;1,0;"A1, A2, M1, M2, A4
+A2, A3, M2, M3, M4
+A1, A3, M1, M3, A4, M4";3;1;1;0;0,3333333333333333;A2, A3, M2, M3, M4;3;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;1;1;0;0,3333333333333333;M3, M4;3;3;3;0;1,0;"M3, M4
+A1, M1, M2, A2, M3
+A1, M1, M2, A2, M4";3;1;1;0;0,3333333333333333;M3, M4;3;1;0;1;0,0;No JSON
+6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;1;0;1;0,0;No JSON;6;6;6;0;1,0;"M5, A5, A6
+A1, M1, M3, A4, M5
+A2, M2, A3, M4, A6
+A1, M1, M3, A4, A5, A6
+A2, M2, A3, M4, M5, A5
+A1, M1, A2, M2, M3, A3, A4, M4, A5";6;1;0;1;0,0;No JSON;6;1;0;1;0,0;No JSON
+6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;1;0;1;0,0;No JSON;6;6;6;0;1,0;"M1, M2, M7, A1, A5
+M5, M6, A4, M8, A6
+M2, M3, M4, M5, A2, A3, M9
+M1, M3, M4, M5, M7, A1, A2, A3, A5, M9
+M2, M3, M4, M6, A2, A3, A4, M8, M9, A6
+M1, M3, M4, M6, M7, A1, A2, A3, A4, M8, A5, M9, A6";6;1;0;1;0,0;No JSON;6;1;0;1;0,0;No JSON
+1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;No JSON
+1;1;1;0;1,0;A1, A2, O1;1;1;1;0;1,0;A1, A2, O1;1;1;1;0;1,0;A1, A2, O1;1;1;1;0;1,0;A1, A2, O1;1;1;1;0;1,0;A1, A2, O1;1;1;1;0;1,0;A1, A2, O1;1;1;0;1;0,0;No JSON;1;1;1;0;1,0;A1, A2, O1;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"O1, O2, A1
+O2, O3, A2
+O1, O3, A1, A2";3;1;0;1;0,0;No JSON;3;1;0;1;0,0;No JSON
+2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"A3, A4, A6
+A1, A2, A5, A7"
+2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"O3, O4, O6
+O1, O2, O5, O7"
+2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;1;0;1;0,0;No JSON;2;2;2;0;1,0;"O2, A2, A4
+A1, O1, A3, O3";2;1;0;1;0,0;No JSON;2;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"A1, A2, O1, O2, A4
+A2, A3, O2, O3, O4
+A1, A3, O1, O3, A4, O4";3;1;0;1;0,0;No JSON;3;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"O3, O4
+A1, O1, O2, A2, O3
+A1, O1, O2, A2, O4";3;1;0;1;0,0;No JSON;3;1;0;1;0,0;No JSON
+6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;1;0;1;0,0;No JSON;6;6;6;0;1,0;"O5, A5, A6
+A1, O1, O3, A4, O5
+A2, O2, A3, O4, A6
+A1, O1, O3, A4, A5, A6
+A2, O2, A3, O4, O5, A5
+A1, O1, A2, O2, O3, A3, A4, O4, A5";6;1;0;1;0,0;No JSON;6;1;0;1;0,0;No JSON
+6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;1;0;1;0,0;No JSON;6;6;6;0;1,0;"O1, O2, O7, A1, A5
+O5, O6, A4, O8, A6
+O2, O3, O4, O5, A2, A3, O9
+O1, O3, O4, O5, O7, A1, A2, A3, A5, O9
+O2, O3, O4, O6, A2, A3, A4, O8, O9, A6
+O1, O3, O4, O6, O7, A1, A2, A3, A4, O8, A5, O9, A6";6;1;0;1;0,0;No JSON;6;1;0;1;0,0;No JSON
+3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;1;1;0;0,3333333333333333;M2, M3, M4;3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4";3;1;1;0;0,3333333333333333;M2, M3, M4;3;3;3;0;1,0;"M1, M2, A1
+M2, M3, M4
+M1, M3, A1, M4"
+3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4";3;1;0;1;0,0;No JSON;3;3;3;0;1,0;"O1, O2, A1
+O2, O3, O4
+O1, O3, A1, O4"
+1;1;1;0;1,0;NA1, NO2, NX1;1;1;1;0;1,0;NA1, NO2, NX1;1;1;1;0;1,0;NA1, NO2, NX1;1;1;1;0;1,0;NA1, NO2, NX1;1;1;1;0;1,0;NA1, NO2, NX1;1;1;1;0;1,0;NA1, NO2, NX1;1;1;0;1;0,0;No JSON;1;1;1;0;1,0;NA1, NO2, NX1;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;No JSON
+1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;;1;1;0;1;0,0;No JSON;1;1;0;1;0,0;No JSON
+1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;1;0;1,0;A1, A2, M1;1;1;0;1;0,0;No JSON

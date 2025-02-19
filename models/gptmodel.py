@@ -14,13 +14,25 @@ class GPTModel:
         self._client = OpenAI()
         self._assistant = self._client.beta.assistants.create(
             name="FaultDiagnosis",
-            instructions=GPT_INSTRUCTION if ACTUAL_PART == PartEnum.ALL.value else
-            GPT_INSTRUCTION_PART_1 if ACTUAL_PART == PartEnum.MSO.value else
-            GPT_INSTRUCTION_PART_2 if ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value else
-            GPT_INSTRUCTION_PART_3 if ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value else
-            "",
-            temperature=0.01,
-            top_p=1.0,
+            instructions=(
+                GPT_INSTRUCTION
+                if ACTUAL_PART == PartEnum.ALL.value
+                else (
+                    GPT_INSTRUCTION_PART_1
+                    if ACTUAL_PART == PartEnum.MSO.value
+                    else (
+                        GPT_INSTRUCTION_PART_2
+                        if ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value
+                        else (
+                            GPT_INSTRUCTION_PART_3
+                            if ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value
+                            else ""
+                        )
+                    )
+                )
+            ),
+            temperature=0.001,
+            top_p=0.001,
             tools=[{"type": "code_interpreter"}],
             model=OPENAI_API_MODEL,
         )
@@ -34,8 +46,7 @@ class GPTModel:
             content=input_data
         )
         self._run = self._client.beta.threads.runs.create_and_poll(
-            thread_id=self._thread.id,
-            assistant_id=self._assistant.id
+            thread_id=self._thread.id, assistant_id=self._assistant.id
         )
 
         if self._run.status == 'completed':
@@ -57,7 +68,18 @@ class GPTModel:
                 gpt_minimal_conflicts = self._extract_conflicts(self._messages.data[0].content[0].text.value)
                 gpt_minimal_diagnoses = self._extract_diagnoses(self._messages.data[0].content[0].text.value)
                 return gpt_mso, gpt_minimal_conflicts, gpt_minimal_diagnoses
+        elif self._run.status == "failed":
+            raw_messages.append(self._run.last_error)
+            if ACTUAL_PART == PartEnum.MSO.value:
+                return ["OpenAI Error"], [], []
+            elif ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value:
+                return [], ["OpenAI Error"], []
+            elif ACTUAL_PART == PartEnum.MINIMAL_DIAGNOSES.value:
+                return [], [], ["OpenAI Error"]
+            elif ACTUAL_PART == PartEnum.ALL.value:
+                return ["OpenAI Error"], ["OpenAI Error"], ["OpenAI Error"]
         else:
+            raw_messages.append("OpenAI Error")
             if ACTUAL_PART == PartEnum.MSO.value:
                 return ['OpenAI Error'], [], []
             elif ACTUAL_PART == PartEnum.MINIMAL_CONFLICTS.value:

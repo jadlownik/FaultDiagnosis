@@ -1,0 +1,5487 @@
+1. Here is the final output in JSON format:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A2",
+            "M2"
+        ]
+    ]
+}
+```
+
+2. Here is the updated output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "M1",
+            "M2"
+        ]
+    ]
+}
+```
+
+3. Here is the updated output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1"
+        ],
+        [
+            "A2",
+            "M2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "M3",
+            "M2"
+        ]
+    ]
+}
+```
+
+4. Here is the updated output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "M2"
+        ]
+    ]
+}
+```
+
+5. Here is the updated output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "A2",
+            "M2"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "M1",
+            "M2"
+        ]
+    ]
+}
+```
+
+6. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+``` 
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+7. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "A6"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+8. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A7"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+9. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "A7"
+        ],
+        [
+            "A4",
+            "A7"
+        ],
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A3",
+            "A7"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A3",
+            "A5"
+        ],
+        [
+            "A4",
+            "A2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+10. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+11. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M7"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "M1"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+12. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M4"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "M6"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+13. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M6",
+            "M7"
+        ],
+        [
+            "M6",
+            "M2"
+        ],
+        [
+            "M5",
+            "M6"
+        ],
+        [
+            "M4",
+            "M2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M5",
+            "M4"
+        ],
+        [
+            "M3",
+            "M7"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "M3",
+            "M5"
+        ],
+        [
+            "M1",
+            "M6"
+        ],
+        [
+            "M7",
+            "M4"
+        ],
+        [
+            "M1",
+            "M4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+14. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+15. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M2"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+16. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A3",
+            "M2"
+        ],
+        [
+            "A4",
+            "M1"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "M3",
+            "A4"
+        ],
+        [
+            "M1",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+17. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "M1"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+18. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+19. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4"
+        ],
+        [
+            "A2",
+            "M4"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "A3",
+            "M2"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A3",
+            "A2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+20. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M4"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A4",
+            "M2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M1",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+21. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "A4",
+            "M2"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "M3",
+            "A4"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M1",
+            "M2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A3",
+            "M2"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "A2",
+            "M4"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "A4",
+            "A3"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+22. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+23. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2",
+            "M4"
+        ],
+        [
+            "M4",
+            "M2"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M1",
+            "M4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+24. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M4"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "M3",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+25. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "M4"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+26. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+27. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "A6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "M3",
+            "A6",
+            "A2"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "M3",
+            "A6",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "M1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+28. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "A6",
+            "M4"
+        ],
+        [
+            "M5",
+            "A1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+29. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "A5"
+        ],
+        [
+            "M5",
+            "A1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A4",
+            "A3"
+        ],
+        [
+            "M5",
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A4",
+            "A2"
+        ],
+        [
+            "M5",
+            "A3",
+            "M3"
+        ],
+        [
+            "M5",
+            "A1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A2",
+            "M3"
+        ],
+        [
+            "M5",
+            "A4",
+            "M2"
+        ],
+        [
+            "M5",
+            "A4",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1",
+            "A2"
+        ],
+        [
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "M3",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A3"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "M5",
+            "A1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M3",
+            "M4"
+        ],
+        [
+            "A6"
+        ],
+        [
+            "M5",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1",
+            "A3"
+        ],
+        [
+            "A3",
+            "A5"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+30. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "A6",
+            "M4"
+        ],
+        [
+            "M3",
+            "A5",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A4"
+        ],
+        [
+            "M5",
+            "A3"
+        ],
+        [
+            "M5",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "A4",
+            "A3",
+            "A5"
+        ],
+        [
+            "M3",
+            "A6",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "M3",
+            "A2",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "M5",
+            "M2"
+        ],
+        [
+            "A4",
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "A6",
+            "M1"
+        ],
+        [
+            "M5",
+            "M4"
+        ],
+        [
+            "A1",
+            "A6",
+            "A5"
+        ],
+        [
+            "A5",
+            "M1",
+            "M4"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A1",
+            "M2",
+            "A5"
+        ],
+        [
+            "M3",
+            "A3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "A1",
+            "A3",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5",
+            "M2"
+        ],
+        [
+            "A1",
+            "A2",
+            "A5"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A5"
+        ],
+        [
+            "M1",
+            "A2",
+            "A5"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "M1",
+            "A3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A5",
+            "M1",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A5"
+        ],
+        [
+            "A4",
+            "A2",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A1",
+            "M4",
+            "A5"
+        ],
+        [
+            "A6",
+            "M1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M3",
+            "A6",
+            "M5"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+31. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "A6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M3",
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "M5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+32. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "A4",
+            "M2"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M3",
+            "A3"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "M5",
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "A5",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "A5"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "M3",
+            "M4"
+        ],
+        [
+            "M3",
+            "A6",
+            "A5"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A5"
+        ],
+        [
+            "M5",
+            "A2",
+            "A5"
+        ],
+        [
+            "M5",
+            "A3",
+            "A5"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+33. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "M1"
+        ],
+        [
+            "M5",
+            "A6",
+            "M3"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M5",
+            "A6",
+            "A4"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+34. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+35. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "A6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M3",
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "M5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M5",
+            "A4",
+            "M7"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "A2",
+            "M2"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A5",
+            "M4"
+        ],
+        [
+            "M5",
+            "M7",
+            "M6"
+        ],
+        [
+            "M9",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M7",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1",
+            "M6"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+36. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "M5",
+            "M6",
+            "A5"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M9",
+            "M1"
+        ],
+        [
+            "A2",
+            "M7"
+        ],
+        [
+            "M3",
+            "M7"
+        ],
+        [
+            "A3",
+            "M7"
+        ],
+        [
+            "M9",
+            "A5"
+        ],
+        [
+            "M5",
+            "A4",
+            "M7"
+        ],
+        [
+            "M5",
+            "A6",
+            "M7"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A5",
+            "M8"
+        ],
+        [
+            "A1",
+            "M9"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A5",
+            "M4"
+        ],
+        [
+            "M5",
+            "M7",
+            "M8"
+        ],
+        [
+            "M5",
+            "A1",
+            "M6"
+        ],
+        [
+            "M5",
+            "A6",
+            "M1"
+        ],
+        [
+            "M5",
+            "A4",
+            "M1"
+        ],
+        [
+            "M5",
+            "A4",
+            "A5"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "M9",
+            "M7"
+        ],
+        [
+            "M5",
+            "M7",
+            "M6"
+        ],
+        [
+            "M5",
+            "A1",
+            "M8"
+        ],
+        [
+            "M5",
+            "M1",
+            "M8"
+        ],
+        [
+            "M5",
+            "A6",
+            "A5"
+        ],
+        [
+            "M5",
+            "A1",
+            "A4"
+        ],
+        [
+            "A3",
+            "A5"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M7",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1",
+            "M6"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+37. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "M5",
+            "M6",
+            "A5"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M9",
+            "M1"
+        ],
+        [
+            "A2",
+            "M7"
+        ],
+        [
+            "M3",
+            "M7"
+        ],
+        [
+            "A3",
+            "M7"
+        ],
+        [
+            "M9",
+            "A5"
+        ],
+        [
+            "M5",
+            "A4",
+            "M7"
+        ],
+        [
+            "M5",
+            "A6",
+            "M7"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A5",
+            "M8"
+        ],
+        [
+            "A1",
+            "M9"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A5",
+            "M4"
+        ],
+        [
+            "M5",
+            "M7",
+            "M8"
+        ],
+        [
+            "M5",
+            "A1",
+            "M6"
+        ],
+        [
+            "M5",
+            "A6",
+            "M1"
+        ],
+        [
+            "M5",
+            "A4",
+            "M1"
+        ],
+        [
+            "M5",
+            "A4",
+            "A5"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "M9",
+            "M7"
+        ],
+        [
+            "M5",
+            "M7",
+            "M6"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "A1",
+            "A4",
+            "M4"
+        ],
+        [
+            "M3",
+            "A1",
+            "A4"
+        ],
+        [
+            "A4",
+            "A2",
+            "M2"
+        ],
+        [
+            "M3",
+            "A4",
+            "M2"
+        ],
+        [
+            "A2",
+            "M7",
+            "M6"
+        ],
+        [
+            "M3",
+            "M7",
+            "M6"
+        ],
+        [
+            "A1",
+            "A3",
+            "M8"
+        ],
+        [
+            "M8",
+            "A3",
+            "M2"
+        ],
+        [
+            "A4",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "A2",
+            "M2"
+        ],
+        [
+            "M5",
+            "M3",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M9",
+            "M2"
+        ],
+        [
+            "M8",
+            "M4",
+            "A5"
+        ],
+        [
+            "M8",
+            "M7",
+            "M2"
+        ],
+        [
+            "M5",
+            "M7",
+            "M6"
+        ],
+        [
+            "A4",
+            "M9",
+            "M2"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "A6",
+            "A3",
+            "A5"
+        ],
+        [
+            "M5",
+            "A2",
+            "M7"
+        ],
+        [
+            "M5",
+            "M7",
+            "M3"
+        ],
+        [
+            "A6",
+            "M9",
+            "M1"
+        ],
+        [
+            "A5",
+            "M6",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M1",
+            "M6",
+            "M4"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M5",
+            "M1",
+            "M6"
+        ],
+        [
+            "A6",
+            "A5",
+            "M4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+38. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "M8",
+            "M2",
+            "A5"
+        ],
+        [
+            "M6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A4",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "A2",
+            "M8"
+        ],
+        [
+            "M3",
+            "M8"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M3",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A4",
+            "M1",
+            "M2"
+        ],
+        [
+            "M9",
+            "M6"
+        ],
+        [
+            "M9",
+            "M8"
+        ],
+        [
+            "A5",
+            "M6",
+            "M2"
+        ],
+        [
+            "M4",
+            "M8"
+        ],
+        [
+            "M6",
+            "M7",
+            "M2"
+        ],
+        [
+            "A1",
+            "M8",
+            "M2"
+        ],
+        [
+            "M3",
+            "M6"
+        ],
+        [
+            "A3",
+            "M6"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "A6",
+            "M9"
+        ],
+        [
+            "A1",
+            "M6",
+            "M2"
+        ],
+        [
+            "M1",
+            "M6",
+            "M2"
+        ],
+        [
+            "M8",
+            "M7",
+            "M2"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "A3",
+            "M8"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "M4"
+        ],
+        [
+            "A4",
+            "M9"
+        ],
+        [
+            "A4",
+            "M7",
+            "M2"
+        ],
+        [
+            "A6",
+            "M7",
+            "M2"
+        ],
+        [
+            "A2",
+            "M6"
+        ],
+        [
+            "M8",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A5",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+39. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "A5"
+        ],
+        [
+            "M9"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "M4"
+        ],
+        [
+            "M5",
+            "M8"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "M5",
+            "M6"
+        ],
+        [
+            "M7",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+40. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M8",
+            "M2",
+            "A5"
+        ],
+        [
+            "M5",
+            "A2"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M9",
+            "M6"
+        ],
+        [
+            "A5",
+            "M6",
+            "M2"
+        ],
+        [
+            "A3",
+            "M8"
+        ],
+        [
+            "M9",
+            "M8"
+        ],
+        [
+            "A6",
+            "M7",
+            "M2"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6"
+        ],
+        [
+            "M5",
+            "M7",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "M4",
+            "M8"
+        ],
+        [
+            "M6",
+            "M7",
+            "M2"
+        ],
+        [
+            "M5",
+            "M2",
+            "A5"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "M5",
+            "M6"
+        ],
+        [
+            "A6",
+            "M4"
+        ],
+        [
+            "A4",
+            "M7",
+            "M2"
+        ],
+        [
+            "A6",
+            "A5",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "M6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A4",
+            "M2"
+        ],
+        [
+            "A2",
+            "M8"
+        ],
+        [
+            "M3",
+            "M8"
+        ],
+        [
+            "A4",
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "M2"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M8",
+            "M2"
+        ],
+        [
+            "M5",
+            "M8"
+        ],
+        [
+            "M5",
+            "M4"
+        ],
+        [
+            "A1",
+            "M6",
+            "M2"
+        ],
+        [
+            "M1",
+            "M6",
+            "M2"
+        ],
+        [
+            "M3",
+            "M6"
+        ],
+        [
+            "A2",
+            "M6"
+        ],
+        [
+            "M5",
+            "M9"
+        ],
+        [
+            "M5",
+            "A3"
+        ],
+        [
+            "M5",
+            "M1",
+            "M2"
+        ],
+        [
+            "M3",
+            "A4"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "A3",
+            "M6"
+        ],
+        [
+            "A6",
+            "M9"
+        ],
+        [
+            "M8",
+            "M7",
+            "M2"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A4",
+            "M9"
+        ],
+        [
+            "M8",
+            "M1",
+            "M2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+41. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "A6",
+            "M4"
+        ],
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M3",
+            "A6",
+            "A2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A6",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "M2"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "M5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "M3",
+            "A5"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "M5",
+            "A4",
+            "M1"
+        ],
+        [
+            "M5",
+            "A1",
+            "M2"
+        ],
+        [
+            "A1",
+            "A4",
+            "M2"
+        ],
+        [
+            "A4",
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A2",
+            "M2"
+        ],
+        [
+            "M5",
+            "M3",
+            "M2"
+        ],
+        [
+            "M5",
+            "M9",
+            "M2"
+        ],
+        [
+            "M8",
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "A2",
+            "A5"
+        ],
+        [
+            "A6",
+            "A3",
+            "A5"
+        ],
+        [
+            "A6",
+            "M9",
+            "M1"
+        ],
+        [
+            "A5",
+            "M6",
+            "M4"
+        ],
+        [
+            "M1",
+            "M6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A5",
+            "M4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+42. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+43. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+This indicates that the single element in the conflict can be considered a minimal diagnosis on its own.
+
+44. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+45. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+46. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+47. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "O2",
+            "A2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+48. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "O2",
+            "O1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+49. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "A2",
+            "O1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+50. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+51. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "A6"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+52. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A7"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+53. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "A7"
+        ],
+        [
+            "A4",
+            "A7"
+        ],
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A3",
+            "A7"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A3",
+            "A5"
+        ],
+        [
+            "A4",
+            "A2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+54. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+55. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O6"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "O4"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+56. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O7"
+        ],
+        [
+            "O5"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "O2"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+57. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O6"
+        ],
+        [
+            "O7",
+            "O4"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "O5",
+            "O4"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "O5",
+            "O3"
+        ],
+        [
+            "O6",
+            "O1"
+        ],
+        [
+            "O7",
+            "O3"
+        ],
+        [
+            "O7",
+            "O6"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "O5",
+            "O6"
+        ],
+        [
+            "O2",
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+58. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+59. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "O2"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+60. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O3"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+61. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A4",
+            "O1"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A4",
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "O2",
+            "A3"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A2",
+            "O1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+62. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+63. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+64. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "A2",
+            "O1"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+65. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "A3"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A2",
+            "O1"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "A4",
+            "O4"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A1",
+            "O2"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O2",
+            "O4"
+        ],
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "A4",
+            "O3"
+        ],
+        [
+            "A1",
+            "O4"
+        ],
+        [
+            "A2",
+            "O4"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "A3",
+            "O1"
+        ],
+        [
+            "A4",
+            "A3"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+66. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+67. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "A1",
+            "O4"
+        ],
+        [
+            "A2",
+            "O4"
+        ],
+        [
+            "O2",
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+68. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+69. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3",
+            "O4"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "A1",
+            "O4"
+        ],
+        [
+            "A2",
+            "O4"
+        ],
+        [
+            "O2",
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+70. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+71. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "O2",
+            "A6",
+            "A4"
+        ],
+        [
+            "O2",
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "A2",
+            "O1"
+        ],
+        [
+            "A6",
+            "A3",
+            "O1"
+        ],
+        [
+            "O3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "A1",
+            "A6",
+            "O2"
+        ],
+        [
+            "O1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "O3",
+            "A6",
+            "O4"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "A2",
+            "O3"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A1",
+            "A6",
+            "O4"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "O5"
+        ],
+        [
+            "O2",
+            "A6",
+            "O3"
+        ],
+        [
+            "A6",
+            "A3",
+            "O3"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+72. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "A5"
+        ],
+        [
+            "O2",
+            "A6",
+            "A4"
+        ],
+        [
+            "O2",
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "A2",
+            "O1"
+        ],
+        [
+            "A6",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A1"
+        ],
+        [
+            "O5",
+            "A6",
+            "A2"
+        ],
+        [
+            "O5",
+            "A6",
+            "O4"
+        ],
+        [
+            "O5",
+            "O3"
+        ],
+        [
+            "O5",
+            "A6",
+            "O2"
+        ],
+        [
+            "O5",
+            "O1"
+        ],
+        [
+            "O3",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "A1",
+            "A6",
+            "O2"
+        ],
+        [
+            "O1",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "O4",
+            "A6",
+            "O3"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "A2",
+            "O3"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "A1",
+            "A6",
+            "O4"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "O2",
+            "A6",
+            "O3"
+        ],
+        [
+            "O5",
+            "A5"
+        ],
+        [
+            "O5",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "O3"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+73. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3",
+            "O1",
+            "A5"
+        ],
+        [
+            "A2",
+            "O3",
+            "A5"
+        ],
+        [
+            "O2",
+            "A6",
+            "O1"
+        ],
+        [
+            "O5",
+            "O4",
+            "A5"
+        ],
+        [
+            "A3",
+            "O3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2",
+            "O1"
+        ],
+        [
+            "O2",
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A1",
+            "A3"
+        ],
+        [
+            "A1",
+            "A4",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "O2",
+            "O3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "O5",
+            "A4",
+            "A3"
+        ],
+        [
+            "O5",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A4",
+            "A2"
+        ],
+        [
+            "O5",
+            "A2",
+            "O1"
+        ],
+        [
+            "O5",
+            "O2",
+            "O1"
+        ],
+        [
+            "A1",
+            "A6",
+            "O2"
+        ],
+        [
+            "A1",
+            "O2",
+            "A5"
+        ],
+        [
+            "A6",
+            "O1",
+            "A5"
+        ],
+        [
+            "O4",
+            "A6",
+            "O3"
+        ],
+        [
+            "A4",
+            "M4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A4",
+            "O2"
+        ],
+        [
+            "O5",
+            "A2",
+            "A5"
+        ],
+        [
+            "O5",
+            "A3",
+            "A5"
+        ],
+        [
+            "O5",
+            "O2",
+            "A5"
+        ],
+        [
+            "O3",
+            "O4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A3",
+            "O3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "O2",
+            "A4",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A5"
+        ],
+        [
+            "A6",
+            "A5",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "A1",
+            "A4",
+            "M4"
+        ],
+        [
+            "A1",
+            "A2",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A2",
+            "M7"
+        ],
+        [
+            "A1",
+            "A3",
+            "M6"
+        ],
+        [
+            "A1",
+            "A2",
+            "M5"
+        ],
+        [
+            "A1",
+            "A4",
+            "M5"
+        ],
+        [
+            "A1",
+            "A2",
+            "M4"
+        ],
+        [
+            "A1",
+            "A3",
+            "M5"
+        ],
+        [
+            "A1",
+            "A2",
+            "M3"
+        ],
+        [
+            "A1",
+            "A4",
+            "M3"
+        ],
+        [
+            "A1",
+            "A2",
+            "M1"
+        ],
+        [
+            "A1",
+            "A3",
+            "M1"
+        ],
+        [
+            "A1",
+            "A4",
+            "M1"
+        ],
+        [
+            "A1",
+            "A2",
+            "M2"
+        ],
+        [
+            "A1",
+            "A3",
+            "M2"
+        ],
+        [
+            "A1",
+            "A4",
+            "M2"
+        ],
+        [
+            "A1",
+            "A2",
+            "M6"
+        ],
+        [
+            "A1",
+            "A3",
+            "M6"
+        ],
+        [
+            "A1",
+            "A4",
+            "M6"
+        ],
+        [
+            "A1",
+            "A2",
+            "M7"
+        ],
+        [
+            "A1",
+            "A3",
+            "M7"
+        ],
+        [
+            "A1",
+            "A4",
+            "M7"
+        ],
+        [
+            "A1",
+            "A2",
+            "M8"
+        ],
+        [
+            "A1",
+            "A3",
+            "M8"
+        ],
+        [
+            "A1",
+            "A4",
+            "M8"
+        ],
+        [
+            "A1",
+            "A2",
+            "M9"
+        ],
+        [
+            "A1",
+            "A3",
+            "M9"
+        ],
+        [
+            "A1",
+            "A4",
+            "M9"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+74. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A6",
+            "O3"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A1",
+            "A6"
+        ],
+        [
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+75. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "A6"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "A6",
+            "O4"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+76. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5",
+            "A1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A4",
+            "A3"
+        ],
+        [
+            "O5",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A4",
+            "A2"
+        ],
+        [
+            "O5",
+            "A2",
+            "O1"
+        ],
+        [
+            "O5",
+            "O2",
+            "O1"
+        ],
+        [
+            "O4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A4",
+            "O2"
+        ],
+        [
+            "O5",
+            "A3",
+            "O3"
+        ],
+        [
+            "A2",
+            "A5"
+        ],
+        [
+            "O5",
+            "O2",
+            "O3"
+        ],
+        [
+            "O5",
+            "A1",
+            "A2"
+        ],
+        [
+            "A6"
+        ],
+        [
+            "O5",
+            "O1",
+            "O4"
+        ],
+        [
+            "O5",
+            "A4",
+            "O4"
+        ],
+        [
+            "O2",
+            "A5"
+        ],
+        [
+            "O5",
+            "A1",
+            "O4"
+        ],
+        [
+            "O4",
+            "O5",
+            "O3"
+        ],
+        [
+            "O5",
+            "A2",
+            "O3"
+        ],
+        [
+            "O5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A3",
+            "A5"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+77. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3",
+            "O1",
+            "A5"
+        ],
+        [
+            "A2",
+            "O3",
+            "A5"
+        ],
+        [
+            "O2",
+            "A6",
+            "O1"
+        ],
+        [
+            "O5",
+            "O4",
+            "A5"
+        ],
+        [
+            "A3",
+            "O3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2",
+            "O1"
+        ],
+        [
+            "O2",
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A1",
+            "A3"
+        ],
+        [
+            "A1",
+            "A4",
+            "A5"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "O2",
+            "O3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2",
+            "A4"
+        ],
+        [
+            "A6",
+            "A3",
+            "A4"
+        ],
+        [
+            "O5",
+            "A4",
+            "A3"
+        ],
+        [
+            "O5",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A4",
+            "A2"
+        ],
+        [
+            "O5",
+            "A2",
+            "O1"
+        ],
+        [
+            "O5",
+            "O2",
+            "O1"
+        ],
+        [
+            "A1",
+            "A6",
+            "O2"
+        ],
+        [
+            "A1",
+            "O2",
+            "A5"
+        ],
+        [
+            "A6",
+            "O1",
+            "A5"
+        ],
+        [
+            "O4",
+            "A6",
+            "O3"
+        ],
+        [
+            "A4",
+            "M4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A4",
+            "O2"
+        ],
+        [
+            "O5",
+            "A2",
+            "A5"
+        ],
+        [
+            "O5",
+            "A3",
+            "A5"
+        ],
+        [
+            "O5",
+            "O2",
+            "A5"
+        ],
+        [
+            "O3",
+            "O4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A3",
+            "O3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "O2",
+            "A4",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A5"
+        ],
+        [
+            "A6",
+            "A5",
+            "M2"
+        ],
+        [
+            "M5",
+            "A1",
+            "A6"
+        ],
+        [
+            "A1",
+            "A4",
+            "M4"
+        ],
+        [
+            "A1",
+            "A2",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "A6",
+            "A2",
+            "M7"
+        ],
+        [
+            "A1",
+            "A3",
+            "M6"
+        ],
+        [
+            "A1",
+            "A2",
+            "M5"
+        ],
+        [
+            "A1",
+            "A4",
+            "M5"
+        ],
+        [
+            "A1",
+            "A2",
+            "M4"
+        ],
+        [
+            "A1",
+            "A3",
+            "M5"
+        ],
+        [
+            "A1",
+            "A2",
+            "M6"
+        ],
+        [
+            "A1",
+            "A3",
+            "M6"
+        ],
+        [
+            "A1",
+            "A4",
+            "M6"
+        ],
+        [
+            "A1",
+            "A2",
+            "M7"
+        ],
+        [
+            "A1",
+            "A3",
+            "M7"
+        ],
+        [
+            "A1",
+            "A4",
+            "M7"
+        ],
+        [
+            "A1",
+            "A2",
+            "M8"
+        ],
+        [
+            "A1",
+            "A3",
+            "M8"
+        ],
+        [
+            "A1",
+            "A4",
+            "M8"
+        ],
+        [
+            "A1",
+            "A2",
+            "M9"
+        ],
+        [
+            "A1",
+            "A3",
+            "M9"
+        ],
+        [
+            "A1",
+            "A4",
+            "M9"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+78. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+79. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O7"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+80. OpenAI Error
+
+81. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "A1",
+            "O5"
+        ],
+        [
+            "O6",
+            "O1"
+        ],
+        [
+            "O5",
+            "O1"
+        ],
+        [
+            "O2",
+            "A6"
+        ],
+        [
+            "O8",
+            "A5"
+        ],
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "O2",
+            "O6"
+        ],
+        [
+            "O7",
+            "O8"
+        ],
+        [
+            "A6",
+            "O1"
+        ],
+        [
+            "O2",
+            "O5",
+            "O9"
+        ],
+        [
+            "O7",
+            "O6"
+        ],
+        [
+            "A1",
+            "A6"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "O2",
+            "O8"
+        ],
+        [
+            "A1",
+            "O6"
+        ],
+        [
+            "A4",
+            "O1"
+        ],
+        [
+            "O8",
+            "O1"
+        ],
+        [
+            "O2",
+            "O5",
+            "O4"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A1",
+            "O8"
+        ],
+        [
+            "A6",
+            "O7"
+        ],
+        [
+            "O2",
+            "O5",
+            "O3"
+        ],
+        [
+            "O5",
+            "O7"
+        ],
+        [
+            "O5",
+            "A5"
+        ],
+        [
+            "O6",
+            "A5"
+        ],
+        [
+            "O7",
+            "A4"
+        ],
+        [
+            "O2",
+            "A3",
+            "O5"
+        ],
+        [
+            "O2",
+            "O5",
+            "A2"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+82. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "A6",
+            "O1"
+        ],
+        [
+            "O9",
+            "O6"
+        ],
+        [
+            "O9",
+            "O8"
+        ],
+        [
+            "O2",
+            "A4",
+            "O1"
+        ],
+        [
+            "O8",
+            "A2"
+        ],
+        [
+            "O9",
+            "A4"
+        ],
+        [
+            "O5",
+            "O2",
+            "O1"
+        ],
+        [
+            "A3",
+            "O6"
+        ],
+        [
+            "O5",
+            "O8"
+        ],
+        [
+            "O6",
+            "O3"
+        ],
+        [
+            "O2",
+            "O8",
+            "A1"
+        ],
+        [
+            "O2",
+            "A6",
+            "A5"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "O5",
+            "O9"
+        ],
+        [
+            "O5",
+            "O6"
+        ],
+        [
+            "A4",
+            "O4"
+        ],
+        [
+            "O2",
+            "A6",
+            "O7"
+        ],
+        [
+            "O5",
+            "A3"
+        ],
+        [
+            "O2",
+            "A4",
+            "O7"
+        ],
+        [
+            "A6",
+            "O4"
+        ],
+        [
+            "O2",
+            "O8",
+            "A5"
+        ],
+        [
+            "O5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "O5",
+            "O3"
+        ],
+        [
+            "O2",
+            "O8",
+            "O7"
+        ],
+        [
+            "A6",
+            "O3"
+        ],
+        [
+            "O8",
+            "O4"
+        ],
+        [
+            "O2",
+            "A6",
+            "A1"
+        ],
+        [
+            "O2",
+            "O8",
+            "O1"
+        ],
+        [
+            "O5",
+            "A2"
+        ],
+        [
+            "O2",
+            "O6",
+            "A5"
+        ],
+        [
+            "O2",
+            "A4",
+            "A5"
+        ],
+        [
+            "O5",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6"
+        ],
+        [
+            "O5",
+            "O7",
+            "O2"
+        ],
+        [
+            "O8",
+            "O3"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "O2",
+            "O6",
+            "O1"
+        ],
+        [
+            "O9",
+            "A6"
+        ],
+        [
+            "O2",
+            "A1",
+            "O6"
+        ],
+        [
+            "O2",
+            "A4",
+            "A1"
+        ],
+        [
+            "A2",
+            "O6"
+        ],
+        [
+            "O5",
+            "O2",
+            "A5"
+        ],
+        [
+            "O2",
+            "O7",
+            "O6"
+        ],
+        [
+            "O8",
+            "A3"
+        ],
+        [
+            "A4",
+            "O3"
+        ],
+        [
+            "O6",
+            "O4"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "O5",
+            "A4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+83. OpenAI Error
+
+84. OpenAI Error
+
+85. OpenAI Error
+
+86. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+87. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+88. OpenAI Error
+
+89. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "M1",
+            "M2"
+        ],
+        [
+            "M1",
+            "M4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+90. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+91. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+92. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O1"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O2"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+93. Here is the output in JSON format based on the new `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "A1",
+            "O2"
+        ],
+        [
+            "A1",
+            "O4"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O2",
+            "O4"
+        ]
+    ]
+}
+```
+
+This output indicates the various combinations of elements from the provided conflicts that can be considered minimal diagnoses.
+
+94. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+95. Here is the output in JSON format based on the `minimal_conflicts` input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "NX1"
+        ],
+        [
+            "NA1"
+        ],
+        [
+            "NO2"
+        ]
+    ]
+}
+```
+
+This indicates that each element in the conflict can be considered a minimal diagnosis on its own.
+
+96. Here is the output in JSON format based on the empty `minimal_conflicts` input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+This indicates that there are no minimal diagnoses available when there are no conflicts provided.
+
+97. OpenAI Error
+
+98. OpenAI Error
+
+99. OpenAI Error
+

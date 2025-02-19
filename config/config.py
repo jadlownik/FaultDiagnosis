@@ -62,7 +62,7 @@ equations = {
 </output>
 </example>
 """
-GPT_INSTRUCTION_PART_2 = '''
+GPT_INSTRUCTION_PART_2 = """
 Imagine you are an engineer specialized in fault diagnosis.
 Create a class with the following components:
 Initialize the class with three parameters:
@@ -131,6 +131,8 @@ HINTS:
 1. To check whether the equation is logical, check the presence of at least one character from the list ['|', '&', '^', '~'] in at least one provided equations.values().
 2. Be sure that all logical opearation (AND (&), OR (|), XOR (^), NOT (~), NAND (~&), NOR (~|), XNOR (~^)) and arithmetic (+, *) are supported.
 3. Use example_1, example_2 and example_3 to test your code before generate results for given data.
+
+'minimal_conflicts' MUST BE IN JSON FORMAT!
 
 <example_1>
 <input>
@@ -219,8 +221,8 @@ For ['NA1', 'NO2', 'NX1'] system of eqautions are inconsistent so output should 
 'minimal_conflicts': [['NA1', 'NO2', 'NX1']]
 }
 </example_3>
-'''
-GPT_INSTRUCTION_PART_3 = '''
+"""
+GPT_INSTRUCTION_PART_3 = """
 Imagine you are an engineer specialized in fault diagnosis.
 Use the 'minimal_conflicts' which contains lists of equation symbols
 The final result should be in JSON format and should consist of 'minimal_diagnoses'.
@@ -262,8 +264,7 @@ Return CandidatesCollection
 "minimal_diagnoses": [['A1'], ['M1'], ['A2', 'M2'], ['M2', 'M3']]
 }
 </output>
-'''
-
+"""
 GPT_INSTRUCTION = """
 Imagine you are an engineer specialized in fault diagnosis. Your task is divided into three parts.
 You have to complete the first part before the second part, and the second part before the third part.

@@ -1,0 +1,5337 @@
+1. Here is the output in the required JSON format:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "A2"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+2. Here is the output in the required JSON format for the new input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M2",
+            "M1"
+        ]
+    ]
+}
+```
+
+3. Here is the output in the required JSON format for the latest input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "A2"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+4. Here is the output in the required JSON format for the latest input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "M3"
+        ],
+        [
+            "A1",
+            "M3"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M1",
+            "A2"
+        ]
+    ]
+}
+```
+
+5. Here is the output in the required JSON format for the latest input:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "A1",
+            "M3"
+        ],
+        [
+            "M1",
+            "M3"
+        ],
+        [
+            "M2",
+            "A2"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "M2",
+            "M1"
+        ]
+    ]
+}
+```
+
+6. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+7. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A4"
+        ]
+    ]
+}
+```
+
+8. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A7"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+9. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4",
+            "A1"
+        ],
+        [
+            "A4",
+            "A7"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "A3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A3",
+            "A1"
+        ],
+        [
+            "A3",
+            "A7"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1"
+        ],
+        [
+            "A6",
+            "A7"
+        ],
+        [
+            "A6",
+            "A2"
+        ]
+    ]
+}
+```
+
+10. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+11. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M7"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "M1"
+        ]
+    ]
+}
+```
+
+12. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3"
+        ],
+        [
+            "M4"
+        ],
+        [
+            "M6"
+        ]
+    ]
+}
+```
+
+13. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "M7"
+        ],
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M4",
+            "M5"
+        ],
+        [
+            "M6",
+            "M2"
+        ],
+        [
+            "M4",
+            "M7"
+        ],
+        [
+            "M4",
+            "M1"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "M4",
+            "M2"
+        ],
+        [
+            "M6",
+            "M5"
+        ],
+        [
+            "M6",
+            "M7"
+        ],
+        [
+            "M6",
+            "M1"
+        ],
+        [
+            "M3",
+            "M5"
+        ]
+    ]
+}
+```
+
+14. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+15. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A4"
+        ]
+    ]
+}
+```
+
+16. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2",
+            "M3"
+        ],
+        [
+            "A4",
+            "A1"
+        ],
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "A2",
+            "A3"
+        ],
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "A4",
+            "M1"
+        ],
+        [
+            "M2",
+            "A3"
+        ],
+        [
+            "A2",
+            "M1"
+        ],
+        [
+            "A4",
+            "M3"
+        ],
+        [
+            "M2",
+            "M1"
+        ]
+    ]
+}
+```
+
+17. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+18. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+19. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2",
+            "M3"
+        ],
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "A2",
+            "M4"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "A2",
+            "A3"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "M2",
+            "A3"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+20. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "M2",
+            "A4"
+        ],
+        [
+            "A2",
+            "A4"
+        ],
+        [
+            "A2",
+            "M1"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "M4"
+        ],
+        [
+            "M2",
+            "M1"
+        ]
+    ]
+}
+```
+
+21. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "A2",
+            "A3"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "M1",
+            "M3"
+        ],
+        [
+            "A2",
+            "A4"
+        ],
+        [
+            "A2",
+            "M1"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "A4",
+            "M3"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "A2",
+            "M3"
+        ],
+        [
+            "A2",
+            "M4"
+        ],
+        [
+            "A1",
+            "M3"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M2",
+            "A3"
+        ],
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "M2",
+            "A4"
+        ],
+        [
+            "M2",
+            "M1"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "M2",
+            "A1"
+        ]
+    ]
+}
+```
+
+22. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+23. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M4",
+            "M1"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "M4",
+            "M2"
+        ],
+        [
+            "M4",
+            "A1"
+        ],
+        [
+            "M4",
+            "A2"
+        ]
+    ]
+}
+```
+
+24. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M3",
+            "M1"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "M3",
+            "A1"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "M4"
+        ]
+    ]
+}
+```
+
+25. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1"
+        ],
+        [
+            "M3",
+            "M4"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A2"
+        ]
+    ]
+}
+```
+
+26. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+27. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "M3",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "A6",
+            "M3",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3",
+            "M4"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M3"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ]
+    ]
+}
+```
+
+28. Here is the output in the required JSON format for the input containing four conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "M5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M2"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "A6",
+            "M4"
+        ]
+    ]
+}
+```
+
+29. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M5",
+            "M4",
+            "A4"
+        ],
+        [
+            "M5",
+            "M2",
+            "A4"
+        ],
+        [
+            "M5",
+            "M4",
+            "M1"
+        ],
+        [
+            "M5",
+            "M2",
+            "M1"
+        ],
+        [
+            "M5",
+            "A3",
+            "A4"
+        ],
+        [
+            "M5",
+            "A3",
+            "M1"
+        ],
+        [
+            "A5",
+            "A3"
+        ],
+        [
+            "M5",
+            "M2",
+            "A1"
+        ],
+        [
+            "M5",
+            "M4",
+            "A1"
+        ],
+        [
+            "M5",
+            "A3",
+            "A1"
+        ],
+        [
+            "M5",
+            "M4",
+            "M3"
+        ],
+        [
+            "M5",
+            "M2",
+            "M3"
+        ],
+        [
+            "A6"
+        ],
+        [
+            "M5",
+            "A3",
+            "M3"
+        ],
+        [
+            "M5",
+            "A2",
+            "A4"
+        ],
+        [
+            "M5",
+            "A2",
+            "M1"
+        ],
+        [
+            "A5",
+            "M2"
+        ],
+        [
+            "A5",
+            "M4"
+        ],
+        [
+            "M5",
+            "A2",
+            "A1"
+        ],
+        [
+            "A5",
+            "A2"
+        ],
+        [
+            "M5",
+            "A2",
+            "M3"
+        ]
+    ]
+}
+```
+
+30. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "M3",
+            "M2"
+        ],
+        [
+            "A6",
+            "M3",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A5",
+            "M3",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A5"
+        ],
+        [
+            "A5",
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "A1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1",
+            "M2"
+        ],
+        [
+            "M5",
+            "M2"
+        ],
+        [
+            "M5",
+            "M4"
+        ],
+        [
+            "A5",
+            "M1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1",
+            "M4"
+        ],
+        [
+            "A5",
+            "A1",
+            "A3"
+        ],
+        [
+            "M5",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4",
+            "M2"
+        ],
+        [
+            "A5",
+            "A4",
+            "M4"
+        ],
+        [
+            "A5",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "M3",
+            "A5"
+        ],
+        [
+            "M5",
+            "A6",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "M1"
+        ],
+        [
+            "A6",
+            "M3",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "M3",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A5",
+            "M3",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "A5"
+        ],
+        [
+            "A5",
+            "A1",
+            "M2"
+        ],
+        [
+            "A5",
+            "A1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "M3"
+        ],
+        [
+            "A5",
+            "M1",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1",
+            "A2"
+        ],
+        [
+            "M5",
+            "A3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A3"
+        ]
+    ]
+}
+```
+
+31. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M3",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M5",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M3",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M3"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M5",
+            "A4"
+        ]
+    ]
+}
+```
+
+32. Here is the output in the required JSON format for the input containing four conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M1",
+            "A6",
+            "A5"
+        ],
+        [
+            "A1",
+            "A6",
+            "A5"
+        ],
+        [
+            "M3",
+            "M2"
+        ],
+        [
+            "M1",
+            "M2"
+        ],
+        [
+            "M3",
+            "M4"
+        ],
+        [
+            "A4",
+            "A6",
+            "A5"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "M3",
+            "A2"
+        ],
+        [
+            "A4",
+            "M2"
+        ],
+        [
+            "M3",
+            "A6",
+            "A5"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M5",
+            "M2",
+            "A5"
+        ],
+        [
+            "M5",
+            "M4",
+            "A5"
+        ],
+        [
+            "M5",
+            "A3",
+            "A5"
+        ],
+        [
+            "A1",
+            "M2"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M3",
+            "A3"
+        ],
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "M5",
+            "A2",
+            "A5"
+        ]
+    ]
+}
+```
+
+33. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "M5",
+            "M3"
+        ],
+        [
+            "A6",
+            "M5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M5",
+            "M1"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "A6",
+            "M5",
+            "A4"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M4"
+        ]
+    ]
+}
+```
+
+34. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+35. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M3",
+            "A3"
+        ],
+        [
+            "A6",
+            "M1",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "A1",
+            "M4"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M5",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "A6",
+            "M3",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M2"
+        ],
+        [
+            "A6",
+            "M3",
+            "A2"
+        ],
+        [
+            "A6",
+            "M1",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3",
+            "M4"
+        ],
+        [
+            "M5",
+            "M1"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "M1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M3"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "M4"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "M5",
+            "A6",
+            "M2"
+        ],
+        [
+            "M5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M5",
+            "M8"
+        ],
+        [
+            "M1",
+            "M5",
+            "A6"
+        ],
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "A1",
+            "M9"
+        ],
+        [
+            "M7",
+            "A3"
+        ],
+        [
+            "M1",
+            "M5",
+            "M6"
+        ],
+        [
+            "A5",
+            "M9"
+        ]
+    ]
+}
+```
+
+36. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "M5",
+            "A6"
+        ],
+        [
+            "M1",
+            "M3"
+        ],
+        [
+            "A5",
+            "M5",
+            "M8"
+        ],
+        [
+            "A1",
+            "M5",
+            "M6"
+        ],
+        [
+            "A5",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "M1",
+            "A2"
+        ],
+        [
+            "M1",
+            "M4"
+        ],
+        [
+            "M7",
+            "M5",
+            "M8"
+        ],
+        [
+            "A5",
+            "A3"
+        ],
+        [
+            "M7",
+            "M5",
+            "A4"
+        ],
+        [
+            "A5",
+            "M5",
+            "A6"
+        ],
+        [
+            "M7",
+            "M3"
+        ],
+        [
+            "M1",
+            "M9"
+        ],
+        [
+            "M7",
+            "A2"
+        ],
+        [
+            "M7",
+            "M4"
+        ],
+        [
+            "A5",
+            "M5",
+            "M6"
+        ],
+        [
+            "M7",
+            "M5",
+            "A6"
+        ],
+        [
+            "M1",
+            "M5",
+            "M8"
+        ],
+        [
+            "M7",
+            "M5",
+            "M6"
+        ],
+        [
+            "M1",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M3"
+        ],
+        [
+            "A1",
+            "M4"
+        ],
+        [
+            "M2"
+        ],
+        [
+            "M7",
+            "M9"
+        ],
+        [
+            "M1",
+            "A3"
+        ],
+        [
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M3"
+        ],
+        [
+            "A5",
+            "M4"
+        ],
+        [
+            "A5",
+            "A2"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M5",
+            "M8"
+        ],
+        [
+            "M1",
+            "M5",
+            "A6"
+        ],
+        [
+            "A1",
+            "M9"
+        ],
+        [
+            "M7",
+            "A3"
+        ],
+        [
+            "M1",
+            "M5",
+            "M6"
+        ],
+        [
+            "A5",
+            "M9"
+        ]
+    ]
+}
+```
+
+37. Here is the output in the required JSON format for the input containing six conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A4",
+            "M3"
+        ],
+        [
+            "M1",
+            "M5",
+            "A2"
+        ],
+        [
+            "M1",
+            "M8",
+            "M9"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "M2",
+            "A6",
+            "M7"
+        ],
+        [
+            "M2",
+            "A6",
+            "M1"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "M7",
+            "A6",
+            "A3"
+        ],
+        [
+            "M1",
+            "M5",
+            "M9"
+        ],
+        [
+            "M2",
+            "M6",
+            "A5"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "M1",
+            "M8",
+            "A3"
+        ],
+        [
+            "A5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M1",
+            "M6",
+            "A3"
+        ],
+        [
+            "M7",
+            "A4",
+            "M3"
+        ],
+        [
+            "A5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M2",
+            "A6",
+            "A2"
+        ],
+        [
+            "M7",
+            "M5",
+            "M3"
+        ],
+        [
+            "M7",
+            "A6",
+            "A2"
+        ],
+        [
+            "A5",
+            "M5",
+            "A6"
+        ],
+        [
+            "M2",
+            "A6",
+            "M9"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "M2",
+            "A4",
+            "M7"
+        ],
+        [
+            "M2",
+            "A4",
+            "M1"
+        ],
+        [
+            "M1",
+            "M5",
+            "A6"
+        ],
+        [
+            "M2",
+            "M8",
+            "M7"
+        ],
+        [
+            "M1",
+            "M8",
+            "M4"
+        ],
+        [
+            "M2",
+            "A4",
+            "A1"
+        ],
+        [
+            "A1",
+            "M6",
+            "M3"
+        ],
+        [
+            "M7",
+            "A6",
+            "M9"
+        ],
+        [
+            "M2",
+            "M5",
+            "M8"
+        ],
+        [
+            "M1",
+            "A6",
+            "A2"
+        ],
+        [
+            "M2",
+            "M8",
+            "A1"
+        ],
+        [
+            "M1",
+            "M5",
+            "M3"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "M6"
+        ],
+        [
+            "A5",
+            "M6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M6",
+            "M4"
+        ],
+        [
+            "M2",
+            "M6",
+            "A2"
+        ],
+        [
+            "M2",
+            "A6",
+            "M3"
+        ],
+        [
+            "M7",
+            "M5",
+            "A6"
+        ],
+        [
+            "M1",
+            "M5",
+            "A3"
+        ],
+        [
+            "A5",
+            "M5",
+            "M4"
+        ],
+        [
+            "A5",
+            "M8",
+            "M3"
+        ],
+        [
+            "A1",
+            "A4",
+            "M9"
+        ],
+        [
+            "M2",
+            "M5",
+            "A1"
+        ],
+        [
+            "M7",
+            "M5",
+            "M8"
+        ],
+        [
+            "M2",
+            "M8",
+            "M3"
+        ],
+        [
+            "M1",
+            "A4",
+            "M3"
+        ],
+        [
+            "A1",
+            "M5",
+            "M6"
+        ]
+    ]
+}
+```
+
+38. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "M2",
+            "M7"
+        ],
+        [
+            "A6",
+            "M2",
+            "M1"
+        ],
+        [
+            "A4",
+            "M3"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "M6",
+            "M3"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M8",
+            "M3"
+        ],
+        [
+            "A6",
+            "M2",
+            "A1"
+        ],
+        [
+            "A4",
+            "M2",
+            "M7"
+        ],
+        [
+            "A4",
+            "M2",
+            "M1"
+        ],
+        [
+            "M6",
+            "M4"
+        ],
+        [
+            "M6",
+            "M2",
+            "M7"
+        ],
+        [
+            "M8",
+            "M2",
+            "M7"
+        ],
+        [
+            "M8",
+            "M2",
+            "M1"
+        ],
+        [
+            "M6",
+            "M2",
+            "M1"
+        ],
+        [
+            "M8",
+            "A2"
+        ],
+        [
+            "M6",
+            "A2"
+        ],
+        [
+            "M8",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3"
+        ],
+        [
+            "M8",
+            "M2",
+            "A1"
+        ],
+        [
+            "A4",
+            "M2",
+            "A1"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "M4"
+        ],
+        [
+            "M6",
+            "M2",
+            "A1"
+        ],
+        [
+            "A6",
+            "M2",
+            "A5"
+        ],
+        [
+            "M5"
+        ],
+        [
+            "A4",
+            "M9"
+        ],
+        [
+            "M8",
+            "M9"
+        ],
+        [
+            "M6",
+            "M9"
+        ],
+        [
+            "M8",
+            "M2",
+            "A5"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "M6",
+            "M2",
+            "A5"
+        ],
+        [
+            "A6",
+            "M9"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "M8",
+            "A3"
+        ],
+        [
+            "M6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A3"
+        ]
+    ]
+}
+```
+
+39. Here is the output in the required JSON format for the input containing four conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "A5"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "M5",
+            "M6"
+        ],
+        [
+            "M3"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "M2",
+            "M7"
+        ],
+        [
+            "M4"
+        ],
+        [
+            "M2",
+            "M1"
+        ],
+        [
+            "M2",
+            "A1"
+        ],
+        [
+            "M5",
+            "M8"
+        ],
+        [
+            "M9"
+        ],
+        [
+            "M5",
+            "A4"
+        ]
+    ]
+}
+```
+
+40. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "M2",
+            "M7"
+        ],
+        [
+            "A6",
+            "M2",
+            "M1"
+        ],
+        [
+            "M5",
+            "M2",
+            "M7"
+        ],
+        [
+            "M5",
+            "M2",
+            "M1"
+        ],
+        [
+            "M5",
+            "A6"
+        ],
+        [
+            "A4",
+            "M3"
+        ],
+        [
+            "A4",
+            "M4"
+        ],
+        [
+            "M6",
+            "M3"
+        ],
+        [
+            "M5",
+            "M2",
+            "A1"
+        ],
+        [
+            "M5",
+            "M3"
+        ],
+        [
+            "M5",
+            "M6"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "M8",
+            "M3"
+        ],
+        [
+            "A6",
+            "M2",
+            "A1"
+        ],
+        [
+            "A4",
+            "M2",
+            "M7"
+        ],
+        [
+            "A4",
+            "M2",
+            "M1"
+        ],
+        [
+            "M6",
+            "M4"
+        ],
+        [
+            "M6",
+            "M2",
+            "M7"
+        ],
+        [
+            "M8",
+            "M2",
+            "M7"
+        ],
+        [
+            "M8",
+            "M2",
+            "M1"
+        ],
+        [
+            "M6",
+            "M2",
+            "M1"
+        ],
+        [
+            "M8",
+            "A2"
+        ],
+        [
+            "M6",
+            "A2"
+        ],
+        [
+            "M8",
+            "M4"
+        ],
+        [
+            "M5",
+            "M4"
+        ],
+        [
+            "A6",
+            "M3"
+        ],
+        [
+            "M5",
+            "A2"
+        ],
+        [
+            "M5",
+            "M2",
+            "A5"
+        ],
+        [
+            "M8",
+            "M2",
+            "A1"
+        ],
+        [
+            "A4",
+            "M2",
+            "A1"
+        ],
+        [
+            "A6",
+            "A2"
+        ],
+        [
+            "A6",
+            "M4"
+        ],
+        [
+            "M6",
+            "M2",
+            "A1"
+        ],
+        [
+            "A6",
+            "M2",
+            "A5"
+        ],
+        [
+            "A4",
+            "M9"
+        ],
+        [
+            "M5",
+            "M9"
+        ],
+        [
+            "M8",
+            "M9"
+        ],
+        [
+            "M6",
+            "M9"
+        ],
+        [
+            "M8",
+            "M2",
+            "A5"
+        ],
+        [
+            "A4",
+            "M2",
+            "A5"
+        ],
+        [
+            "M6",
+            "M2",
+            "A5"
+        ],
+        [
+            "A6",
+            "M9"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "M8",
+            "A3"
+        ],
+        [
+            "M6",
+            "A3"
+        ],
+        [
+            "M5",
+            "A3"
+        ],
+        [
+            "M5",
+            "M8"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "M5",
+            "A4"
+        ]
+    ]
+}
+```
+
+41. Here is the output in the required JSON format for the input containing six conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A1",
+            "A4",
+            "M3"
+        ],
+        [
+            "M1",
+            "M5",
+            "A2"
+        ],
+        [
+            "M1",
+            "M8",
+            "M9"
+        ],
+        [
+            "A1",
+            "A6",
+            "M4"
+        ],
+        [
+            "M2",
+            "A6",
+            "M7"
+        ],
+        [
+            "M2",
+            "A6",
+            "M1"
+        ],
+        [
+            "A1",
+            "A6",
+            "A2"
+        ],
+        [
+            "M7",
+            "A6",
+            "A3"
+        ],
+        [
+            "M1",
+            "M5",
+            "M9"
+        ],
+        [
+            "M2",
+            "M6",
+            "A5"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "M1",
+            "M8",
+            "A3"
+        ],
+        [
+            "A5",
+            "A6",
+            "M4"
+        ],
+        [
+            "M1",
+            "M6",
+            "A3"
+        ],
+        [
+            "M7",
+            "A4",
+            "M3"
+        ],
+        [
+            "A5",
+            "A6",
+            "A2"
+        ],
+        [
+            "M2",
+            "A6",
+            "A2"
+        ],
+        [
+            "M7",
+            "M5",
+            "M3"
+        ],
+        [
+            "M7",
+            "A6",
+            "A2"
+        ],
+        [
+            "A5",
+            "M5",
+            "A6"
+        ],
+        [
+            "M2",
+            "A6",
+            "M9"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "M2",
+            "A4",
+            "M7"
+        ],
+        [
+            "M2",
+            "A4",
+            "M1"
+        ],
+        [
+            "M1",
+            "M5",
+            "A6"
+        ],
+        [
+            "M2",
+            "M8",
+            "M7"
+        ],
+        [
+            "M1",
+            "M8",
+            "M4"
+        ],
+        [
+            "M2",
+            "A4",
+            "A1"
+        ],
+        [
+            "A1",
+            "M6",
+            "M3"
+        ],
+        [
+            "M7",
+            "A6",
+            "M9"
+        ],
+        [
+            "M2",
+            "M5",
+            "M8"
+        ],
+        [
+            "M1",
+            "A6",
+            "A2"
+        ],
+        [
+            "M2",
+            "M8",
+            "A1"
+        ],
+        [
+            "M1",
+            "M5",
+            "M3"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "M6"
+        ],
+        [
+            "A5",
+            "M6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M6",
+            "M4"
+        ],
+        [
+            "M2",
+            "M6",
+            "A2"
+        ],
+        [
+            "M2",
+            "A6",
+            "M3"
+        ],
+        [
+            "M7",
+            "M5",
+            "A6"
+        ],
+        [
+            "M1",
+            "M5",
+            "A3"
+        ],
+        [
+            "A5",
+            "M5",
+            "M4"
+        ],
+        [
+            "A5",
+            "M8",
+            "M3"
+        ],
+        [
+            "A1",
+            "A4",
+            "M9"
+        ],
+        [
+            "M2",
+            "M5",
+            "A1"
+        ],
+        [
+            "M7",
+            "M5",
+            "M8"
+        ],
+        [
+            "M2",
+            "M8",
+            "M3"
+        ],
+        [
+            "M1",
+            "A4",
+            "M3"
+        ],
+        [
+            "A1",
+            "M5"
+        ],
+        [
+            "M7",
+            "M4",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "M9"
+        ],
+        [
+            "A1",
+            "M6",
+            "A2"
+        ],
+        [
+            "A5",
+            "M6",
+            "A3"
+        ],
+        [
+            "M1",
+            "M5",
+            "M6"
+        ]
+    ]
+}
+```
+
+42. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+43. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+44. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+45. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+46. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+47. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "O2",
+            "A2"
+        ]
+    ]
+}
+```
+
+48. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "A2"
+        ]
+    ]
+}
+```
+
+49. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "O1",
+            "A2"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "A1",
+            "A2"
+        ]
+    ]
+}
+```
+
+50. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+51. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A4"
+        ]
+    ]
+}
+```
+
+52. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A7"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+53. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A4",
+            "A1"
+        ],
+        [
+            "A4",
+            "A7"
+        ],
+        [
+            "A4",
+            "A2"
+        ],
+        [
+            "A3",
+            "A5"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A3",
+            "A1"
+        ],
+        [
+            "A3",
+            "A7"
+        ],
+        [
+            "A3",
+            "A2"
+        ],
+        [
+            "A4",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1"
+        ],
+        [
+            "A6",
+            "A7"
+        ],
+        [
+            "A6",
+            "A2"
+        ]
+    ]
+}
+```
+
+54. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+55. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O4"
+        ],
+        [
+            "O6"
+        ],
+        [
+            "O3"
+        ]
+    ]
+}
+```
+
+56. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5"
+        ],
+        [
+            "O7"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "O1"
+        ]
+    ]
+}
+```
+
+57. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O6",
+            "O7"
+        ],
+        [
+            "O3",
+            "O5"
+        ],
+        [
+            "O6",
+            "O2"
+        ],
+        [
+            "O3",
+            "O1"
+        ],
+        [
+            "O3",
+            "O7"
+        ],
+        [
+            "O3",
+            "O2"
+        ],
+        [
+            "O4",
+            "O5"
+        ],
+        [
+            "O6",
+            "O5"
+        ],
+        [
+            "O4",
+            "O7"
+        ],
+        [
+            "O4",
+            "O1"
+        ],
+        [
+            "O4",
+            "O2"
+        ],
+        [
+            "O6",
+            "O1"
+        ]
+    ]
+}
+```
+
+58. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+59. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A4"
+        ]
+    ]
+}
+```
+
+60. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A3"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+61. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A4",
+            "A1"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "A2",
+            "A3"
+        ],
+        [
+            "A4",
+            "O1"
+        ],
+        [
+            "A4",
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "A2",
+            "O1"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "O2",
+            "A3"
+        ]
+    ]
+}
+```
+
+62. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+63. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O1"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A2"
+        ]
+    ]
+}
+```
+
+64. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O4"
+        ],
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "A2",
+            "A4"
+        ],
+        [
+            "A2",
+            "O1"
+        ],
+        [
+            "A3"
+        ]
+    ]
+}
+```
+
+65. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A2",
+            "A3"
+        ],
+        [
+            "A4",
+            "O3"
+        ],
+        [
+            "A2",
+            "A4"
+        ],
+        [
+            "A1",
+            "A3"
+        ],
+        [
+            "A2",
+            "A1"
+        ],
+        [
+            "O1",
+            "A3"
+        ],
+        [
+            "A4",
+            "O4"
+        ],
+        [
+            "A2",
+            "O1"
+        ],
+        [
+            "A2",
+            "O3"
+        ],
+        [
+            "O2",
+            "A3"
+        ],
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "A1",
+            "O3"
+        ],
+        [
+            "A2",
+            "O4"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "O1",
+            "O3"
+        ],
+        [
+            "A1",
+            "O4"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O2",
+            "O3"
+        ],
+        [
+            "A4",
+            "A3"
+        ],
+        [
+            "O1",
+            "O4"
+        ],
+        [
+            "O2",
+            "O4"
+        ]
+    ]
+}
+```
+
+66. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+67. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3"
+        ],
+        [
+            "O4",
+            "A1"
+        ],
+        [
+            "O4",
+            "A2"
+        ],
+        [
+            "O4",
+            "O1"
+        ],
+        [
+            "O4",
+            "O2"
+        ]
+    ]
+}
+```
+
+68. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O4"
+        ],
+        [
+            "O3",
+            "O1"
+        ],
+        [
+            "O3",
+            "O2"
+        ],
+        [
+            "O3",
+            "A1"
+        ],
+        [
+            "O3",
+            "A2"
+        ]
+    ]
+}
+```
+
+69. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O3",
+            "O4"
+        ],
+        [
+            "O3",
+            "O1"
+        ],
+        [
+            "O4",
+            "A1"
+        ],
+        [
+            "O3",
+            "O2"
+        ],
+        [
+            "O4",
+            "A2"
+        ],
+        [
+            "O3",
+            "A1"
+        ],
+        [
+            "O4",
+            "O1"
+        ],
+        [
+            "O3",
+            "A2"
+        ],
+        [
+            "O4",
+            "O2"
+        ]
+    ]
+}
+```
+
+70. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+71. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "O5"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "A6",
+            "A1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O1",
+            "A2"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "A5",
+            "O1"
+        ],
+        [
+            "A5",
+            "O3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O3",
+            "A2"
+        ],
+        [
+            "A6",
+            "O3",
+            "O4"
+        ]
+    ]
+}
+```
+
+72. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5",
+            "A6",
+            "O4"
+        ],
+        [
+            "O5",
+            "A4"
+        ],
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "O5",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "O5",
+            "O1"
+        ],
+        [
+            "O5",
+            "O3"
+        ],
+        [
+            "A6",
+            "A1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O1",
+            "A2"
+        ],
+        [
+            "O5",
+            "A5"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "O1"
+        ],
+        [
+            "A5",
+            "O3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A6",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O3",
+            "A2"
+        ],
+        [
+            "A6",
+            "O3",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A2"
+        ]
+    ]
+}
+```
+
+73. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "O1",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "O1",
+            "A2"
+        ],
+        [
+            "O5",
+            "O4",
+            "O3"
+        ],
+        [
+            "O5",
+            "O4",
+            "O1"
+        ],
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "O5",
+            "A1"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "M1"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "O5",
+            "O2",
+            "A4"
+        ],
+        [
+            "A6",
+            "A1",
+            "M4"
+        ],
+        [
+            "A6",
+            "O1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O3",
+            "A2"
+        ],
+        [
+            "O5",
+            "A3",
+            "A4"
+        ],
+        [
+            "O5",
+            "O2",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "M2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "O5",
+            "A2",
+            "A4"
+        ],
+        [
+            "A5",
+            "A1",
+            "M2"
+        ],
+        [
+            "A5",
+            "A1",
+            "M4"
+        ],
+        [
+            "O5",
+            "A3",
+            "O1"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "A5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A5",
+            "A2",
+            "M3"
+        ],
+        [
+            "A5",
+            "A2",
+            "M4"
+        ],
+        [
+            "A5",
+            "A2",
+            "O1"
+        ],
+        [
+            "A5",
+            "A2",
+            "O3"
+        ],
+        [
+            "A5",
+            "A1",
+            "M3"
+        ],
+        [
+            "A5",
+            "A1",
+            "M4"
+        ],
+        [
+            "A5",
+            "A1",
+            "O4"
+        ],
+        [
+            "A5",
+            "A1",
+            "O3"
+        ],
+        [
+            "A5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A5",
+            "A1",
+            "O5"
+        ],
+        [
+            "A5",
+            "A1",
+            "O6"
+        ],
+        [
+            "A5",
+            "A1",
+            "O7"
+        ],
+        [
+            "A5",
+            "A1",
+            "O8"
+        ],
+        [
+            "A5",
+            "A1",
+            "O9"
+        ]
+    ]
+}
+```
+
+74. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O4"
+        ],
+        [
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "O3"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A6",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "A2"
+        ]
+    ]
+}
+```
+
+75. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A6",
+            "O4"
+        ],
+        [
+            "O1"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "A4"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "A6",
+            "O2"
+        ],
+        [
+            "A1"
+        ],
+        [
+            "A6",
+            "A3"
+        ],
+        [
+            "A6",
+            "A2"
+        ]
+    ]
+}
+```
+
+76. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5",
+            "O4",
+            "A1"
+        ],
+        [
+            "O5",
+            "O4",
+            "O3"
+        ],
+        [
+            "O5",
+            "O4",
+            "O1"
+        ],
+        [
+            "O5",
+            "O2",
+            "A4"
+        ],
+        [
+            "A5",
+            "A3"
+        ],
+        [
+            "O5",
+            "O2",
+            "A1"
+        ],
+        [
+            "O5",
+            "A3",
+            "A4"
+        ],
+        [
+            "O5",
+            "O2",
+            "O1"
+        ],
+        [
+            "O5",
+            "O2",
+            "O3"
+        ],
+        [
+            "A6"
+        ],
+        [
+            "O5",
+            "A3",
+            "A1"
+        ],
+        [
+            "O5",
+            "A2",
+            "A4"
+        ],
+        [
+            "A5",
+            "O2"
+        ],
+        [
+            "O5",
+            "A3",
+            "O1"
+        ],
+        [
+            "O5",
+            "A3",
+            "O3"
+        ],
+        [
+            "A5",
+            "A2"
+        ],
+        [
+            "O5",
+            "A2",
+            "A1"
+        ],
+        [
+            "A5",
+            "O4"
+        ],
+        [
+            "O5",
+            "O4",
+            "A4"
+        ],
+        [
+            "O5",
+            "A2",
+            "O1"
+        ],
+        [
+            "O5",
+            "A2",
+            "O3"
+        ]
+    ]
+}
+```
+
+77. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "O1",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "O1",
+            "A2"
+        ],
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "A6",
+            "A1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "O4"
+        ],
+        [
+            "A5",
+            "A1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "A2"
+        ],
+        [
+            "O5",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "A3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A2"
+        ],
+        [
+            "A5",
+            "O1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4",
+            "O4"
+        ],
+        [
+            "A5",
+            "O3",
+            "O2"
+        ],
+        [
+            "O5",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "A5",
+            "O3",
+            "A2"
+        ],
+        [
+            "A5",
+            "O3",
+            "O4"
+        ],
+        [
+            "A5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "O5",
+            "A6",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "O3",
+            "A5"
+        ],
+        [
+            "A5",
+            "O1",
+            "O2"
+        ],
+        [
+            "O5",
+            "A6",
+            "O3"
+        ],
+        [
+            "A5",
+            "A1",
+            "A2"
+        ],
+        [
+            "O5",
+            "A6",
+            "A5"
+        ],
+        [
+            "A5",
+            "A1",
+            "O4"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "M9"
+        ],
+        [
+            "A1",
+            "M5",
+            "M6"
+        ],
+        [
+            "M2",
+            "M5",
+            "M3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "A1"
+        ],
+        [
+            "A1",
+            "M5",
+            "A2"
+        ],
+        [
+            "A1",
+            "M5",
+            "A3"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M5",
+            "A6"
+        ],
+        [
+            "A1",
+            "M5",
+            "A7"
+        ],
+        [
+            "A1",
+            "M5",
+            "A8"
+        ],
+        [
+            "A1",
+            "M5",
+            "A9"
+        ]
+    ]
+}
+```
+
+78. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+79. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O1"
+        ],
+        [
+            "O7"
+        ],
+        [
+            "O2"
+        ],
+        [
+            "A5"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+80. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A5",
+            "O1",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "O1",
+            "A2"
+        ],
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "A5",
+            "A4",
+            "M3"
+        ],
+        [
+            "A6",
+            "A1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "A5"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "O4"
+        ],
+        [
+            "A5",
+            "A1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "A2"
+        ],
+        [
+            "O5",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "A3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A2"
+        ],
+        [
+            "A5",
+            "O1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4",
+            "O4"
+        ],
+        [
+            "A5",
+            "O3",
+            "O2"
+        ],
+        [
+            "O5",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A4"
+        ],
+        [
+            "A6",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A5"
+        ],
+        [
+            "A5",
+            "O3",
+            "A2"
+        ],
+        [
+            "A5",
+            "O3",
+            "O4"
+        ],
+        [
+            "A5",
+            "A1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "O5",
+            "A6",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A6",
+            "O1"
+        ],
+        [
+            "A6",
+            "O3",
+            "A5"
+        ],
+        [
+            "A5",
+            "O1",
+            "O2"
+        ],
+        [
+            "O5",
+            "A6",
+            "O3"
+        ],
+        [
+            "A5",
+            "A1",
+            "A2"
+        ],
+        [
+            "O5",
+            "A6",
+            "A5"
+        ],
+        [
+            "A5",
+            "A1",
+            "O4"
+        ],
+        [
+            "A1",
+            "A6",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "M9"
+        ],
+        [
+            "A1",
+            "M5",
+            "M6"
+        ],
+        [
+            "M2",
+            "M5",
+            "M3"
+        ],
+        [
+            "A5",
+            "A4",
+            "A3"
+        ],
+        [
+            "M2",
+            "M5",
+            "A1"
+        ],
+        [
+            "A1",
+            "M5",
+            "A2"
+        ],
+        [
+            "A1",
+            "M5",
+            "A3"
+        ],
+        [
+            "A1",
+            "M5",
+            "A4"
+        ],
+        [
+            "A1",
+            "M5",
+            "A6"
+        ],
+        [
+            "A1",
+            "M5",
+            "A7"
+        ],
+        [
+            "A1",
+            "M5",
+            "A8"
+        ],
+        [
+            "A1",
+            "M5",
+            "A9"
+        ]
+    ]
+}
+```
+
+81. Here is the output in the required JSON format for the input containing three conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O2",
+            "O5",
+            "A2"
+        ],
+        [
+            "A1",
+            "O5"
+        ],
+        [
+            "O2",
+            "O5",
+            "O4"
+        ],
+        [
+            "A5",
+            "O5"
+        ],
+        [
+            "A1",
+            "A4"
+        ],
+        [
+            "O2",
+            "O5",
+            "O9"
+        ],
+        [
+            "O1",
+            "O5"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "A1",
+            "O6"
+        ],
+        [
+            "O1",
+            "A4"
+        ],
+        [
+            "O7",
+            "O5"
+        ],
+        [
+            "A1",
+            "O8"
+        ],
+        [
+            "A5",
+            "O6"
+        ],
+        [
+            "A5",
+            "O8"
+        ],
+        [
+            "A1",
+            "A6"
+        ],
+        [
+            "O7",
+            "A4"
+        ],
+        [
+            "O2",
+            "A4"
+        ],
+        [
+            "O1",
+            "O6"
+        ],
+        [
+            "O1",
+            "O8"
+        ],
+        [
+            "A5",
+            "A6"
+        ],
+        [
+            "O7",
+            "O6"
+        ],
+        [
+            "O2",
+            "O6"
+        ],
+        [
+            "O1",
+            "A6"
+        ],
+        [
+            "O7",
+            "O8"
+        ],
+        [
+            "O2",
+            "O8"
+        ],
+        [
+            "O2",
+            "O5",
+            "A3"
+        ],
+        [
+            "O7",
+            "A6"
+        ],
+        [
+            "O2",
+            "A6"
+        ],
+        [
+            "O2",
+            "O5",
+            "O3"
+        ]
+    ]
+}
+```
+
+82. OpenAI Error
+
+83. Here is the output in the required JSON format for the input containing four conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5",
+            "A4"
+        ],
+        [
+            "O5",
+            "O6"
+        ],
+        [
+            "A3"
+        ],
+        [
+            "O5",
+            "O8"
+        ],
+        [
+            "O2",
+            "O7"
+        ],
+        [
+            "O5",
+            "A6"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ],
+        [
+            "A2"
+        ],
+        [
+            "O4"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O2",
+            "A5"
+        ],
+        [
+            "O9"
+        ]
+    ]
+}
+```
+
+84. OpenAI Error
+
+85. Here is the output in the required JSON format for the input containing five conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O5",
+            "A6",
+            "O4"
+        ],
+        [
+            "O5",
+            "A4"
+        ],
+        [
+            "A6",
+            "A1",
+            "O2"
+        ],
+        [
+            "O5",
+            "A1"
+        ],
+        [
+            "A6",
+            "A4",
+            "A3"
+        ],
+        [
+            "A6",
+            "O1",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A2"
+        ],
+        [
+            "A5",
+            "A4"
+        ],
+        [
+            "O5",
+            "O1"
+        ],
+        [
+            "O5",
+            "O3"
+        ],
+        [
+            "A6",
+            "A1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O1",
+            "A2"
+        ],
+        [
+            "O5",
+            "A5"
+        ],
+        [
+            "A6",
+            "O1",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "A3"
+        ],
+        [
+            "A5",
+            "A1"
+        ],
+        [
+            "O5",
+            "A6",
+            "A3"
+        ],
+        [
+            "A5",
+            "O1"
+        ],
+        [
+            "A5",
+            "O3"
+        ],
+        [
+            "A6",
+            "A4",
+            "O2"
+        ],
+        [
+            "A6",
+            "A4",
+            "A2"
+        ],
+        [
+            "A6",
+            "A4",
+            "O4"
+        ],
+        [
+            "A6",
+            "O3",
+            "O2"
+        ],
+        [
+            "A6",
+            "A1",
+            "A3"
+        ],
+        [
+            "O5",
+            "A6",
+            "O2"
+        ],
+        [
+            "A6",
+            "O1",
+            "A3"
+        ],
+        [
+            "A6",
+            "O3",
+            "A2"
+        ],
+        [
+            "A6",
+            "O3",
+            "O4"
+        ],
+        [
+            "O5",
+            "A6",
+            "A2"
+        ]
+    ]
+}
+```
+
+86. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+87. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "M2",
+            "M3"
+        ],
+        [
+            "M1"
+        ],
+        [
+            "M2",
+            "M4"
+        ],
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+88. OpenAI Error
+
+89. OpenAI Error
+
+90. OpenAI Error
+
+91. Here is the output in the required JSON format for the input containing two conflicts:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "O4"
+        ],
+        [
+            "O2",
+            "O1"
+        ],
+        [
+            "O3"
+        ],
+        [
+            "O2",
+            "A1"
+        ]
+    ]
+}
+```
+
+92. OpenAI Error
+
+93. OpenAI Error
+
+94. OpenAI Error
+
+95. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "NX1"
+        ],
+        [
+            "NO2"
+        ],
+        [
+            "NA1"
+        ]
+    ]
+}
+```
+
+96. Here is the output in the required JSON format for the empty input:
+
+```json
+{
+    "minimal_diagnoses": [
+        []
+    ]
+}
+```
+
+97. Here is the output in the required JSON format for the input containing a single conflict:
+
+```json
+{
+    "minimal_diagnoses": [
+        [
+            "A1"
+        ]
+    ]
+}
+```
+
+98. OpenAI Error
+
+99. OpenAI Error
+

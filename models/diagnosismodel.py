@@ -262,7 +262,7 @@ class DiagnosisModel:
         return max(equations)
 
     def _get_random_number(self):
-        return random.randint(0, 9999)
+        return random.randint(0, 99999)
 
     def _save_model_definition_to_file(self, iterator):
         tmp_dir = "fdt"
