@@ -4,7 +4,12 @@ import os
 
 def normalize_elements(element):
     """Funkcja normalizuje wartości w kolumnach, obsługując poprawnie puste wartości"""
-    if pd.isna(element) or not isinstance(element, str) or element.strip() == "":
+    if (
+        pd.isna(element)
+        or not isinstance(element, str)
+        or element.strip() == ""
+        or element.strip() in ["No JSON", "OpenAI Error"]
+    ):
         return []  # Zwracamy pustą listę, jeśli wartość jest NaN, None lub pusta
 
     groups = element.strip().split(
@@ -38,6 +43,7 @@ def calculate_rowwise_common_elements(file_path, column1, column2):
 
     df['CommonElements'] = df.apply(lambda row: count_common_groups(row['Normalized1'], row['Normalized2']), axis=1)
     df["IncorrectlyGenerated"] = df["CountNormalized2"] - df["CommonElements"]
+    df["MissingElements"] = df["CountNormalized1"] - df["CommonElements"]
 
     df["CommonPercentage"] = df.apply(
         lambda row: (
@@ -57,10 +63,10 @@ def calculate_rowwise_common_elements(file_path, column1, column2):
 
     return df[
         [
-            "CountNormalized1",
             "CountNormalized2",
             "CommonElements",
             "IncorrectlyGenerated",
+            "MissingElements",
             "CommonPercentage",
             column2,
         ]
@@ -103,8 +109,8 @@ def process_csv_files_in_directory(input_directory, column1, column2):
 
 
 # Example usage:
-input_directory = r"C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results_article\mso_conflicts_diagnoses\csv\MINIMAL_CONFLICTS"
-column1 = "Minimal conflicts"
-column2 = "Minimal conflicts - GPT"
+input_directory = r"C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results_article\mso_conflicts_diagnoses\csv\MINIMAL_DIAGNOSES\raw"
+column1 = "Minimal diagnosis"
+column2 = "Minimal diagnosis - GPT"
 
 process_csv_files_in_directory(input_directory, column1, column2)
