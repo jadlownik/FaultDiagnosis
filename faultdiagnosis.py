@@ -51,19 +51,19 @@ class FaultDiagnosis:
         timestamp = datetime.now().strftime("%d_%m_%H_%M_%S")
         self._print_service.save_to_csv(
             self._collected_data,
-            f"results_article\\mso_conflicts_diagnoses\\csv\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.csv",
+            f"results_article\\o1\\mso_conflicts_diagnoses\\csv\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.csv",
         )
         self._print_service.save_table_to_file(
             self._collected_data,
-            f"results_article\\mso_conflicts_diagnoses\\txt\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+            f"results_article\\o1\\mso_conflicts_diagnoses\\txt\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
         )
         self._print_service.save_array_to_file(
             self._raw,
-            f"results_article\\mso_conflicts_diagnoses\\raw\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+            f"results_article\\o1\\mso_conflicts_diagnoses\\raw\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
         )
         self._print_service.save_array_to_file(
             self._raw_messages,
-            f"results_article\\mso_conflicts_diagnoses\\raw_messages\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
+            f"results_article\\o1\\mso_conflicts_diagnoses\\raw_messages\\{PartEnum(ACTUAL_PART).name}\\result_{timestamp}.txt",
         )
 
     def _print_results_to_console(self,

@@ -1,7 +1,7 @@
 from enums import PartEnum
 
-ACTUAL_PART = PartEnum.MINIMAL_CONFLICTS.value
-OPENAI_API_MODEL = 'gpt-4o-mini'
+ACTUAL_PART = PartEnum.MSO.value
+OPENAI_API_MODEL = "o1"
 
 PATH_EXAMPLES = 'examples\\'
 TITLE = 'title'
