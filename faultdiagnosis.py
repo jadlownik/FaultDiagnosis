@@ -97,17 +97,22 @@ class FaultDiagnosis:
         sys.stdout = self._disable_print
 
     def _generate_single_row(self, variables, iterator):
-        if not any(char in equation for equation in variables[EQUATIONS] for char in ['~', '&', '|', '^']):
-            model = DiagnosisModel()
-            model.create(variables, iterator)
-            all_minimal_conflicts = model.get_all_minimal_conflicts()
-            all_minimal_diagnosis = model.get_all_minimal_diagnosis()
-            minimal_conflicts = model.get_minimal_conflicts()
-            minimal_diagnosis = model.get_minimal_diagnosis()
-        else:
-            small_model = SmallDiagnosisModel()
-            small_model.create(variables)
-            all_minimal_conflicts, all_minimal_diagnosis, minimal_conflicts, minimal_diagnosis = small_model.get_result()
+        # if not any(char in equation for equation in variables[EQUATIONS] for char in ['~', '&', '|', '^']):
+        #     model = DiagnosisModel()
+        #     model.create(variables, iterator)
+        #     all_minimal_conflicts = model.get_all_minimal_conflicts()
+        #     all_minimal_diagnosis = model.get_all_minimal_diagnosis()
+        #     minimal_conflicts = model.get_minimal_conflicts()
+        #     minimal_diagnosis = model.get_minimal_diagnosis()
+        # else:
+        small_model = SmallDiagnosisModel()
+        small_model.create(variables)
+        (
+            all_minimal_conflicts,
+            all_minimal_diagnosis,
+            minimal_conflicts,
+            minimal_diagnosis,
+        ) = small_model.get_result()
 
         gpt_equations = prepare_equations_for_gpt(variables)
         gpt_observations = prepare_observations_for_gpt(variables)

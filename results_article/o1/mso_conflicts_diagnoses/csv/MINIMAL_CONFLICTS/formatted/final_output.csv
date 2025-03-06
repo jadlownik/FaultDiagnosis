@@ -1,0 +1,161 @@
+CountNormalized2;CommonElements;IncorrectlyGenerated;MissingElements;CommonPercentage;Minimal conflicts - GPT
+0;0;0;0;1,0;
+2;2;0;0;1,0;"A2, M2, M3
+A1, A2, M1, M3"
+2;2;0;0;1,0;"A1, M1, M2
+A1, A2, M1, M3"
+2;2;0;0;1,0;"A1, M1, M2
+A2, M2, M3"
+3;3;0;0;1,0;"A1, M1, M2
+A2, M2, M3
+A1, A2, M1, M3"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A3, A4, A6
+1;1;0;0;1,0;A1, A2, A5, A7
+2;2;0;0;1,0;"A3, A4, A6
+A1, A2, A5, A7"
+0;0;0;0;1,0;
+1;1;0;0;1,0;M1, M2, M5, M7
+1;1;0;0;1,0;M3, M4, M6
+2;2;0;0;1,0;"M3, M4, M6
+M1, M2, M5, M7"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A2, A4, M2
+2;2;0;0;1,0;"A2, A4, M2
+A1, A3, M1, M3"
+1;1;0;0;1,0;A1, A3, M1, M3
+0;0;0;0;1,0;
+2;2;0;0;1,0;"A1, A2, A4, M1, M2
+A1, A3, A4, M1, M3, M4"
+2;2;0;0;1,0;"A2, A3, M2, M3, M4
+A1, A3, A4, M1, M3, M4"
+3;3;0;0;1,0;"A1, A2, A4, M1, M2
+A2, A3, M2, M3, M4
+A1, A3, A4, M1, M3, M4"
+0;0;0;0;1,0;
+2;2;0;0;1,0;"M3, M4
+A1, A2, M1, M2, M3"
+2;2;0;0;1,0;"M3, M4
+A1, A2, M1, M2, M4"
+2;2;0;0;1,0;"A1, A2, M1, M2, M3
+A1, A2, M1, M2, M4"
+0;0;0;0;1,0;
+3;3;0;0;1,0;"A5, A6, M5
+A1, A4, M1, M3, M5
+A2, A3, A5, M2, M4, M5"
+4;4;0;0;1,0;"A5, A6, M5
+A1, A4, A5, A6, M1, M3
+A2, A3, A5, M2, M4, M5
+A1, A2, A3, A4, A5, M1, M2, M3, M4"
+3;3;0;0;1,0;"A5, A6, M5
+A2, A3, A6, M2, M4
+A1, A4, A5, A6, M1, M3"
+4;4;0;1;0,8;"A5, A6, M5
+A1, A4, M1, M3, M5
+A2, A3, A6, M2, M4
+A2, A3, A5, M2, M4, M5"
+5;5;0;0;1,0;"A5, A6, M5
+A1, A4, M1, M3, M5
+A1, A4, A5, A6, M1, M3
+A2, A3, A5, M2, M4, M5
+A1, A2, A3, A4, A5, M1, M2, M3, M4"
+4;4;0;0;1,0;"A1, A4, M1, M3, M5
+A2, A3, A6, M2, M4
+A1, A4, A5, A6, M1, M3
+A2, A3, A5, M2, M4, M5"
+3;3;0;0;1,0;"A2, A3, A6, M2, M4
+A2, A3, A5, M2, M4, M5
+A1, A2, A3, A4, A5, M1, M2, M3, M4"
+0;0;0;0;1,0;
+2;2;0;3;0,4;"A1, A5, M1, M2, M7
+A2, A3, M2, M3, M4, M5, M9"
+5;3;2;0;1,0;"A1, A5, M1, M2, M7
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9"
+6;6;0;0;1,0;"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9"
+3;3;0;0;1,0;"A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9"
+4;4;0;0;1,0;"A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9"
+5;5;0;0;1,0;"A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9
+A1, A2, A3, A5, M1, M3, M4, M5, M7, M9
+A2, A3, A4, A6, M2, M3, M4, M6, M8, M9
+A1, A2, A3, A4, A5, A6, M1, M3, M4, M6, M7, M8, M9"
+3;3;0;1;0,75;"A1, A5, M1, M2, M7
+A4, A6, M5, M6, M8
+A2, A3, M2, M3, M4, M5, M9"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A1
+0;0;0;0;1,0;
+1;1;0;0;1,0;A1, A2, O1
+0;0;0;0;1,0;
+2;2;0;0;1,0;"A1, O1, O2
+A1, A2, O1, O3"
+2;2;0;0;1,0;"A2, O2, O3
+A1, A2, O1, O3"
+2;2;0;0;1,0;"A1, O1, O2
+A2, O2, O3"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A3, A4, A6
+1;1;0;0;1,0;A1, A2, A5, A7
+2;2;0;0;1,0;"A3, A4, A6
+A1, A2, A5, A7"
+0;0;0;0;1,0;
+1;1;0;0;1,0;O3, O4, O6
+1;1;0;0;1,0;O1, O2, O5, O7
+2;2;0;0;1,0;"O3, O4, O6
+O1, O2, O5, O7"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A2, A4, O2
+1;1;0;0;1,0;A1, A3, O1, O3
+2;2;0;0;1,0;"A2, A4, O2
+A1, A3, O1, O3"
+0;0;0;0;1,0;
+1;1;0;0;1,0;A1, A2, A4, O1, O2
+0;0;0;2;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;4;0,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error
+0;0;0;5;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;2;0,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error
+0;0;0;3;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error
+0;0;0;0;1,0;OpenAI Error
+0;0;0;1;0,0;OpenAI Error

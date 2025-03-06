@@ -1,6 +1,6 @@
 from enums import PartEnum
 
-ACTUAL_PART = PartEnum.MSO.value
+ACTUAL_PART = PartEnum.MINIMAL_CONFLICTS.value
 OPENAI_API_MODEL = "o1"
 
 PATH_EXAMPLES = 'examples\\'
@@ -44,7 +44,7 @@ Conditions:
 2. None of its proper subsets can be PSO (all must have redundancy ≤ 0).
 Output:
 JSON format: { "mso": [...] }, where each inner list represents a valid MSO set.
-[USE CODE INTERPRETER]
+RESPONSE MUST BE IN JSON FORMAT. DO NOT GENERATE CODE AND RETURN IT IN RESPONSE.
 <example>
 <input>
 equations = {
@@ -133,6 +133,7 @@ HINTS:
 3. Use example_1, example_2 and example_3 to test your code before generate results for given data.
 
 'minimal_conflicts' MUST BE IN JSON FORMAT!
+RESPONSE MUST BE IN JSON FORMAT. DO NOT GENERATE CODE AND RETURN IT IN RESPONSE.
 
 <example_1>
 <input>
@@ -232,7 +233,7 @@ Translate the algorithm steps into Python functions:
 - Implement the main loop of the algorithm, handling conflicts and candidates (diagnoses) generation.
 - Implement the logic to update the candidates (diagnoses) collection and ensure duplicates and non-minimal elements are removed.
 In <output></output> you have example format of output for this part.
-[USE CODE INTERPRETER]
+RESPONSE MUST BE IN JSON FORMAT. DO NOT GENERATE CODE AND RETURN IT IN RESPONSE.
 <algorithm>
 Algorithm 1: Conflicts guide candidates generation.
 Inputs: MinimalConflicts

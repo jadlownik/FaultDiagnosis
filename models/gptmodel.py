@@ -31,9 +31,10 @@ class GPTModel:
                     )
                 )
             ),
-            temperature=0.001,
-            top_p=0.001,
-            tools=[{"type": "code_interpreter"}],
+            temperature=None,
+            top_p=None,
+            response_format="auto",
+            reasoning_effort="high",
             model=OPENAI_API_MODEL,
         )
 

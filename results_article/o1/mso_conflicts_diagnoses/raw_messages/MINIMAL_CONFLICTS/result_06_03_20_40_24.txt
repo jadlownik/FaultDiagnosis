@@ -1,0 +1,479 @@
+1. {"minimal_conflicts": []}
+
+2. {
+  "minimal_conflicts": [
+    ["A2", "M2", "M3"],
+    ["A1", "A2", "M1", "M3"]
+  ]
+}
+
+3. {
+  "minimal_conflicts": [
+    ["A1", "M1", "M2"],
+    ["A1", "A2", "M1", "M3"]
+  ]
+}
+
+4. {
+  "minimal_conflicts": [
+    ["A1", "M1", "M2"],
+    ["A2", "M2", "M3"]
+  ]
+}
+
+5. {
+  "minimal_conflicts": [
+    ["A1", "M1", "M2"],
+    ["A2", "M2", "M3"],
+    ["A1", "A2", "M1", "M3"]
+  ]
+}
+
+6. {
+  "minimal_conflicts": []
+}
+
+7. {
+  "minimal_conflicts": [
+    ["A3", "A4", "A6"]
+  ]
+}
+
+8. {
+  "minimal_conflicts": [
+    ["A1", "A2", "A5", "A7"]
+  ]
+}
+
+9. {
+  "minimal_conflicts": [
+    ["A3", "A4", "A6"],
+    ["A1", "A2", "A5", "A7"]
+  ]
+}
+
+10. {
+  "minimal_conflicts": []
+}
+
+11. {
+  "minimal_conflicts": [
+    ["M1", "M2", "M5", "M7"]
+  ]
+}
+
+12. {
+  "minimal_conflicts": [
+    ["M3", "M4", "M6"]
+  ]
+}
+
+13. {
+  "minimal_conflicts": [
+    ["M3", "M4", "M6"],
+    ["M1", "M2", "M5", "M7"]
+  ]
+}
+
+14. {
+  "minimal_conflicts": []
+}
+
+15. {
+  "minimal_conflicts": [
+    ["A2", "A4", "M2"]
+  ]
+}
+
+16. {
+  "minimal_conflicts": [
+    ["A2", "A4", "M2"],
+    ["A1", "A3", "M1", "M3"]
+  ]
+}
+
+17. {
+  "minimal_conflicts": [
+    ["A1", "A3", "M1", "M3"]
+  ]
+}
+
+18. {
+  "minimal_conflicts": []
+}
+
+19. {
+  "minimal_conflicts": [
+    ["A1", "A2", "A4", "M1", "M2"],
+    ["A1", "A3", "A4", "M1", "M3", "M4"]
+  ]
+}
+
+20. {
+  "minimal_conflicts": [
+    ["A2", "A3", "M2", "M3", "M4"],
+    ["A1", "A3", "A4", "M1", "M3", "M4"]
+  ]
+}
+
+21. {
+  "minimal_conflicts": [
+    ["A1", "A2", "A4", "M1", "M2"],
+    ["A2", "A3", "M2", "M3", "M4"],
+    ["A1", "A3", "A4", "M1", "M3", "M4"]
+  ]
+}
+
+22. {
+  "minimal_conflicts": []
+}
+
+23. {
+  "minimal_conflicts": [
+    ["M3", "M4"],
+    ["A1", "A2", "M1", "M2", "M3"]
+  ]
+}
+
+24. {
+  "minimal_conflicts": [
+    ["M3", "M4"],
+    ["A1", "A2", "M1", "M2", "M4"]
+  ]
+}
+
+25. {
+  "minimal_conflicts": [
+    ["A1", "A2", "M1", "M2", "M3"],
+    ["A1", "A2", "M1", "M2", "M4"]
+  ]
+}
+
+26. {
+  "minimal_conflicts": []
+}
+
+27. {
+  "minimal_conflicts": [
+    ["A5", "A6", "M5"],
+    ["A1", "A4", "M1", "M3", "M5"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"]
+  ]
+}
+
+28. {
+  "minimal_conflicts": [
+    ["A5", "A6", "M5"],
+    ["A1", "A4", "A5", "A6", "M1", "M3"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"],
+    ["A1", "A2", "A3", "A4", "A5", "M1", "M2", "M3", "M4"]
+  ]
+}
+
+29. {
+  "minimal_conflicts": [
+    ["A5", "A6", "M5"],
+    ["A2", "A3", "A6", "M2", "M4"],
+    ["A1", "A4", "A5", "A6", "M1", "M3"]
+  ]
+}
+
+30. {
+  "minimal_conflicts": [
+    ["A5", "A6", "M5"],
+    ["A1", "A4", "M1", "M3", "M5"],
+    ["A2", "A3", "A6", "M2", "M4"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"]
+  ]
+}
+
+31. {
+  "minimal_conflicts": [
+    ["A5", "A6", "M5"],
+    ["A1", "A4", "M1", "M3", "M5"],
+    ["A1", "A4", "A5", "A6", "M1", "M3"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"],
+    ["A1", "A2", "A3", "A4", "A5", "M1", "M2", "M3", "M4"]
+  ]
+}
+
+32. {
+  "minimal_conflicts": [
+    ["A1", "A4", "M1", "M3", "M5"],
+    ["A2", "A3", "A6", "M2", "M4"],
+    ["A1", "A4", "A5", "A6", "M1", "M3"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"]
+  ]
+}
+
+33. {
+  "minimal_conflicts": [
+    ["A2", "A3", "A6", "M2", "M4"],
+    ["A2", "A3", "A5", "M2", "M4", "M5"],
+    ["A1", "A2", "A3", "A4", "A5", "M1", "M2", "M3", "M4"]
+  ]
+}
+
+34. {
+  "minimal_conflicts": []
+}
+
+35. {
+  "minimal_conflicts": [
+    ["A1", "A5", "M1", "M2", "M7"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"]
+  ]
+}
+
+36. {
+  "minimal_conflicts": [
+    ["A1", "A5", "M1", "M2", "M7"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"],
+    ["A1", "A2", "A3", "A5", "M1", "M3", "M4", "M5", "M7", "M9"],
+    ["A2", "A3", "A4", "A6", "M2", "M3", "M4", "M6", "M8", "M9"],
+    ["A1", "A2", "A3", "A4", "A5", "A6", "M1", "M3", "M4", "M6", "M7", "M8", "M9"]
+  ]
+}
+
+37. {
+  "minimal_conflicts": [
+    ["A1", "A5", "M1", "M2", "M7"],
+    ["A4", "A6", "M5", "M6", "M8"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"],
+    ["A1", "A2", "A3", "A5", "M1", "M3", "M4", "M5", "M7", "M9"],
+    ["A2", "A3", "A4", "A6", "M2", "M3", "M4", "M6", "M8", "M9"],
+    ["A1", "A2", "A3", "A4", "A5", "A6", "M1", "M3", "M4", "M6", "M7", "M8", "M9"]
+  ]
+}
+
+38. {
+  "minimal_conflicts": [
+    ["A4", "A6", "M5", "M6", "M8"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"],
+    ["A1", "A2", "A3", "A5", "M1", "M3", "M4", "M5", "M7", "M9"]
+  ]
+}
+
+39. {
+  "minimal_conflicts": [
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"],
+    ["A1", "A2", "A3", "A5", "M1", "M3", "M4", "M5", "M7", "M9"],
+    ["A2", "A3", "A4", "A6", "M2", "M3", "M4", "M6", "M8", "M9"],
+    ["A1", "A2", "A3", "A4", "A5", "A6", "M1", "M3", "M4", "M6", "M7", "M8", "M9"]
+  ]
+}
+
+40. {
+  "minimal_conflicts": [
+    ["A4", "A6", "M5", "M6", "M8"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"],
+    ["A1", "A2", "A3", "A5", "M1", "M3", "M4", "M5", "M7", "M9"],
+    ["A2", "A3", "A4", "A6", "M2", "M3", "M4", "M6", "M8", "M9"],
+    ["A1", "A2", "A3", "A4", "A5", "A6", "M1", "M3", "M4", "M6", "M7", "M8", "M9"]
+  ]
+}
+
+41. {
+  "minimal_conflicts": [
+    ["A1", "A5", "M1", "M2", "M7"],
+    ["A4", "A6", "M5", "M6", "M8"],
+    ["A2", "A3", "M2", "M3", "M4", "M5", "M9"]
+  ]
+}
+
+42. {
+  "minimal_conflicts": []
+}
+
+43. {
+  "minimal_conflicts": [
+    ["A1"]
+  ]
+}
+
+44. {
+  "minimal_conflicts": []
+}
+
+45. {
+  "minimal_conflicts": [
+    ["A1", "A2", "O1"]
+  ]
+}
+
+46. {
+  "minimal_conflicts": []
+}
+
+47. {
+  "minimal_conflicts": [
+    ["A1", "O1", "O2"],
+    ["A1", "A2", "O1", "O3"]
+  ]
+}
+
+48. {
+  "minimal_conflicts": [
+    ["A2", "O2", "O3"],
+    ["A1", "A2", "O1", "O3"]
+  ]
+}
+
+49. {
+  "minimal_conflicts": [
+    ["A1", "O1", "O2"],
+    ["A2", "O2", "O3"]
+  ]
+}
+
+50. {
+  "minimal_conflicts": []
+}
+
+51. {
+  "minimal_conflicts": [
+    ["A3", "A4", "A6"]
+  ]
+}
+
+52. {
+  "minimal_conflicts": [
+    ["A1", "A2", "A5", "A7"]
+  ]
+}
+
+53. {
+  "minimal_conflicts": [
+    ["A3", "A4", "A6"],
+    ["A1", "A2", "A5", "A7"]
+  ]
+}
+
+54. {
+  "minimal_conflicts": []
+}
+
+55. {
+  "minimal_conflicts": [
+    ["O3", "O4", "O6"]
+  ]
+}
+
+56. {
+  "minimal_conflicts": [
+    ["O1", "O2", "O5", "O7"]
+  ]
+}
+
+57. {
+  "minimal_conflicts": [
+    ["O3", "O4", "O6"],
+    ["O1", "O2", "O5", "O7"]
+  ]
+}
+
+58. {
+  "minimal_conflicts": []
+}
+
+59. {
+  "minimal_conflicts": [
+    ["A2", "A4", "O2"]
+  ]
+}
+
+60. {
+  "minimal_conflicts": [
+    ["A1", "A3", "O1", "O3"]
+  ]
+}
+
+61. {
+  "minimal_conflicts": [
+    ["A2", "A4", "O2"],
+    ["A1", "A3", "O1", "O3"]
+  ]
+}
+
+62. {
+  "minimal_conflicts": []
+}
+
+63. {
+  "minimal_conflicts": [
+    ["A1", "A2", "A4", "O1", "O2"]
+  ]
+}
+
+64. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+65. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+66. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+67. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+68. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+69. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+70. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+71. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+72. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+73. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+74. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+75. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+76. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+77. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+78. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+79. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+80. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+81. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+82. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+83. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+84. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+85. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+86. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+87. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+88. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+89. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+90. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+91. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+92. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+93. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+94. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+95. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+96. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+97. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+98. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
+99. LastError(code='rate_limit_exceeded', message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.')
+
