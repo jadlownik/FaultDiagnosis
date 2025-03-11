@@ -1,7 +1,7 @@
 from enums import PartEnum
 
 ACTUAL_PART = PartEnum.MINIMAL_CONFLICTS.value
-OPENAI_API_MODEL = "o1"
+OPENAI_API_MODEL = "o3-mini-2025-01-31"
 
 PATH_EXAMPLES = 'examples\\'
 TITLE = 'title'

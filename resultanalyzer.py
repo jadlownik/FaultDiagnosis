@@ -109,8 +109,8 @@ def process_csv_files_in_directory(input_directory, column1, column2):
 
 
 # Example usage:
-input_directory = r"C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results_article\mso_conflicts_diagnoses\csv\MINIMAL_DIAGNOSES\raw"
-column1 = "Minimal diagnosis"
-column2 = "Minimal diagnosis - GPT"
+input_directory = r"C:\Users\jakto\Desktop\Pulpit\FaultDiagnosis\FaultDiagnosis\results_article\o3_mini\mso_conflicts_diagnoses\csv\MINIMAL_CONFLICTS"
+column1 = "Minimal conflicts"
+column2 = "Minimal conflicts - GPT"
 
 process_csv_files_in_directory(input_directory, column1, column2)
